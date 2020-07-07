@@ -11,14 +11,20 @@ using CDNBase;
 
 namespace OptimaAPI
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
 
-        public Form1()
+        private IApplication Application { get; set; }
+        public ILogin Login { get; set; }
+
+        public Form2(IApplication application, ILogin login)
         {
+            Application = application;
+            Login = login;
+
             InitializeComponent();
         }
 
@@ -43,38 +49,15 @@ namespace OptimaAPI
             dragging = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string loginText = textBox1.Text;
-            string password = textBox2.Text;
-            string company = textBox3.Text;
-
-            System.Environment.CurrentDirectory = @"C:\Program Files (x86)\Comarch ERP Optima";
-
-            try
-            {
-                IApplication application = new CDNBase.Application();
-                
-                ILogin login = application.LockApp(256, 5000, null, null, null, null);
-
-                login = application.Login(loginText, password, company, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0);
-
-                this.Visible = false;
-
-                Form2 appForm = new Form2(application, login);
-                appForm.Show();
-                appForm.TopMost = true;
-                appForm.Activate();
-
-            } catch (System.Runtime.InteropServices.COMException ex) 
-            {
-                label4.Text = "Błąd logowania";
-            }
+            Application.UnlockApp();
+            this.Visible = false;
+            
+            Form1 loginForm = new Form1();
+            loginForm.Show();
+            loginForm.TopMost = true;
+            loginForm.Activate();
         }
     }
 }
