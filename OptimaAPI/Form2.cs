@@ -26,16 +26,17 @@ namespace OptimaAPI
             Login = login;
 
             InitializeComponent();
+            ChangeNameOfKontrachenciColumns();
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        private void Form2_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
             dragCursorPoint = Cursor.Position;
             dragFormPoint = this.Location;
         }
 
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        private void Form2_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
             {
@@ -44,7 +45,7 @@ namespace OptimaAPI
             }
         }
 
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        private void Form2_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
         }
@@ -58,6 +59,30 @@ namespace OptimaAPI
             loginForm.Show();
             loginForm.TopMost = true;
             loginForm.Activate();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.UnlockApp();
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet.Kontrahenci' table. You can move, or remove it, as needed.
+            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+        }
+
+        private void ChangeNameOfKontrachenciColumns()
+        {
+            this.dataGridView1.Columns[0].HeaderText = "Kod";
+            this.dataGridView1.Columns[1].HeaderText = "Nazwa";
+            this.dataGridView1.Columns[2].HeaderText = "Ulica";
+            this.dataGridView1.Columns[3].HeaderText = "Nr domu";
+            this.dataGridView1.Columns[4].HeaderText = "Miasto";
+            this.dataGridView1.Columns[5].HeaderText = "Kod pocztowy";
+            this.dataGridView1.Columns[6].HeaderText = "Telefon";
+            this.dataGridView1.Columns[7].HeaderText = "Email";
         }
     }
 }

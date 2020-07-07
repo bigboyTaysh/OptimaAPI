@@ -43,6 +43,12 @@ namespace OptimaAPI
             dragging = false;
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                button1.PerformClick();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
