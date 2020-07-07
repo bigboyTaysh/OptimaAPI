@@ -58,6 +58,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
@@ -254,6 +262,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.textBox6);
@@ -272,73 +288,169 @@
             // 
             this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Email", true));
             this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Email", true));
-            this.textBox8.Location = new System.Drawing.Point(411, 372);
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox8.Location = new System.Drawing.Point(449, 372);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(131, 20);
+            this.textBox8.Size = new System.Drawing.Size(145, 22);
             this.textBox8.TabIndex = 8;
             // 
             // textBox7
             // 
             this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Telefon1", true));
             this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Telefon1", true));
-            this.textBox7.Location = new System.Drawing.Point(411, 302);
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox7.Location = new System.Drawing.Point(449, 301);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(131, 20);
+            this.textBox7.Size = new System.Drawing.Size(145, 22);
             this.textBox7.TabIndex = 7;
             // 
             // textBox6
             // 
             this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_KodPocztowy", true));
             this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_KodPocztowy", true));
-            this.textBox6.Location = new System.Drawing.Point(411, 231);
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox6.Location = new System.Drawing.Point(449, 230);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(131, 20);
+            this.textBox6.Size = new System.Drawing.Size(145, 22);
             this.textBox6.TabIndex = 6;
             // 
             // textBox5
             // 
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Miasto", true));
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Miasto", true));
-            this.textBox5.Location = new System.Drawing.Point(411, 169);
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox5.Location = new System.Drawing.Point(449, 169);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 20);
+            this.textBox5.Size = new System.Drawing.Size(145, 22);
             this.textBox5.TabIndex = 5;
             // 
             // textBox4
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_NrDomu", true));
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_NrDomu", true));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox4.Location = new System.Drawing.Point(127, 372);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 20);
+            this.textBox4.Size = new System.Drawing.Size(145, 22);
             this.textBox4.TabIndex = 4;
             // 
             // textBox3
             // 
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Ulica", true));
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Ulica", true));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox3.Location = new System.Drawing.Point(127, 302);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 20);
+            this.textBox3.Size = new System.Drawing.Size(145, 22);
             this.textBox3.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Nazwa1", true));
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Nazwa1", true));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox2.Location = new System.Drawing.Point(127, 231);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 20);
+            this.textBox2.Size = new System.Drawing.Size(145, 22);
             this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Kod", true));
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.Location = new System.Drawing.Point(127, 169);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
+            this.textBox1.Size = new System.Drawing.Size(145, 22);
             this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(43, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Kod";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(43, 230);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 18);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Nazwa";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(43, 301);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 18);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Ulica";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(43, 371);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 18);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Nr domu";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(327, 168);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Miasto";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(327, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Kod pocztowy";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(327, 300);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 18);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Telefon";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(327, 371);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 18);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Email";
             // 
             // Form2
             // 
@@ -400,5 +512,13 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
