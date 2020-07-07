@@ -31,17 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cDN_SEDDataSet = new OptimaAPI.CDN_SEDDataSet();
             this.kontrahenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kontrahenciTableAdapter = new OptimaAPI.CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.kntKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kntUlicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,18 +49,28 @@
             this.kntKodPocztowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kntTelefon1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kntEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(844, 0);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(821, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 37);
             this.button1.TabIndex = 0;
@@ -76,7 +85,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Location = new System.Drawing.Point(983, 0);
+            this.button2.Location = new System.Drawing.Point(977, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(45, 36);
             this.button2.TabIndex = 2;
@@ -87,14 +96,6 @@
             this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseMove);
             this.button2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseUp);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(180, 46);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(848, 392);
-            this.flowLayoutPanel1.TabIndex = 3;
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.button3);
@@ -102,7 +103,7 @@
             this.flowLayoutPanel2.Controls.Add(this.button5);
             this.flowLayoutPanel2.Controls.Add(this.button6);
             this.flowLayoutPanel2.Controls.Add(this.button7);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 46);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(14, 56);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(161, 392);
             this.flowLayoutPanel2.TabIndex = 4;
@@ -118,6 +119,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Kontrachenci";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -130,6 +132,7 @@
             this.button4.TabIndex = 1;
             this.button4.Text = "text1";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -167,6 +170,20 @@
             this.button7.Text = "text1";
             this.button7.UseVisualStyleBackColor = false;
             // 
+            // cDN_SEDDataSet
+            // 
+            this.cDN_SEDDataSet.DataSetName = "CDN_SEDDataSet";
+            this.cDN_SEDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kontrahenciBindingSource
+            // 
+            this.kontrahenciBindingSource.DataMember = "Kontrahenci";
+            this.kontrahenciBindingSource.DataSource = this.cDN_SEDDataSet;
+            // 
+            // kontrahenciTableAdapter
+            // 
+            this.kontrahenciTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -181,24 +198,11 @@
             this.kntTelefon1DataGridViewTextBoxColumn,
             this.kntEmailDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.kontrahenciBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(843, 136);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // cDN_SEDDataSet
-            // 
-            this.cDN_SEDDataSet.DataSetName = "CDN_SEDDataSet";
-            this.cDN_SEDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kontrahenciBindingSource
-            // 
-            this.kontrahenciBindingSource.DataMember = "Kontrahenci";
-            this.kontrahenciBindingSource.DataSource = this.cDN_SEDDataSet;
-            // 
-            // kontrahenciTableAdapter
-            // 
-            this.kontrahenciTableAdapter.ClearBeforeFill = true;
             // 
             // kntKodDataGridViewTextBoxColumn
             // 
@@ -248,25 +252,119 @@
             this.kntEmailDataGridViewTextBoxColumn.HeaderText = "Knt_Email";
             this.kntEmailDataGridViewTextBoxColumn.Name = "kntEmailDataGridViewTextBoxColumn";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(181, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(847, 435);
+            this.panel1.TabIndex = 5;
+            // 
+            // textBox8
+            // 
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Email", true));
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Email", true));
+            this.textBox8.Location = new System.Drawing.Point(411, 372);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(131, 20);
+            this.textBox8.TabIndex = 8;
+            // 
+            // textBox7
+            // 
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Telefon1", true));
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Telefon1", true));
+            this.textBox7.Location = new System.Drawing.Point(411, 302);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(131, 20);
+            this.textBox7.TabIndex = 7;
+            // 
+            // textBox6
+            // 
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_KodPocztowy", true));
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_KodPocztowy", true));
+            this.textBox6.Location = new System.Drawing.Point(411, 231);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(131, 20);
+            this.textBox6.TabIndex = 6;
+            // 
+            // textBox5
+            // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Miasto", true));
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Miasto", true));
+            this.textBox5.Location = new System.Drawing.Point(411, 169);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(131, 20);
+            this.textBox5.TabIndex = 5;
+            // 
+            // textBox4
+            // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_NrDomu", true));
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_NrDomu", true));
+            this.textBox4.Location = new System.Drawing.Point(127, 372);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(131, 20);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Ulica", true));
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Ulica", true));
+            this.textBox3.Location = new System.Drawing.Point(127, 302);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(131, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Nazwa1", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Nazwa1", true));
+            this.textBox2.Location = new System.Drawing.Point(127, 231);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(131, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.kontrahenciBindingSource, "Knt_Kod", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
+            this.textBox1.Location = new System.Drawing.Point(127, 169);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(131, 20);
+            this.textBox1.TabIndex = 1;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(1)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(1032, 447);
+            this.ClientSize = new System.Drawing.Size(1034, 503);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseUp);
             this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -275,17 +373,16 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private CDN_SEDDataSet cDN_SEDDataSet;
         private System.Windows.Forms.BindingSource kontrahenciBindingSource;
         private CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter kontrahenciTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntKodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntNazwa1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntUlicaDataGridViewTextBoxColumn;
@@ -294,5 +391,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kntKodPocztowyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntTelefon1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

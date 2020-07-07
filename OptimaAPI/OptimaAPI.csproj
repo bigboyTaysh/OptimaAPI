@@ -33,6 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICDNHeal, Version=2020.6.1.1728, Culture=neutral, PublicKeyToken=5179454a0b814fab, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_32\ICDNHeal\v4.0_2020.6.1.1728__5179454a0b814fab\ICDNHeal.dll</HintPath>
+    </Reference>
+    <Reference Include="ICDNRVAT, Version=2020.6.1.1728, Culture=neutral, PublicKeyToken=5179454a0b814fab, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_32\ICDNRVAT\v4.0_2020.6.1.1728__5179454a0b814fab\ICDNRVAT.dll</HintPath>
+    </Reference>
+    <Reference Include="ICDNTwrb1, Version=2020.6.1.1728, Culture=neutral, PublicKeyToken=5179454a0b814fab, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_32\ICDNTwrb1\v4.0_2020.6.1.1728__5179454a0b814fab\ICDNTwrb1.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

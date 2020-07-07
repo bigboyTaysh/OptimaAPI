@@ -74,13 +74,18 @@ namespace OptimaAPI
 
                 Form2 appForm = new Form2(application, login);
                 appForm.Show();
-                appForm.TopMost = true;
                 appForm.Activate();
 
             } catch (System.Runtime.InteropServices.COMException ex) 
             {
                 label4.Text = "Błąd logowania";
             }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                            this.DisplayRectangle);
         }
     }
 }

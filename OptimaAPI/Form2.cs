@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CDNBase;
+using CDNRVAT;
 
 namespace OptimaAPI
 {
@@ -57,7 +58,6 @@ namespace OptimaAPI
             
             Form1 loginForm = new Form1();
             loginForm.Show();
-            loginForm.TopMost = true;
             loginForm.Activate();
         }
 
@@ -71,6 +71,15 @@ namespace OptimaAPI
         {
             // TODO: This line of code loads data into the 'cDN_SEDDataSet.Kontrahenci' table. You can move, or remove it, as needed.
             this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+
+
+            /*
+            AdoSession session = Login.CreateSession();
+            RejestryVAT rejestryVAT = (RejestryVAT)(session.CreateObject("CDN.RejestryVat", null));
+            VAT rejestrVAT = (VAT)rejestryVAT[string.Format("VaN_VaNID='{0}'", "1")];
+
+            MessageBox.Show($"{rejestrVAT.Podmiot.Nazwa1}");
+            */
         }
 
         private void ChangeNameOfKontrachenciColumns()
@@ -83,6 +92,24 @@ namespace OptimaAPI
             this.dataGridView1.Columns[5].HeaderText = "Kod pocztowy";
             this.dataGridView1.Columns[6].HeaderText = "Telefon";
             this.dataGridView1.Columns[7].HeaderText = "Email";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //panel2.Visible = false;
+            panel1.Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //panel1.Visible = false;
+            //panel2.Visible = true;
+        }
+
+        private void Form2_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                            this.DisplayRectangle);
         }
     }
 }
