@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CDNBase;
+using CDNHeal;
 using CDNRVAT;
 
 namespace OptimaAPI
@@ -96,20 +97,45 @@ namespace OptimaAPI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //panel2.Visible = false;
-            panel1.Visible = true;
+            panel2.Visible = false;
+            panel_kontrachent.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //panel1.Visible = false;
-            //panel2.Visible = true;
+            panel_kontrachent.Visible = false;
+            panel2.Visible = true;
         }
 
         private void Form2_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
                             this.DisplayRectangle);
+        }
+
+        private void add_kontrachent_Click(object sender, EventArgs e)
+        {
+            AdoSession session = Login.CreateSession();
+            ICollection collection_kontrahent = (ICollection)session.CreateObject("CDN.Kontrachenci", null);
+            
+            
+            IKontrahent kontrahent = (IKontrahent)collection_kontrahent.AddNew(null);
+
+            kontrahent.Nazwa1 = textBox1.Text;
+
+
+
+            ((CurrencyManager)BindingContext[this.cDN_SEDDataSet.Kontrahenci]).Refresh();
+        }
+
+        private void update_kontrahent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delete_kontrahent_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
