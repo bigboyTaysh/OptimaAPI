@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CDNBase;
 
 namespace OptimaAPI
 {
@@ -19,11 +20,6 @@ namespace OptimaAPI
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -45,6 +41,31 @@ namespace OptimaAPI
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string loginText = textBox1.Text;
+            string password = textBox2.Text;
+            string company = textBox3.Text;
+
+            System.Environment.CurrentDirectory = @"C:\Program Files (x86)\Comarch ERP Optima";
+
+            try
+            {
+                IApplication application = new CDNBase.Application();
+                ILogin login = application.LockApp(256, 5000, null, null, null, null);
+
+                login = application.Login(loginText, password, company, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0);
+            } catch (System.Runtime.InteropServices.COMException ex) 
+            {
+                label4.Text = "Błąd logowania";
+            }
         }
     }
 }
