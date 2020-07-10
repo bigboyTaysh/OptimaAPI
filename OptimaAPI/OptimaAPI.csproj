@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -48,6 +48,11 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_32\ICDNTwrb1\v4.0_2020.6.1.1728__5179454a0b814fab\ICDNTwrb1.dll</HintPath>
     </Reference>
+    <Reference Include="IOP_KASBOLib, Version=2020.6.1.1728, Culture=neutral, PublicKeyToken=5179454a0b814fab, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_32\IOP_KASBOLib\v4.0_2020.6.1.1728__5179454a0b814fab\IOP_KASBOLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +70,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CDN_SEDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDN_SEDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDN_SEDDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CDN_SEDDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDN_SEDDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -105,6 +120,28 @@
     </None>
     <None Include="CDN_SEDDataSet.xss">
       <DependentUpon>CDN_SEDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CDN_SEDDataSet1.xsc">
+      <DependentUpon>CDN_SEDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CDN_SEDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CDN_SEDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDN_SEDDataSet1.xss">
+      <DependentUpon>CDN_SEDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CDN_SEDDataSet2.xsc">
+      <DependentUpon>CDN_SEDDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CDN_SEDDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CDN_SEDDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDN_SEDDataSet2.xss">
+      <DependentUpon>CDN_SEDDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

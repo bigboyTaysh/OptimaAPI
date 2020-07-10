@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using CDNBase;
 using CDNHeal;
 using CDNRVAT;
+using CDNTwrb1;
+using OP_KASBOLib;
 
 namespace OptimaAPI
 {
@@ -19,7 +21,7 @@ namespace OptimaAPI
         private Point dragCursorPoint;
         private Point dragFormPoint;
 
-        private IApplication Application { get; set; }
+        public IApplication Application { get; set; }
         public ILogin Login { get; set; }
 
         public Form2(IApplication application, ILogin login)
@@ -73,7 +75,7 @@ namespace OptimaAPI
             // TODO: This line of code loads data into the 'cDN_SEDDataSet.Kontrahenci' table. You can move, or remove it, as needed.
             this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
 
-
+            dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             /*
             AdoSession session = Login.CreateSession();
             RejestryVAT rejestryVAT = (RejestryVAT)(session.CreateObject("CDN.RejestryVat", null));
@@ -85,6 +87,7 @@ namespace OptimaAPI
 
         private void ChangeNameOfKontrachenciColumns()
         {
+            /*
             this.dataGridView1.Columns[0].HeaderText = "Kod";
             this.dataGridView1.Columns[1].HeaderText = "Nazwa";
             this.dataGridView1.Columns[2].HeaderText = "Ulica";
@@ -93,6 +96,7 @@ namespace OptimaAPI
             this.dataGridView1.Columns[5].HeaderText = "Kod pocztowy";
             this.dataGridView1.Columns[6].HeaderText = "Telefon";
             this.dataGridView1.Columns[7].HeaderText = "Email";
+            */
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -113,29 +117,120 @@ namespace OptimaAPI
                             this.DisplayRectangle);
         }
 
-        private void add_kontrachent_Click(object sender, EventArgs e)
+        private void add_kontrahent_Click(object sender, EventArgs e)
         {
             AdoSession session = Login.CreateSession();
-            ICollection collection_kontrahent = (ICollection)session.CreateObject("CDN.Kontrachenci", null);
-            
-            
-            IKontrahent kontrahent = (IKontrahent)collection_kontrahent.AddNew(null);
 
-            kontrahent.Nazwa1 = textBox1.Text;
+            Kontrahenci kontrahenci = (Kontrahenci)session.CreateObject("CDN.Kontrahenci", null);
+            IKontrahent kontrahent = (IKontrahent)kontrahenci.AddNew(null);
 
+            IAdres adres = kontrahent.Adres;
 
+            kontrahent.Akronim = textBox1.Text;
+            kontrahent.Nazwa1 = textBox2.Text;
+            adres.Ulica = textBox3.Text;
+            adres.NrDomu = textBox4.Text;
+            adres.Miasto = textBox5.Text;
+            adres.KodPocztowy = textBox6.Text;
+            kontrahent.Telefon = textBox7.Text;
+            kontrahent.Email = textBox8.Text;
 
-            ((CurrencyManager)BindingContext[this.cDN_SEDDataSet.Kontrahenci]).Refresh();
+            try
+            {
+                session.Save();
+                this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void update_kontrahent_Click(object sender, EventArgs e)
         {
+            AdoSession session = Login.CreateSession();
 
+            Kontrahenci kontrahenci = (Kontrahenci)session.CreateObject("CDN.Kontrahenci", null);
+            IKontrahent kontrahent = (IKontrahent)kontrahenci[$"Knt_Kod='{textBox1.Text}'"];
+
+            IAdres adres = kontrahent.Adres;
+
+            kontrahent.Akronim = textBox1.Text;
+            kontrahent.Nazwa1 = textBox2.Text;
+            adres.Ulica = textBox3.Text;
+            adres.NrDomu = textBox4.Text;
+            adres.Miasto = textBox5.Text;
+            adres.KodPocztowy = textBox6.Text;
+            kontrahent.Telefon = textBox7.Text;
+            kontrahent.Email = textBox8.Text;
+
+            try
+            {
+                session.Save();
+
+                this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void delete_kontrahent_Click(object sender, EventArgs e)
         {
+            AdoSession session = Login.CreateSession();
 
+            Kontrahenci kontrahenci = (Kontrahenci)session.CreateObject("CDN.Kontrahenci", null);
+
+            /*
+            Towary towary = (Towary)session.CreateObject("CDN.Towary", null);
+            towary.Delete("Twr_Kod='KOD1'");
+            */
+
+            try
+            {
+                kontrahenci.Delete((IKontrahent)kontrahenci[$"Knt_Kod='{textBox1.Text}'"]);
+                session.Save();
+
+                this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = dataGridView1.Rows[e.RowIndex];
+            var changedValue = (string)row.Cells[e.ColumnIndex].Value;
+
+            AdoSession session = Login.CreateSession();
+
+            Kontrahenci kontrahenci = (Kontrahenci)session.CreateObject("CDN.Kontrahenci", null);
+            IKontrahent kontrahent = (IKontrahent)kontrahenci[$"Knt_Kod='{(string)row.Cells[0].Value}'"];
+
+            IAdres adres = kontrahent.Adres;
+
+            kontrahent.Akronim = (string)row.Cells[0].Value;
+            kontrahent.Nazwa1 = (string)row.Cells[1].Value;
+            adres.Ulica = (string)row.Cells[2].Value;
+            adres.NrDomu = (string)row.Cells[3].Value;
+            adres.Miasto = (string)row.Cells[4].Value;
+            adres.KodPocztowy = (string)row.Cells[5].Value;
+            kontrahent.Telefon = (string)row.Cells[6].Value;
+            kontrahent.Email = (string)row.Cells[7].Value;
+
+            try
+            {
+                session.Save();
+                
+                this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
