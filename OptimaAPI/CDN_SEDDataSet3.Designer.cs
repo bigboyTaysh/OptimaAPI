@@ -20,9 +20,9 @@ namespace OptimaAPI {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CDN_SEDDataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CDN_SEDDataSet3")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CDN_SEDDataSet2 : global::System.Data.DataSet {
+    public partial class CDN_SEDDataSet3 : global::System.Data.DataSet {
         
         private KontrahenciDataTable tableKontrahenci;
         
@@ -30,7 +30,7 @@ namespace OptimaAPI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CDN_SEDDataSet2() {
+        public CDN_SEDDataSet3() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace OptimaAPI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CDN_SEDDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CDN_SEDDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace OptimaAPI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CDN_SEDDataSet2 cln = ((CDN_SEDDataSet2)(base.Clone()));
+            CDN_SEDDataSet3 cln = ((CDN_SEDDataSet3)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace OptimaAPI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CDN_SEDDataSet2";
+            this.DataSetName = "CDN_SEDDataSet3";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CDN_SEDDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/CDN_SEDDataSet3.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableKontrahenci = new KontrahenciDataTable();
@@ -225,7 +225,7 @@ namespace OptimaAPI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CDN_SEDDataSet2 ds = new CDN_SEDDataSet2();
+            CDN_SEDDataSet3 ds = new CDN_SEDDataSet3();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,22 +279,6 @@ namespace OptimaAPI {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class KontrahenciDataTable : global::System.Data.TypedTableBase<KontrahenciRow> {
             
-            private global::System.Data.DataColumn columnKnt_Kod;
-            
-            private global::System.Data.DataColumn columnKnt_Nazwa1;
-            
-            private global::System.Data.DataColumn columnKnt_Ulica;
-            
-            private global::System.Data.DataColumn columnKnt_NrDomu;
-            
-            private global::System.Data.DataColumn columnKnt_Miasto;
-            
-            private global::System.Data.DataColumn columnKnt_KodPocztowy;
-            
-            private global::System.Data.DataColumn columnKnt_Telefon1;
-            
-            private global::System.Data.DataColumn columnKnt_Email;
-            
             private global::System.Data.DataColumn columnKnt_Rodzaj_Dostawca;
             
             private global::System.Data.DataColumn columnKnt_Rodzaj_Odbiorca;
@@ -336,70 +320,6 @@ namespace OptimaAPI {
             protected KontrahenciDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_KodColumn {
-                get {
-                    return this.columnKnt_Kod;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_Nazwa1Column {
-                get {
-                    return this.columnKnt_Nazwa1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_UlicaColumn {
-                get {
-                    return this.columnKnt_Ulica;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_NrDomuColumn {
-                get {
-                    return this.columnKnt_NrDomu;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_MiastoColumn {
-                get {
-                    return this.columnKnt_Miasto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_KodPocztowyColumn {
-                get {
-                    return this.columnKnt_KodPocztowy;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_Telefon1Column {
-                get {
-                    return this.columnKnt_Telefon1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_EmailColumn {
-                get {
-                    return this.columnKnt_Email;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -479,17 +399,9 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciRow AddKontrahenciRow(string Knt_Kod, string Knt_Nazwa1, string Knt_Ulica, string Knt_NrDomu, string Knt_Miasto, string Knt_KodPocztowy, string Knt_Telefon1, string Knt_Email, byte Knt_Rodzaj_Dostawca, byte Knt_Rodzaj_Odbiorca, byte Knt_Rodzaj_Konkurencja, byte Knt_Rodzaj_Partner, byte Knt_Rodzaj_Potencjalny) {
+            public KontrahenciRow AddKontrahenciRow(byte Knt_Rodzaj_Dostawca, byte Knt_Rodzaj_Odbiorca, byte Knt_Rodzaj_Konkurencja, byte Knt_Rodzaj_Partner, byte Knt_Rodzaj_Potencjalny) {
                 KontrahenciRow rowKontrahenciRow = ((KontrahenciRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Knt_Kod,
-                        Knt_Nazwa1,
-                        Knt_Ulica,
-                        Knt_NrDomu,
-                        Knt_Miasto,
-                        Knt_KodPocztowy,
-                        Knt_Telefon1,
-                        Knt_Email,
                         Knt_Rodzaj_Dostawca,
                         Knt_Rodzaj_Odbiorca,
                         Knt_Rodzaj_Konkurencja,
@@ -517,14 +429,6 @@ namespace OptimaAPI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnKnt_Kod = base.Columns["Knt_Kod"];
-                this.columnKnt_Nazwa1 = base.Columns["Knt_Nazwa1"];
-                this.columnKnt_Ulica = base.Columns["Knt_Ulica"];
-                this.columnKnt_NrDomu = base.Columns["Knt_NrDomu"];
-                this.columnKnt_Miasto = base.Columns["Knt_Miasto"];
-                this.columnKnt_KodPocztowy = base.Columns["Knt_KodPocztowy"];
-                this.columnKnt_Telefon1 = base.Columns["Knt_Telefon1"];
-                this.columnKnt_Email = base.Columns["Knt_Email"];
                 this.columnKnt_Rodzaj_Dostawca = base.Columns["Knt_Rodzaj_Dostawca"];
                 this.columnKnt_Rodzaj_Odbiorca = base.Columns["Knt_Rodzaj_Odbiorca"];
                 this.columnKnt_Rodzaj_Konkurencja = base.Columns["Knt_Rodzaj_Konkurencja"];
@@ -535,22 +439,6 @@ namespace OptimaAPI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnKnt_Kod = new global::System.Data.DataColumn("Knt_Kod", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Kod);
-                this.columnKnt_Nazwa1 = new global::System.Data.DataColumn("Knt_Nazwa1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Nazwa1);
-                this.columnKnt_Ulica = new global::System.Data.DataColumn("Knt_Ulica", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Ulica);
-                this.columnKnt_NrDomu = new global::System.Data.DataColumn("Knt_NrDomu", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_NrDomu);
-                this.columnKnt_Miasto = new global::System.Data.DataColumn("Knt_Miasto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Miasto);
-                this.columnKnt_KodPocztowy = new global::System.Data.DataColumn("Knt_KodPocztowy", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_KodPocztowy);
-                this.columnKnt_Telefon1 = new global::System.Data.DataColumn("Knt_Telefon1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Telefon1);
-                this.columnKnt_Email = new global::System.Data.DataColumn("Knt_Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Email);
                 this.columnKnt_Rodzaj_Dostawca = new global::System.Data.DataColumn("Knt_Rodzaj_Dostawca", typeof(byte), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKnt_Rodzaj_Dostawca);
                 this.columnKnt_Rodzaj_Odbiorca = new global::System.Data.DataColumn("Knt_Rodzaj_Odbiorca", typeof(byte), null, global::System.Data.MappingType.Element);
@@ -561,22 +449,6 @@ namespace OptimaAPI {
                 base.Columns.Add(this.columnKnt_Rodzaj_Partner);
                 this.columnKnt_Rodzaj_Potencjalny = new global::System.Data.DataColumn("Knt_Rodzaj_Potencjalny", typeof(byte), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKnt_Rodzaj_Potencjalny);
-                this.columnKnt_Kod.AllowDBNull = false;
-                this.columnKnt_Kod.MaxLength = 20;
-                this.columnKnt_Nazwa1.AllowDBNull = false;
-                this.columnKnt_Nazwa1.MaxLength = 50;
-                this.columnKnt_Ulica.AllowDBNull = false;
-                this.columnKnt_Ulica.MaxLength = 40;
-                this.columnKnt_NrDomu.AllowDBNull = false;
-                this.columnKnt_NrDomu.MaxLength = 10;
-                this.columnKnt_Miasto.AllowDBNull = false;
-                this.columnKnt_Miasto.MaxLength = 40;
-                this.columnKnt_KodPocztowy.AllowDBNull = false;
-                this.columnKnt_KodPocztowy.MaxLength = 10;
-                this.columnKnt_Telefon1.AllowDBNull = false;
-                this.columnKnt_Telefon1.MaxLength = 20;
-                this.columnKnt_Email.AllowDBNull = false;
-                this.columnKnt_Email.MaxLength = 127;
                 this.columnKnt_Rodzaj_Dostawca.AllowDBNull = false;
                 this.columnKnt_Rodzaj_Odbiorca.AllowDBNull = false;
                 this.columnKnt_Rodzaj_Konkurencja.AllowDBNull = false;
@@ -649,7 +521,7 @@ namespace OptimaAPI {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CDN_SEDDataSet2 ds = new CDN_SEDDataSet2();
+                CDN_SEDDataSet3 ds = new CDN_SEDDataSet3();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -720,94 +592,6 @@ namespace OptimaAPI {
             internal KontrahenciRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableKontrahenci = ((KontrahenciDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Kod {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_KodColumn]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_KodColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Nazwa1 {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_Nazwa1Column]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_Nazwa1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Ulica {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_UlicaColumn]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_UlicaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_NrDomu {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_NrDomuColumn]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_NrDomuColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Miasto {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_MiastoColumn]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_MiastoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_KodPocztowy {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_KodPocztowyColumn]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_KodPocztowyColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Telefon1 {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_Telefon1Column]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_Telefon1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Email {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_EmailColumn]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_EmailColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -901,7 +685,7 @@ namespace OptimaAPI {
         }
     }
 }
-namespace OptimaAPI.CDN_SEDDataSet2TableAdapters {
+namespace OptimaAPI.CDN_SEDDataSet3TableAdapters {
     
     
     /// <summary>
@@ -1025,14 +809,6 @@ namespace OptimaAPI.CDN_SEDDataSet2TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Kontrahenci";
-            tableMapping.ColumnMappings.Add("Knt_Kod", "Knt_Kod");
-            tableMapping.ColumnMappings.Add("Knt_Nazwa1", "Knt_Nazwa1");
-            tableMapping.ColumnMappings.Add("Knt_Ulica", "Knt_Ulica");
-            tableMapping.ColumnMappings.Add("Knt_NrDomu", "Knt_NrDomu");
-            tableMapping.ColumnMappings.Add("Knt_Miasto", "Knt_Miasto");
-            tableMapping.ColumnMappings.Add("Knt_KodPocztowy", "Knt_KodPocztowy");
-            tableMapping.ColumnMappings.Add("Knt_Telefon1", "Knt_Telefon1");
-            tableMapping.ColumnMappings.Add("Knt_Email", "Knt_Email");
             tableMapping.ColumnMappings.Add("Knt_Rodzaj_Dostawca", "Knt_Rodzaj_Dostawca");
             tableMapping.ColumnMappings.Add("Knt_Rodzaj_Odbiorca", "Knt_Rodzaj_Odbiorca");
             tableMapping.ColumnMappings.Add("Knt_Rodzaj_Konkurencja", "Knt_Rodzaj_Konkurencja");
@@ -1054,9 +830,8 @@ namespace OptimaAPI.CDN_SEDDataSet2TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Knt_Kod, Knt_Nazwa1, Knt_Ulica, Knt_NrDomu, Knt_Miasto, Knt_KodPocztowy, Knt_Telefon1, Knt_Email, Knt_Rodzaj_Dostawca, Knt_Rodzaj_Odbiorca, Knt_Rodzaj_Konkurencja, Knt_Rodzaj_Partner, 
-                         Knt_Rodzaj_Potencjalny
-FROM            CDN.Kontrahenci";
+            this._commandCollection[0].CommandText = "SELECT Knt_Rodzaj_Dostawca, Knt_Rodzaj_Odbiorca, Knt_Rodzaj_Konkurencja, Knt_Rodz" +
+                "aj_Partner, Knt_Rodzaj_Potencjalny FROM CDN.Kontrahenci";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1064,7 +839,7 @@ FROM            CDN.Kontrahenci";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CDN_SEDDataSet2.KontrahenciDataTable dataTable) {
+        public virtual int Fill(CDN_SEDDataSet3.KontrahenciDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1077,9 +852,9 @@ FROM            CDN.Kontrahenci";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CDN_SEDDataSet2.KontrahenciDataTable GetData() {
+        public virtual CDN_SEDDataSet3.KontrahenciDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CDN_SEDDataSet2.KontrahenciDataTable dataTable = new CDN_SEDDataSet2.KontrahenciDataTable();
+            CDN_SEDDataSet3.KontrahenciDataTable dataTable = new CDN_SEDDataSet3.KontrahenciDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1153,7 +928,7 @@ FROM            CDN.Kontrahenci";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(CDN_SEDDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CDN_SEDDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1163,7 +938,7 @@ FROM            CDN.Kontrahenci";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(CDN_SEDDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CDN_SEDDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1173,7 +948,7 @@ FROM            CDN.Kontrahenci";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(CDN_SEDDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CDN_SEDDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1207,7 +982,7 @@ FROM            CDN.Kontrahenci";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(CDN_SEDDataSet2 dataSet) {
+        public virtual int UpdateAll(CDN_SEDDataSet3 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

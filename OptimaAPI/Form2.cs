@@ -33,13 +33,32 @@ namespace OptimaAPI
             ChangeNameOfKontrachenciColumns();
         }
 
+        #region okno
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.UnlockApp();
+            this.Visible = false;
+
+            Form1 loginForm = new Form1();
+            loginForm.Show();
+            loginForm.Activate();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.UnlockApp();
+            System.Windows.Forms.Application.Exit();
+        }
+        private void Form2_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                            this.DisplayRectangle);
+        }
         private void Form2_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
             dragCursorPoint = Cursor.Position;
             dragFormPoint = this.Location;
         }
-
         private void Form2_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
@@ -48,46 +67,21 @@ namespace OptimaAPI
                 this.Location = Point.Add(dragFormPoint, new Size(dif));
             }
         }
-
         private void Form2_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.UnlockApp();
-            this.Visible = false;
-            
-            Form1 loginForm = new Form1();
-            loginForm.Show();
-            loginForm.Activate();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.UnlockApp();
-            System.Windows.Forms.Application.Exit();
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'cDN_SEDDataSet.Kontrahenci' table. You can move, or remove it, as needed.
             this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
 
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
-            /*
-            AdoSession session = Login.CreateSession();
-            RejestryVAT rejestryVAT = (RejestryVAT)(session.CreateObject("CDN.RejestryVat", null));
-            VAT rejestrVAT = (VAT)rejestryVAT[string.Format("VaN_VaNID='{0}'", "1")];
-
-            MessageBox.Show($"{rejestrVAT.Podmiot.Nazwa1}");
-            */
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.RowHeadersWidth = 25;
         }
-
         private void ChangeNameOfKontrachenciColumns()
         {
-            /*
             this.dataGridView1.Columns[0].HeaderText = "Kod";
             this.dataGridView1.Columns[1].HeaderText = "Nazwa";
             this.dataGridView1.Columns[2].HeaderText = "Ulica";
@@ -96,27 +90,24 @@ namespace OptimaAPI
             this.dataGridView1.Columns[5].HeaderText = "Kod pocztowy";
             this.dataGridView1.Columns[6].HeaderText = "Telefon";
             this.dataGridView1.Columns[7].HeaderText = "Email";
-            */
         }
+        #endregion
 
+        #region menu
         private void button3_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
+            //panel2.Visible = false;
             panel_kontrachent.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             panel_kontrachent.Visible = false;
-            panel2.Visible = true;
+            //panel2.Visible = true;
         }
+        #endregion
 
-        private void Form2_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
-                            this.DisplayRectangle);
-        }
-
+        #region Kontrahent
         private void add_kontrahent_Click(object sender, EventArgs e)
         {
             AdoSession session = Login.CreateSession();
@@ -134,6 +125,8 @@ namespace OptimaAPI
             adres.KodPocztowy = textBox6.Text;
             kontrahent.Telefon = textBox7.Text;
             kontrahent.Email = textBox8.Text;
+            
+            MessageBox.Show()
 
             try
             {
@@ -203,7 +196,6 @@ namespace OptimaAPI
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             var row = dataGridView1.Rows[e.RowIndex];
-            var changedValue = (string)row.Cells[e.ColumnIndex].Value;
 
             AdoSession session = Login.CreateSession();
 
@@ -232,5 +224,6 @@ namespace OptimaAPI
                 MessageBox.Show(ex.ToString());
             }
         }
+        #endregion
     }
 }

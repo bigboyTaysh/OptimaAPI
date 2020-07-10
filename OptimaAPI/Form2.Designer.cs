@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -39,17 +39,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel_kontrachent = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kntKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntUlicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntNrDomuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntMiastoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntKodPocztowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntTelefon1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kontrahenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cDN_SEDDataSet = new OptimaAPI.CDN_SEDDataSet2();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.filterKontrahenci = new System.Windows.Forms.ComboBox();
             this.delete_kontrachent = new System.Windows.Forms.Button();
             this.update_kontrachent = new System.Windows.Forms.Button();
             this.add_kontrahent = new System.Windows.Forms.Button();
@@ -69,47 +59,61 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.phraseKontrahenci = new System.Windows.Forms.TextBox();
+            this.kntKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntUlicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntNrDomuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntMiastoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntKodPocztowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntTelefon1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kontrahenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDN_SEDDataSet = new OptimaAPI.CDN_SEDDataSet2();
             this.kontrahenciTableAdapter = new OptimaAPI.CDN_SEDDataSet2TableAdapters.KontrahenciTableAdapter();
+            this.customerCheckBox = new System.Windows.Forms.CheckBox();
+            this.providerCheckBox = new System.Windows.Forms.CheckBox();
+            this.CompetitionCheckBox = new System.Windows.Forms.CheckBox();
+            this.partnerCheckBox = new System.Windows.Forms.CheckBox();
+            this.potentialCheckBox = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel_kontrachent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // logoutButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(833, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "wyloguj";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logoutButton.Location = new System.Drawing.Point(833, 12);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(133, 36);
+            this.logoutButton.TabIndex = 0;
+            this.logoutButton.Text = "wyloguj";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // exitButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Location = new System.Drawing.Point(993, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseDown);
-            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseMove);
-            this.button2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseUp);
+            this.exitButton.BackColor = System.Drawing.Color.Black;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exitButton.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.exitButton.Location = new System.Drawing.Point(993, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(45, 36);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.button2_Click);
+            this.exitButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseDown);
+            this.exitButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseMove);
+            this.exitButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseUp);
             // 
             // flowLayoutPanel2
             // 
@@ -187,8 +191,14 @@
             // 
             // panel_kontrachent
             // 
+            this.panel_kontrachent.Controls.Add(this.potentialCheckBox);
+            this.panel_kontrachent.Controls.Add(this.partnerCheckBox);
+            this.panel_kontrachent.Controls.Add(this.CompetitionCheckBox);
+            this.panel_kontrachent.Controls.Add(this.providerCheckBox);
+            this.panel_kontrachent.Controls.Add(this.customerCheckBox);
+            this.panel_kontrachent.Controls.Add(this.phraseKontrahenci);
             this.panel_kontrachent.Controls.Add(this.dataGridView1);
-            this.panel_kontrachent.Controls.Add(this.comboBox1);
+            this.panel_kontrachent.Controls.Add(this.filterKontrahenci);
             this.panel_kontrachent.Controls.Add(this.delete_kontrachent);
             this.panel_kontrachent.Controls.Add(this.update_kontrachent);
             this.panel_kontrachent.Controls.Add(this.add_kontrahent);
@@ -210,7 +220,7 @@
             this.panel_kontrachent.Controls.Add(this.textBox1);
             this.panel_kontrachent.Location = new System.Drawing.Point(181, 56);
             this.panel_kontrachent.Name = "panel_kontrachent";
-            this.panel_kontrachent.Size = new System.Drawing.Size(866, 435);
+            this.panel_kontrachent.Size = new System.Drawing.Size(866, 587);
             this.panel_kontrachent.TabIndex = 5;
             // 
             // dataGridView1
@@ -229,8 +239,229 @@
             this.dataGridView1.DataSource = this.kontrahenciBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(14, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(852, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(833, 195);
             this.dataGridView1.TabIndex = 20;
+            // 
+            // filterKontrahenci
+            // 
+            this.filterKontrahenci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.filterKontrahenci.FormattingEnabled = true;
+            this.filterKontrahenci.Items.AddRange(new object[] {
+            "-każdy-",
+            "odbiorca",
+            "dostawca",
+            "konkurencja",
+            "partner",
+            "potencjalny"});
+            this.filterKontrahenci.Location = new System.Drawing.Point(491, 216);
+            this.filterKontrahenci.Name = "filterKontrahenci";
+            this.filterKontrahenci.Size = new System.Drawing.Size(153, 24);
+            this.filterKontrahenci.TabIndex = 19;
+            // 
+            // delete_kontrachent
+            // 
+            this.delete_kontrachent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.delete_kontrachent.Location = new System.Drawing.Point(685, 502);
+            this.delete_kontrachent.Name = "delete_kontrachent";
+            this.delete_kontrachent.Size = new System.Drawing.Size(115, 37);
+            this.delete_kontrachent.TabIndex = 18;
+            this.delete_kontrachent.Text = "Usuń";
+            this.delete_kontrachent.UseVisualStyleBackColor = true;
+            this.delete_kontrachent.Click += new System.EventHandler(this.delete_kontrahent_Click);
+            // 
+            // update_kontrachent
+            // 
+            this.update_kontrachent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.update_kontrachent.Location = new System.Drawing.Point(685, 434);
+            this.update_kontrachent.Name = "update_kontrachent";
+            this.update_kontrachent.Size = new System.Drawing.Size(115, 37);
+            this.update_kontrachent.TabIndex = 17;
+            this.update_kontrachent.Text = "Edytuj";
+            this.update_kontrachent.UseVisualStyleBackColor = true;
+            this.update_kontrachent.Click += new System.EventHandler(this.update_kontrahent_Click);
+            // 
+            // add_kontrahent
+            // 
+            this.add_kontrahent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.add_kontrahent.Location = new System.Drawing.Point(685, 371);
+            this.add_kontrahent.Name = "add_kontrahent";
+            this.add_kontrahent.Size = new System.Drawing.Size(115, 37);
+            this.add_kontrahent.TabIndex = 16;
+            this.add_kontrahent.Text = "Dodaj";
+            this.add_kontrahent.UseVisualStyleBackColor = true;
+            this.add_kontrahent.Click += new System.EventHandler(this.add_kontrahent_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(352, 532);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 18);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Email";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(352, 461);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 18);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Telefon";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(352, 390);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Kod pocztowy";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(352, 329);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Miasto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(49, 532);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 18);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Nr domu";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(49, 462);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 18);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Ulica";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(49, 391);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 18);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Nazwa";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(49, 331);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Kod";
+            // 
+            // textBox8
+            // 
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Email", true));
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox8.Location = new System.Drawing.Point(474, 533);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(145, 22);
+            this.textBox8.TabIndex = 8;
+            // 
+            // textBox7
+            // 
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Telefon1", true));
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox7.Location = new System.Drawing.Point(474, 462);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(145, 22);
+            this.textBox7.TabIndex = 7;
+            // 
+            // textBox6
+            // 
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_KodPocztowy", true));
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox6.Location = new System.Drawing.Point(474, 391);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(145, 22);
+            this.textBox6.TabIndex = 6;
+            // 
+            // textBox5
+            // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Miasto", true));
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox5.Location = new System.Drawing.Point(474, 330);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(145, 22);
+            this.textBox5.TabIndex = 5;
+            // 
+            // textBox4
+            // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_NrDomu", true));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox4.Location = new System.Drawing.Point(133, 533);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(145, 22);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Ulica", true));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox3.Location = new System.Drawing.Point(133, 463);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(145, 22);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Nazwa1", true));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox2.Location = new System.Drawing.Point(133, 392);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(145, 22);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.Location = new System.Drawing.Point(133, 330);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(145, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // phraseKontrahenci
+            // 
+            this.phraseKontrahenci.Location = new System.Drawing.Point(169, 216);
+            this.phraseKontrahenci.Name = "phraseKontrahenci";
+            this.phraseKontrahenci.Size = new System.Drawing.Size(212, 20);
+            this.phraseKontrahenci.TabIndex = 21;
             // 
             // kntKodDataGridViewTextBoxColumn
             // 
@@ -290,243 +521,85 @@
             this.cDN_SEDDataSet.DataSetName = "CDN_SEDDataSet";
             this.cDN_SEDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(652, 167);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 24);
-            this.comboBox1.TabIndex = 19;
-            // 
-            // delete_kontrachent
-            // 
-            this.delete_kontrachent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.delete_kontrachent.Location = new System.Drawing.Point(678, 362);
-            this.delete_kontrachent.Name = "delete_kontrachent";
-            this.delete_kontrachent.Size = new System.Drawing.Size(115, 37);
-            this.delete_kontrachent.TabIndex = 18;
-            this.delete_kontrachent.Text = "Usuń";
-            this.delete_kontrachent.UseVisualStyleBackColor = true;
-            this.delete_kontrachent.Click += new System.EventHandler(this.delete_kontrahent_Click);
-            // 
-            // update_kontrachent
-            // 
-            this.update_kontrachent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.update_kontrachent.Location = new System.Drawing.Point(678, 294);
-            this.update_kontrachent.Name = "update_kontrachent";
-            this.update_kontrachent.Size = new System.Drawing.Size(115, 37);
-            this.update_kontrachent.TabIndex = 17;
-            this.update_kontrachent.Text = "Edytuj";
-            this.update_kontrachent.UseVisualStyleBackColor = true;
-            this.update_kontrachent.Click += new System.EventHandler(this.update_kontrahent_Click);
-            // 
-            // add_kontrahent
-            // 
-            this.add_kontrahent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.add_kontrahent.Location = new System.Drawing.Point(678, 231);
-            this.add_kontrahent.Name = "add_kontrahent";
-            this.add_kontrahent.Size = new System.Drawing.Size(115, 37);
-            this.add_kontrahent.TabIndex = 16;
-            this.add_kontrahent.Text = "Dodaj";
-            this.add_kontrahent.UseVisualStyleBackColor = true;
-            this.add_kontrahent.Click += new System.EventHandler(this.add_kontrahent_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(327, 371);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 18);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Email";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(327, 300);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 18);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Telefon";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(327, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Kod pocztowy";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(327, 168);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Miasto";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(43, 371);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 18);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Nr domu";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(43, 301);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 18);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Ulica";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(43, 230);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 18);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Nazwa";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(43, 170);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 18);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Kod";
-            // 
-            // textBox8
-            // 
-            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Email", true));
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox8.Location = new System.Drawing.Point(449, 372);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(145, 22);
-            this.textBox8.TabIndex = 8;
-            // 
-            // textBox7
-            // 
-            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Telefon1", true));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.Location = new System.Drawing.Point(449, 301);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(145, 22);
-            this.textBox7.TabIndex = 7;
-            // 
-            // textBox6
-            // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_KodPocztowy", true));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.Location = new System.Drawing.Point(449, 230);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(145, 22);
-            this.textBox6.TabIndex = 6;
-            // 
-            // textBox5
-            // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Miasto", true));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox5.Location = new System.Drawing.Point(449, 169);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 22);
-            this.textBox5.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_NrDomu", true));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox4.Location = new System.Drawing.Point(127, 372);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 22);
-            this.textBox4.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Ulica", true));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(127, 302);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 22);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Nazwa1", true));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(127, 231);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 22);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(127, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(617, 497);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 435);
-            this.panel2.TabIndex = 6;
-            this.panel2.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(365, 216);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 24);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "TODO";
-            // 
             // kontrahenciTableAdapter
             // 
             this.kontrahenciTableAdapter.ClearBeforeFill = true;
+            // 
+            // customerCheckBox
+            // 
+            this.customerCheckBox.AutoSize = true;
+            this.customerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Odbiorca", true));
+            this.customerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.customerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.customerCheckBox.Location = new System.Drawing.Point(87, 268);
+            this.customerCheckBox.Name = "customerCheckBox";
+            this.customerCheckBox.Size = new System.Drawing.Size(89, 24);
+            this.customerCheckBox.TabIndex = 22;
+            this.customerCheckBox.Text = "odbiorca";
+            this.customerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // providerCheckBox
+            // 
+            this.providerCheckBox.AutoSize = true;
+            this.providerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Dostawca", true));
+            this.providerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.providerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.providerCheckBox.Location = new System.Drawing.Point(240, 268);
+            this.providerCheckBox.Name = "providerCheckBox";
+            this.providerCheckBox.Size = new System.Drawing.Size(96, 24);
+            this.providerCheckBox.TabIndex = 23;
+            this.providerCheckBox.Text = "dostawca";
+            this.providerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // CompetitionCheckBox
+            // 
+            this.CompetitionCheckBox.AutoSize = true;
+            this.CompetitionCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Konkurencja", true));
+            this.CompetitionCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.CompetitionCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CompetitionCheckBox.Location = new System.Drawing.Point(394, 268);
+            this.CompetitionCheckBox.Name = "CompetitionCheckBox";
+            this.CompetitionCheckBox.Size = new System.Drawing.Size(114, 24);
+            this.CompetitionCheckBox.TabIndex = 24;
+            this.CompetitionCheckBox.Text = "konkurencja";
+            this.CompetitionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // partnerCheckBox
+            // 
+            this.partnerCheckBox.AutoSize = true;
+            this.partnerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Partner", true));
+            this.partnerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.partnerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.partnerCheckBox.Location = new System.Drawing.Point(556, 268);
+            this.partnerCheckBox.Name = "partnerCheckBox";
+            this.partnerCheckBox.Size = new System.Drawing.Size(79, 24);
+            this.partnerCheckBox.TabIndex = 25;
+            this.partnerCheckBox.Text = "partner";
+            this.partnerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // potentialCheckBox
+            // 
+            this.potentialCheckBox.AutoSize = true;
+            this.potentialCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Potencjalny", true));
+            this.potentialCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.potentialCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.potentialCheckBox.Location = new System.Drawing.Point(687, 268);
+            this.potentialCheckBox.Name = "potentialCheckBox";
+            this.potentialCheckBox.Size = new System.Drawing.Size(108, 24);
+            this.potentialCheckBox.TabIndex = 26;
+            this.potentialCheckBox.Text = "potencjalny";
+            this.potentialCheckBox.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(1)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(1050, 503);
+            this.ClientSize = new System.Drawing.Size(1052, 655);
             this.Controls.Add(this.panel_kontrachent);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.logoutButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -542,16 +615,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -578,9 +649,7 @@
         private System.Windows.Forms.Button add_kontrahent;
         private System.Windows.Forms.Button update_kontrachent;
         private System.Windows.Forms.Button delete_kontrachent;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox filterKontrahenci;
         private System.Windows.Forms.DataGridView dataGridView1;
         private CDN_SEDDataSet2 cDN_SEDDataSet;
         private System.Windows.Forms.BindingSource kontrahenciBindingSource;
@@ -593,5 +662,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kntKodPocztowyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntTelefon1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox phraseKontrahenci;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.CheckBox customerCheckBox;
+        private System.Windows.Forms.CheckBox providerCheckBox;
+        private System.Windows.Forms.CheckBox potentialCheckBox;
+        private System.Windows.Forms.CheckBox partnerCheckBox;
+        private System.Windows.Forms.CheckBox CompetitionCheckBox;
     }
 }
