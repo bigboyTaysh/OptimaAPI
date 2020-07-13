@@ -32,14 +32,21 @@
             this.logoutButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.kontrahenciButton = new System.Windows.Forms.Button();
+            this.towaryButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.panel_kontrachent = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.filterKontrahenci = new System.Windows.Forms.ComboBox();
+            this.kontrahenciPanel = new System.Windows.Forms.Panel();
+            this.potentialCheckBox = new System.Windows.Forms.CheckBox();
+            this.towaryPanel = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.partnerCheckBox = new System.Windows.Forms.CheckBox();
+            this.competitionCheckBox = new System.Windows.Forms.CheckBox();
+            this.providerCheckBox = new System.Windows.Forms.CheckBox();
+            this.customerCheckBox = new System.Windows.Forms.CheckBox();
+            this.phraseKontrahenci = new System.Windows.Forms.TextBox();
+            this.filterKontrahenciComboBox = new System.Windows.Forms.ComboBox();
             this.delete_kontrachent = new System.Windows.Forms.Button();
             this.update_kontrachent = new System.Windows.Forms.Button();
             this.add_kontrahent = new System.Windows.Forms.Button();
@@ -59,26 +66,22 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.phraseKontrahenci = new System.Windows.Forms.TextBox();
-            this.kntKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntUlicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntNrDomuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntMiastoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntKodPocztowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntTelefon1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kontrahenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cDN_SEDDataSet = new OptimaAPI.CDN_SEDDataSet2();
-            this.kontrahenciTableAdapter = new OptimaAPI.CDN_SEDDataSet2TableAdapters.KontrahenciTableAdapter();
-            this.customerCheckBox = new System.Windows.Forms.CheckBox();
-            this.providerCheckBox = new System.Windows.Forms.CheckBox();
-            this.CompetitionCheckBox = new System.Windows.Forms.CheckBox();
-            this.partnerCheckBox = new System.Windows.Forms.CheckBox();
-            this.potentialCheckBox = new System.Windows.Forms.CheckBox();
+            this.cDN_SEDDataSet = new OptimaAPI.CDN_SEDDataSet();
+            this.kontrahenciTableAdapter = new OptimaAPI.CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter();
             this.flowLayoutPanel2.SuspendLayout();
-            this.panel_kontrachent.SuspendLayout();
+            this.kontrahenciPanel.SuspendLayout();
+            this.towaryPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
@@ -117,8 +120,8 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.button3);
-            this.flowLayoutPanel2.Controls.Add(this.button4);
+            this.flowLayoutPanel2.Controls.Add(this.kontrahenciButton);
+            this.flowLayoutPanel2.Controls.Add(this.towaryButton);
             this.flowLayoutPanel2.Controls.Add(this.button5);
             this.flowLayoutPanel2.Controls.Add(this.button6);
             this.flowLayoutPanel2.Controls.Add(this.button7);
@@ -127,31 +130,31 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(161, 355);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
-            // button3
+            // kontrahenciButton
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 65);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Kontrachenci";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.kontrahenciButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.kontrahenciButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kontrahenciButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kontrahenciButton.Location = new System.Drawing.Point(3, 3);
+            this.kontrahenciButton.Name = "kontrahenciButton";
+            this.kontrahenciButton.Size = new System.Drawing.Size(158, 65);
+            this.kontrahenciButton.TabIndex = 0;
+            this.kontrahenciButton.Text = "kontrachenci";
+            this.kontrahenciButton.UseVisualStyleBackColor = false;
+            this.kontrahenciButton.Click += new System.EventHandler(this.kontrahenciButton_Click);
             // 
-            // button4
+            // towaryButton
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(3, 74);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 65);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "text1";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.towaryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.towaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.towaryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.towaryButton.Location = new System.Drawing.Point(3, 74);
+            this.towaryButton.Name = "towaryButton";
+            this.towaryButton.Size = new System.Drawing.Size(158, 65);
+            this.towaryButton.TabIndex = 1;
+            this.towaryButton.Text = "towary";
+            this.towaryButton.UseVisualStyleBackColor = false;
+            this.towaryButton.Click += new System.EventHandler(this.towaryButton_Click);
             // 
             // button5
             // 
@@ -189,74 +192,150 @@
             this.button7.Text = "text1";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // panel_kontrachent
+            // kontrahenciPanel
             // 
-            this.panel_kontrachent.Controls.Add(this.potentialCheckBox);
-            this.panel_kontrachent.Controls.Add(this.partnerCheckBox);
-            this.panel_kontrachent.Controls.Add(this.CompetitionCheckBox);
-            this.panel_kontrachent.Controls.Add(this.providerCheckBox);
-            this.panel_kontrachent.Controls.Add(this.customerCheckBox);
-            this.panel_kontrachent.Controls.Add(this.phraseKontrahenci);
-            this.panel_kontrachent.Controls.Add(this.dataGridView1);
-            this.panel_kontrachent.Controls.Add(this.filterKontrahenci);
-            this.panel_kontrachent.Controls.Add(this.delete_kontrachent);
-            this.panel_kontrachent.Controls.Add(this.update_kontrachent);
-            this.panel_kontrachent.Controls.Add(this.add_kontrahent);
-            this.panel_kontrachent.Controls.Add(this.label8);
-            this.panel_kontrachent.Controls.Add(this.label7);
-            this.panel_kontrachent.Controls.Add(this.label6);
-            this.panel_kontrachent.Controls.Add(this.label5);
-            this.panel_kontrachent.Controls.Add(this.label4);
-            this.panel_kontrachent.Controls.Add(this.label3);
-            this.panel_kontrachent.Controls.Add(this.label2);
-            this.panel_kontrachent.Controls.Add(this.label1);
-            this.panel_kontrachent.Controls.Add(this.textBox8);
-            this.panel_kontrachent.Controls.Add(this.textBox7);
-            this.panel_kontrachent.Controls.Add(this.textBox6);
-            this.panel_kontrachent.Controls.Add(this.textBox5);
-            this.panel_kontrachent.Controls.Add(this.textBox4);
-            this.panel_kontrachent.Controls.Add(this.textBox3);
-            this.panel_kontrachent.Controls.Add(this.textBox2);
-            this.panel_kontrachent.Controls.Add(this.textBox1);
-            this.panel_kontrachent.Location = new System.Drawing.Point(181, 56);
-            this.panel_kontrachent.Name = "panel_kontrachent";
-            this.panel_kontrachent.Size = new System.Drawing.Size(866, 587);
-            this.panel_kontrachent.TabIndex = 5;
+            this.kontrahenciPanel.Controls.Add(this.dataGridView1);
+            this.kontrahenciPanel.Controls.Add(this.potentialCheckBox);
+            this.kontrahenciPanel.Controls.Add(this.towaryPanel);
+            this.kontrahenciPanel.Controls.Add(this.partnerCheckBox);
+            this.kontrahenciPanel.Controls.Add(this.competitionCheckBox);
+            this.kontrahenciPanel.Controls.Add(this.providerCheckBox);
+            this.kontrahenciPanel.Controls.Add(this.customerCheckBox);
+            this.kontrahenciPanel.Controls.Add(this.phraseKontrahenci);
+            this.kontrahenciPanel.Controls.Add(this.filterKontrahenciComboBox);
+            this.kontrahenciPanel.Controls.Add(this.delete_kontrachent);
+            this.kontrahenciPanel.Controls.Add(this.update_kontrachent);
+            this.kontrahenciPanel.Controls.Add(this.add_kontrahent);
+            this.kontrahenciPanel.Controls.Add(this.label8);
+            this.kontrahenciPanel.Controls.Add(this.label7);
+            this.kontrahenciPanel.Controls.Add(this.label6);
+            this.kontrahenciPanel.Controls.Add(this.label5);
+            this.kontrahenciPanel.Controls.Add(this.label4);
+            this.kontrahenciPanel.Controls.Add(this.label3);
+            this.kontrahenciPanel.Controls.Add(this.label2);
+            this.kontrahenciPanel.Controls.Add(this.label1);
+            this.kontrahenciPanel.Controls.Add(this.textBox8);
+            this.kontrahenciPanel.Controls.Add(this.textBox7);
+            this.kontrahenciPanel.Controls.Add(this.textBox6);
+            this.kontrahenciPanel.Controls.Add(this.textBox5);
+            this.kontrahenciPanel.Controls.Add(this.textBox4);
+            this.kontrahenciPanel.Controls.Add(this.textBox3);
+            this.kontrahenciPanel.Controls.Add(this.textBox2);
+            this.kontrahenciPanel.Controls.Add(this.textBox1);
+            this.kontrahenciPanel.Location = new System.Drawing.Point(181, 56);
+            this.kontrahenciPanel.Name = "kontrahenciPanel";
+            this.kontrahenciPanel.Size = new System.Drawing.Size(866, 587);
+            this.kontrahenciPanel.TabIndex = 5;
+            this.kontrahenciPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.kontrahenciPanel_Paint);
             // 
-            // dataGridView1
+            // potentialCheckBox
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kntKodDataGridViewTextBoxColumn,
-            this.kntNazwa1DataGridViewTextBoxColumn,
-            this.kntUlicaDataGridViewTextBoxColumn,
-            this.kntNrDomuDataGridViewTextBoxColumn,
-            this.kntMiastoDataGridViewTextBoxColumn,
-            this.kntKodPocztowyDataGridViewTextBoxColumn,
-            this.kntTelefon1DataGridViewTextBoxColumn,
-            this.kntEmailDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.kontrahenciBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(833, 195);
-            this.dataGridView1.TabIndex = 20;
+            this.potentialCheckBox.AutoSize = true;
+            this.potentialCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Potencjalny", true));
+            this.potentialCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.potentialCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.potentialCheckBox.Location = new System.Drawing.Point(687, 268);
+            this.potentialCheckBox.Name = "potentialCheckBox";
+            this.potentialCheckBox.Size = new System.Drawing.Size(108, 24);
+            this.potentialCheckBox.TabIndex = 26;
+            this.potentialCheckBox.Text = "potencjalny";
+            this.potentialCheckBox.UseVisualStyleBackColor = true;
             // 
-            // filterKontrahenci
+            // towaryPanel
             // 
-            this.filterKontrahenci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.filterKontrahenci.FormattingEnabled = true;
-            this.filterKontrahenci.Items.AddRange(new object[] {
+            this.towaryPanel.Controls.Add(this.dataGridView2);
+            this.towaryPanel.Location = new System.Drawing.Point(806, 474);
+            this.towaryPanel.Name = "towaryPanel";
+            this.towaryPanel.Size = new System.Drawing.Size(866, 587);
+            this.towaryPanel.TabIndex = 6;
+            this.towaryPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.towaryPanel_Paint);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(853, 195);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // partnerCheckBox
+            // 
+            this.partnerCheckBox.AutoSize = true;
+            this.partnerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Partner", true));
+            this.partnerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.partnerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.partnerCheckBox.Location = new System.Drawing.Point(556, 268);
+            this.partnerCheckBox.Name = "partnerCheckBox";
+            this.partnerCheckBox.Size = new System.Drawing.Size(79, 24);
+            this.partnerCheckBox.TabIndex = 25;
+            this.partnerCheckBox.Text = "partner";
+            this.partnerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // competitionCheckBox
+            // 
+            this.competitionCheckBox.AutoSize = true;
+            this.competitionCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Konkurencja", true));
+            this.competitionCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.competitionCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.competitionCheckBox.Location = new System.Drawing.Point(394, 268);
+            this.competitionCheckBox.Name = "competitionCheckBox";
+            this.competitionCheckBox.Size = new System.Drawing.Size(114, 24);
+            this.competitionCheckBox.TabIndex = 24;
+            this.competitionCheckBox.Text = "konkurencja";
+            this.competitionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // providerCheckBox
+            // 
+            this.providerCheckBox.AutoSize = true;
+            this.providerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Dostawca", true));
+            this.providerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.providerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.providerCheckBox.Location = new System.Drawing.Point(240, 268);
+            this.providerCheckBox.Name = "providerCheckBox";
+            this.providerCheckBox.Size = new System.Drawing.Size(96, 24);
+            this.providerCheckBox.TabIndex = 23;
+            this.providerCheckBox.Text = "dostawca";
+            this.providerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // customerCheckBox
+            // 
+            this.customerCheckBox.AutoSize = true;
+            this.customerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Odbiorca", true));
+            this.customerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.customerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.customerCheckBox.Location = new System.Drawing.Point(87, 268);
+            this.customerCheckBox.Name = "customerCheckBox";
+            this.customerCheckBox.Size = new System.Drawing.Size(89, 24);
+            this.customerCheckBox.TabIndex = 22;
+            this.customerCheckBox.Text = "odbiorca";
+            this.customerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // phraseKontrahenci
+            // 
+            this.phraseKontrahenci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.phraseKontrahenci.Location = new System.Drawing.Point(169, 216);
+            this.phraseKontrahenci.Name = "phraseKontrahenci";
+            this.phraseKontrahenci.Size = new System.Drawing.Size(212, 22);
+            this.phraseKontrahenci.TabIndex = 21;
+            this.phraseKontrahenci.TextChanged += new System.EventHandler(this.phraseKontrahenci_TextChanged);
+            // 
+            // filterKontrahenciComboBox
+            // 
+            this.filterKontrahenciComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filterKontrahenciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.filterKontrahenciComboBox.FormattingEnabled = true;
+            this.filterKontrahenciComboBox.Items.AddRange(new object[] {
             "-każdy-",
             "odbiorca",
             "dostawca",
             "konkurencja",
             "partner",
             "potencjalny"});
-            this.filterKontrahenci.Location = new System.Drawing.Point(491, 216);
-            this.filterKontrahenci.Name = "filterKontrahenci";
-            this.filterKontrahenci.Size = new System.Drawing.Size(153, 24);
-            this.filterKontrahenci.TabIndex = 19;
+            this.filterKontrahenciComboBox.Location = new System.Drawing.Point(491, 216);
+            this.filterKontrahenciComboBox.Name = "filterKontrahenciComboBox";
+            this.filterKontrahenciComboBox.Size = new System.Drawing.Size(153, 24);
+            this.filterKontrahenciComboBox.TabIndex = 19;
+            this.filterKontrahenciComboBox.SelectedIndexChanged += new System.EventHandler(this.filterKontrahenci_SelectedIndexChanged);
             // 
             // delete_kontrachent
             // 
@@ -451,65 +530,73 @@
             this.textBox1.Size = new System.Drawing.Size(145, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // contextMenuStrip1
+            // dataGridView1
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dataGridView1.DataSource = this.kontrahenciBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(844, 150);
+            this.dataGridView1.TabIndex = 27;
             // 
-            // phraseKontrahenci
+            // dataGridViewTextBoxColumn1
             // 
-            this.phraseKontrahenci.Location = new System.Drawing.Point(169, 216);
-            this.phraseKontrahenci.Name = "phraseKontrahenci";
-            this.phraseKontrahenci.Size = new System.Drawing.Size(212, 20);
-            this.phraseKontrahenci.TabIndex = 21;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Knt_Kod";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Knt_Kod";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // kntKodDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.kntKodDataGridViewTextBoxColumn.DataPropertyName = "Knt_Kod";
-            this.kntKodDataGridViewTextBoxColumn.HeaderText = "Knt_Kod";
-            this.kntKodDataGridViewTextBoxColumn.Name = "kntKodDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Knt_Nazwa1";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Knt_Nazwa1";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // kntNazwa1DataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.kntNazwa1DataGridViewTextBoxColumn.DataPropertyName = "Knt_Nazwa1";
-            this.kntNazwa1DataGridViewTextBoxColumn.HeaderText = "Knt_Nazwa1";
-            this.kntNazwa1DataGridViewTextBoxColumn.Name = "kntNazwa1DataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Knt_Ulica";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Knt_Ulica";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // kntUlicaDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.kntUlicaDataGridViewTextBoxColumn.DataPropertyName = "Knt_Ulica";
-            this.kntUlicaDataGridViewTextBoxColumn.HeaderText = "Knt_Ulica";
-            this.kntUlicaDataGridViewTextBoxColumn.Name = "kntUlicaDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Knt_NrDomu";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Knt_NrDomu";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // kntNrDomuDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.kntNrDomuDataGridViewTextBoxColumn.DataPropertyName = "Knt_NrDomu";
-            this.kntNrDomuDataGridViewTextBoxColumn.HeaderText = "Knt_NrDomu";
-            this.kntNrDomuDataGridViewTextBoxColumn.Name = "kntNrDomuDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Knt_Miasto";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Knt_Miasto";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // kntMiastoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.kntMiastoDataGridViewTextBoxColumn.DataPropertyName = "Knt_Miasto";
-            this.kntMiastoDataGridViewTextBoxColumn.HeaderText = "Knt_Miasto";
-            this.kntMiastoDataGridViewTextBoxColumn.Name = "kntMiastoDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Knt_KodPocztowy";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Knt_KodPocztowy";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // kntKodPocztowyDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.kntKodPocztowyDataGridViewTextBoxColumn.DataPropertyName = "Knt_KodPocztowy";
-            this.kntKodPocztowyDataGridViewTextBoxColumn.HeaderText = "Knt_KodPocztowy";
-            this.kntKodPocztowyDataGridViewTextBoxColumn.Name = "kntKodPocztowyDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Knt_Telefon1";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Knt_Telefon1";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // kntTelefon1DataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn8
             // 
-            this.kntTelefon1DataGridViewTextBoxColumn.DataPropertyName = "Knt_Telefon1";
-            this.kntTelefon1DataGridViewTextBoxColumn.HeaderText = "Knt_Telefon1";
-            this.kntTelefon1DataGridViewTextBoxColumn.Name = "kntTelefon1DataGridViewTextBoxColumn";
-            // 
-            // kntEmailDataGridViewTextBoxColumn
-            // 
-            this.kntEmailDataGridViewTextBoxColumn.DataPropertyName = "Knt_Email";
-            this.kntEmailDataGridViewTextBoxColumn.HeaderText = "Knt_Email";
-            this.kntEmailDataGridViewTextBoxColumn.Name = "kntEmailDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Knt_Email";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Knt_Email";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // kontrahenciBindingSource
             // 
@@ -525,78 +612,13 @@
             // 
             this.kontrahenciTableAdapter.ClearBeforeFill = true;
             // 
-            // customerCheckBox
-            // 
-            this.customerCheckBox.AutoSize = true;
-            this.customerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Odbiorca", true));
-            this.customerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.customerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.customerCheckBox.Location = new System.Drawing.Point(87, 268);
-            this.customerCheckBox.Name = "customerCheckBox";
-            this.customerCheckBox.Size = new System.Drawing.Size(89, 24);
-            this.customerCheckBox.TabIndex = 22;
-            this.customerCheckBox.Text = "odbiorca";
-            this.customerCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // providerCheckBox
-            // 
-            this.providerCheckBox.AutoSize = true;
-            this.providerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Dostawca", true));
-            this.providerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.providerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.providerCheckBox.Location = new System.Drawing.Point(240, 268);
-            this.providerCheckBox.Name = "providerCheckBox";
-            this.providerCheckBox.Size = new System.Drawing.Size(96, 24);
-            this.providerCheckBox.TabIndex = 23;
-            this.providerCheckBox.Text = "dostawca";
-            this.providerCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // CompetitionCheckBox
-            // 
-            this.CompetitionCheckBox.AutoSize = true;
-            this.CompetitionCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Konkurencja", true));
-            this.CompetitionCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CompetitionCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CompetitionCheckBox.Location = new System.Drawing.Point(394, 268);
-            this.CompetitionCheckBox.Name = "CompetitionCheckBox";
-            this.CompetitionCheckBox.Size = new System.Drawing.Size(114, 24);
-            this.CompetitionCheckBox.TabIndex = 24;
-            this.CompetitionCheckBox.Text = "konkurencja";
-            this.CompetitionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // partnerCheckBox
-            // 
-            this.partnerCheckBox.AutoSize = true;
-            this.partnerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Partner", true));
-            this.partnerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.partnerCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.partnerCheckBox.Location = new System.Drawing.Point(556, 268);
-            this.partnerCheckBox.Name = "partnerCheckBox";
-            this.partnerCheckBox.Size = new System.Drawing.Size(79, 24);
-            this.partnerCheckBox.TabIndex = 25;
-            this.partnerCheckBox.Text = "partner";
-            this.partnerCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // potentialCheckBox
-            // 
-            this.potentialCheckBox.AutoSize = true;
-            this.potentialCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.kontrahenciBindingSource, "Knt_Rodzaj_Potencjalny", true));
-            this.potentialCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.potentialCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.potentialCheckBox.Location = new System.Drawing.Point(687, 268);
-            this.potentialCheckBox.Name = "potentialCheckBox";
-            this.potentialCheckBox.Size = new System.Drawing.Size(108, 24);
-            this.potentialCheckBox.TabIndex = 26;
-            this.potentialCheckBox.Text = "potencjalny";
-            this.potentialCheckBox.UseVisualStyleBackColor = true;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(1)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(1052, 655);
-            this.Controls.Add(this.panel_kontrachent);
+            this.Controls.Add(this.kontrahenciPanel);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.logoutButton);
@@ -610,8 +632,10 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseUp);
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.panel_kontrachent.ResumeLayout(false);
-            this.panel_kontrachent.PerformLayout();
+            this.kontrahenciPanel.ResumeLayout(false);
+            this.kontrahenciPanel.PerformLayout();
+            this.towaryPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).EndInit();
@@ -624,12 +648,12 @@
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button kontrahenciButton;
+        private System.Windows.Forms.Button towaryButton;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Panel panel_kontrachent;
+        private System.Windows.Forms.Panel kontrahenciPanel;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
@@ -649,11 +673,7 @@
         private System.Windows.Forms.Button add_kontrahent;
         private System.Windows.Forms.Button update_kontrachent;
         private System.Windows.Forms.Button delete_kontrachent;
-        private System.Windows.Forms.ComboBox filterKontrahenci;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private CDN_SEDDataSet2 cDN_SEDDataSet;
-        private System.Windows.Forms.BindingSource kontrahenciBindingSource;
-        private CDN_SEDDataSet2TableAdapters.KontrahenciTableAdapter kontrahenciTableAdapter;
+        private System.Windows.Forms.ComboBox filterKontrahenciComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntKodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntNazwa1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntUlicaDataGridViewTextBoxColumn;
@@ -663,11 +683,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kntTelefon1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kntEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox phraseKontrahenci;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.CheckBox customerCheckBox;
         private System.Windows.Forms.CheckBox providerCheckBox;
         private System.Windows.Forms.CheckBox potentialCheckBox;
         private System.Windows.Forms.CheckBox partnerCheckBox;
-        private System.Windows.Forms.CheckBox CompetitionCheckBox;
+        private System.Windows.Forms.CheckBox competitionCheckBox;
+        private System.Windows.Forms.Panel towaryPanel;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private CDN_SEDDataSet cDN_SEDDataSet;
+        private System.Windows.Forms.BindingSource kontrahenciBindingSource;
+        private CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter kontrahenciTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

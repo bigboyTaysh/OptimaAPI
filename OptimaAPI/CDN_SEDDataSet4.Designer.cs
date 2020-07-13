@@ -20,17 +20,19 @@ namespace OptimaAPI {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CDN_SEDDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CDN_SEDDataSet4")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CDN_SEDDataSet1 : global::System.Data.DataSet {
+    public partial class CDN_SEDDataSet4 : global::System.Data.DataSet {
         
-        private KontrahenciDataTable tableKontrahenci;
+        private TowaryDataTable tableTowary;
+        
+        private TwrCenyDataTable tableTwrCeny;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CDN_SEDDataSet1() {
+        public CDN_SEDDataSet4() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +43,7 @@ namespace OptimaAPI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CDN_SEDDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CDN_SEDDataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +56,11 @@ namespace OptimaAPI {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Kontrahenci"] != null)) {
-                    base.Tables.Add(new KontrahenciDataTable(ds.Tables["Kontrahenci"]));
+                if ((ds.Tables["Towary"] != null)) {
+                    base.Tables.Add(new TowaryDataTable(ds.Tables["Towary"]));
+                }
+                if ((ds.Tables["TwrCeny"] != null)) {
+                    base.Tables.Add(new TwrCenyDataTable(ds.Tables["TwrCeny"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +84,19 @@ namespace OptimaAPI {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public KontrahenciDataTable Kontrahenci {
+        public TowaryDataTable Towary {
             get {
-                return this.tableKontrahenci;
+                return this.tableTowary;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TwrCenyDataTable TwrCeny {
+            get {
+                return this.tableTwrCeny;
             }
         }
         
@@ -127,7 +142,7 @@ namespace OptimaAPI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CDN_SEDDataSet1 cln = ((CDN_SEDDataSet1)(base.Clone()));
+            CDN_SEDDataSet4 cln = ((CDN_SEDDataSet4)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +167,11 @@ namespace OptimaAPI {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Kontrahenci"] != null)) {
-                    base.Tables.Add(new KontrahenciDataTable(ds.Tables["Kontrahenci"]));
+                if ((ds.Tables["Towary"] != null)) {
+                    base.Tables.Add(new TowaryDataTable(ds.Tables["Towary"]));
+                }
+                if ((ds.Tables["TwrCeny"] != null)) {
+                    base.Tables.Add(new TwrCenyDataTable(ds.Tables["TwrCeny"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +206,16 @@ namespace OptimaAPI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableKontrahenci = ((KontrahenciDataTable)(base.Tables["Kontrahenci"]));
+            this.tableTowary = ((TowaryDataTable)(base.Tables["Towary"]));
             if ((initTable == true)) {
-                if ((this.tableKontrahenci != null)) {
-                    this.tableKontrahenci.InitVars();
+                if ((this.tableTowary != null)) {
+                    this.tableTowary.InitVars();
+                }
+            }
+            this.tableTwrCeny = ((TwrCenyDataTable)(base.Tables["TwrCeny"]));
+            if ((initTable == true)) {
+                if ((this.tableTwrCeny != null)) {
+                    this.tableTwrCeny.InitVars();
                 }
             }
         }
@@ -199,18 +223,26 @@ namespace OptimaAPI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CDN_SEDDataSet1";
+            this.DataSetName = "CDN_SEDDataSet4";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CDN_SEDDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/CDN_SEDDataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableKontrahenci = new KontrahenciDataTable();
-            base.Tables.Add(this.tableKontrahenci);
+            this.tableTowary = new TowaryDataTable();
+            base.Tables.Add(this.tableTowary);
+            this.tableTwrCeny = new TwrCenyDataTable();
+            base.Tables.Add(this.tableTwrCeny);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeKontrahenci() {
+        private bool ShouldSerializeTowary() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeTwrCeny() {
             return false;
         }
         
@@ -225,7 +257,7 @@ namespace OptimaAPI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CDN_SEDDataSet1 ds = new CDN_SEDDataSet1();
+            CDN_SEDDataSet4 ds = new CDN_SEDDataSet4();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +302,32 @@ namespace OptimaAPI {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void KontrahenciRowChangeEventHandler(object sender, KontrahenciRowChangeEvent e);
+        public delegate void TowaryRowChangeEventHandler(object sender, TowaryRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void TwrCenyRowChangeEventHandler(object sender, TwrCenyRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class KontrahenciDataTable : global::System.Data.TypedTableBase<KontrahenciRow> {
+        public partial class TowaryDataTable : global::System.Data.TypedTableBase<TowaryRow> {
             
-            private global::System.Data.DataColumn columnKnt_Kod;
+            private global::System.Data.DataColumn columnTwr_Kod;
             
-            private global::System.Data.DataColumn columnKnt_Nazwa1;
+            private global::System.Data.DataColumn columnTwr_Nazwa;
             
-            private global::System.Data.DataColumn columnKnt_Ulica;
+            private global::System.Data.DataColumn columnTwr_JM;
             
-            private global::System.Data.DataColumn columnKnt_NrDomu;
+            private global::System.Data.DataColumn columnTwr_Waluta;
             
-            private global::System.Data.DataColumn columnKnt_Miasto;
-            
-            private global::System.Data.DataColumn columnKnt_KodPocztowy;
-            
-            private global::System.Data.DataColumn columnKnt_Telefon1;
-            
-            private global::System.Data.DataColumn columnKnt_Email;
+            private global::System.Data.DataColumn columnTwr_Stawka;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciDataTable() {
-                this.TableName = "Kontrahenci";
+            public TowaryDataTable() {
+                this.TableName = "Towary";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +335,7 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal KontrahenciDataTable(global::System.Data.DataTable table) {
+            internal TowaryDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,72 +352,48 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected KontrahenciDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TowaryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_KodColumn {
+            public global::System.Data.DataColumn Twr_KodColumn {
                 get {
-                    return this.columnKnt_Kod;
+                    return this.columnTwr_Kod;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_Nazwa1Column {
+            public global::System.Data.DataColumn Twr_NazwaColumn {
                 get {
-                    return this.columnKnt_Nazwa1;
+                    return this.columnTwr_Nazwa;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_UlicaColumn {
+            public global::System.Data.DataColumn Twr_JMColumn {
                 get {
-                    return this.columnKnt_Ulica;
+                    return this.columnTwr_JM;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_NrDomuColumn {
+            public global::System.Data.DataColumn Twr_WalutaColumn {
                 get {
-                    return this.columnKnt_NrDomu;
+                    return this.columnTwr_Waluta;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_MiastoColumn {
+            public global::System.Data.DataColumn Twr_StawkaColumn {
                 get {
-                    return this.columnKnt_Miasto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_KodPocztowyColumn {
-                get {
-                    return this.columnKnt_KodPocztowy;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_Telefon1Column {
-                get {
-                    return this.columnKnt_Telefon1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_EmailColumn {
-                get {
-                    return this.columnKnt_Email;
+                    return this.columnTwr_Stawka;
                 }
             }
             
@@ -403,52 +408,49 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciRow this[int index] {
+            public TowaryRow this[int index] {
                 get {
-                    return ((KontrahenciRow)(this.Rows[index]));
+                    return ((TowaryRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KontrahenciRowChangeEventHandler KontrahenciRowChanging;
+            public event TowaryRowChangeEventHandler TowaryRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KontrahenciRowChangeEventHandler KontrahenciRowChanged;
+            public event TowaryRowChangeEventHandler TowaryRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KontrahenciRowChangeEventHandler KontrahenciRowDeleting;
+            public event TowaryRowChangeEventHandler TowaryRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KontrahenciRowChangeEventHandler KontrahenciRowDeleted;
+            public event TowaryRowChangeEventHandler TowaryRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddKontrahenciRow(KontrahenciRow row) {
+            public void AddTowaryRow(TowaryRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciRow AddKontrahenciRow(string Knt_Kod, string Knt_Nazwa1, string Knt_Ulica, string Knt_NrDomu, string Knt_Miasto, string Knt_KodPocztowy, string Knt_Telefon1, string Knt_Email) {
-                KontrahenciRow rowKontrahenciRow = ((KontrahenciRow)(this.NewRow()));
+            public TowaryRow AddTowaryRow(string Twr_Kod, string Twr_Nazwa, string Twr_JM, string Twr_Waluta, decimal Twr_Stawka) {
+                TowaryRow rowTowaryRow = ((TowaryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Knt_Kod,
-                        Knt_Nazwa1,
-                        Knt_Ulica,
-                        Knt_NrDomu,
-                        Knt_Miasto,
-                        Knt_KodPocztowy,
-                        Knt_Telefon1,
-                        Knt_Email};
-                rowKontrahenciRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowKontrahenciRow);
-                return rowKontrahenciRow;
+                        Twr_Kod,
+                        Twr_Nazwa,
+                        Twr_JM,
+                        Twr_Waluta,
+                        Twr_Stawka};
+                rowTowaryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTowaryRow);
+                return rowTowaryRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                KontrahenciDataTable cln = ((KontrahenciDataTable)(base.Clone()));
+                TowaryDataTable cln = ((TowaryDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -456,83 +458,67 @@ namespace OptimaAPI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new KontrahenciDataTable();
+                return new TowaryDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnKnt_Kod = base.Columns["Knt_Kod"];
-                this.columnKnt_Nazwa1 = base.Columns["Knt_Nazwa1"];
-                this.columnKnt_Ulica = base.Columns["Knt_Ulica"];
-                this.columnKnt_NrDomu = base.Columns["Knt_NrDomu"];
-                this.columnKnt_Miasto = base.Columns["Knt_Miasto"];
-                this.columnKnt_KodPocztowy = base.Columns["Knt_KodPocztowy"];
-                this.columnKnt_Telefon1 = base.Columns["Knt_Telefon1"];
-                this.columnKnt_Email = base.Columns["Knt_Email"];
+                this.columnTwr_Kod = base.Columns["Twr_Kod"];
+                this.columnTwr_Nazwa = base.Columns["Twr_Nazwa"];
+                this.columnTwr_JM = base.Columns["Twr_JM"];
+                this.columnTwr_Waluta = base.Columns["Twr_Waluta"];
+                this.columnTwr_Stawka = base.Columns["Twr_Stawka"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnKnt_Kod = new global::System.Data.DataColumn("Knt_Kod", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Kod);
-                this.columnKnt_Nazwa1 = new global::System.Data.DataColumn("Knt_Nazwa1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Nazwa1);
-                this.columnKnt_Ulica = new global::System.Data.DataColumn("Knt_Ulica", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Ulica);
-                this.columnKnt_NrDomu = new global::System.Data.DataColumn("Knt_NrDomu", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_NrDomu);
-                this.columnKnt_Miasto = new global::System.Data.DataColumn("Knt_Miasto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Miasto);
-                this.columnKnt_KodPocztowy = new global::System.Data.DataColumn("Knt_KodPocztowy", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_KodPocztowy);
-                this.columnKnt_Telefon1 = new global::System.Data.DataColumn("Knt_Telefon1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Telefon1);
-                this.columnKnt_Email = new global::System.Data.DataColumn("Knt_Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Email);
-                this.columnKnt_Kod.AllowDBNull = false;
-                this.columnKnt_Kod.MaxLength = 20;
-                this.columnKnt_Nazwa1.AllowDBNull = false;
-                this.columnKnt_Nazwa1.MaxLength = 50;
-                this.columnKnt_Ulica.AllowDBNull = false;
-                this.columnKnt_Ulica.MaxLength = 40;
-                this.columnKnt_NrDomu.AllowDBNull = false;
-                this.columnKnt_NrDomu.MaxLength = 10;
-                this.columnKnt_Miasto.AllowDBNull = false;
-                this.columnKnt_Miasto.MaxLength = 40;
-                this.columnKnt_KodPocztowy.AllowDBNull = false;
-                this.columnKnt_KodPocztowy.MaxLength = 10;
-                this.columnKnt_Telefon1.AllowDBNull = false;
-                this.columnKnt_Telefon1.MaxLength = 20;
-                this.columnKnt_Email.AllowDBNull = false;
-                this.columnKnt_Email.MaxLength = 127;
+                this.columnTwr_Kod = new global::System.Data.DataColumn("Twr_Kod", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTwr_Kod);
+                this.columnTwr_Nazwa = new global::System.Data.DataColumn("Twr_Nazwa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTwr_Nazwa);
+                this.columnTwr_JM = new global::System.Data.DataColumn("Twr_JM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTwr_JM);
+                this.columnTwr_Waluta = new global::System.Data.DataColumn("Twr_Waluta", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTwr_Waluta);
+                this.columnTwr_Stawka = new global::System.Data.DataColumn("Twr_Stawka", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTwr_Stawka);
+                this.columnTwr_Kod.AllowDBNull = false;
+                this.columnTwr_Kod.MaxLength = 50;
+                this.columnTwr_Nazwa.AllowDBNull = false;
+                this.columnTwr_Nazwa.MaxLength = 255;
+                this.columnTwr_JM.AllowDBNull = false;
+                this.columnTwr_JM.MaxLength = 20;
+                this.columnTwr_Waluta.AllowDBNull = false;
+                this.columnTwr_Waluta.MaxLength = 3;
+                this.columnTwr_Stawka.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciRow NewKontrahenciRow() {
-                return ((KontrahenciRow)(this.NewRow()));
+            public TowaryRow NewTowaryRow() {
+                return ((TowaryRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new KontrahenciRow(builder);
+                return new TowaryRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(KontrahenciRow);
+                return typeof(TowaryRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.KontrahenciRowChanged != null)) {
-                    this.KontrahenciRowChanged(this, new KontrahenciRowChangeEvent(((KontrahenciRow)(e.Row)), e.Action));
+                if ((this.TowaryRowChanged != null)) {
+                    this.TowaryRowChanged(this, new TowaryRowChangeEvent(((TowaryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -540,8 +526,8 @@ namespace OptimaAPI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.KontrahenciRowChanging != null)) {
-                    this.KontrahenciRowChanging(this, new KontrahenciRowChangeEvent(((KontrahenciRow)(e.Row)), e.Action));
+                if ((this.TowaryRowChanging != null)) {
+                    this.TowaryRowChanging(this, new TowaryRowChangeEvent(((TowaryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -549,8 +535,8 @@ namespace OptimaAPI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.KontrahenciRowDeleted != null)) {
-                    this.KontrahenciRowDeleted(this, new KontrahenciRowChangeEvent(((KontrahenciRow)(e.Row)), e.Action));
+                if ((this.TowaryRowDeleted != null)) {
+                    this.TowaryRowDeleted(this, new TowaryRowChangeEvent(((TowaryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -558,14 +544,14 @@ namespace OptimaAPI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.KontrahenciRowDeleting != null)) {
-                    this.KontrahenciRowDeleting(this, new KontrahenciRowChangeEvent(((KontrahenciRow)(e.Row)), e.Action));
+                if ((this.TowaryRowDeleting != null)) {
+                    this.TowaryRowDeleting(this, new TowaryRowChangeEvent(((TowaryRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveKontrahenciRow(KontrahenciRow row) {
+            public void RemoveTowaryRow(TowaryRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -574,7 +560,7 @@ namespace OptimaAPI {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CDN_SEDDataSet1 ds = new CDN_SEDDataSet1();
+                CDN_SEDDataSet4 ds = new CDN_SEDDataSet4();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -592,7 +578,255 @@ namespace OptimaAPI {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "KontrahenciDataTable";
+                attribute2.FixedValue = "TowaryDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TwrCenyDataTable : global::System.Data.TypedTableBase<TwrCenyRow> {
+            
+            private global::System.Data.DataColumn columnTwC_Wartosc;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public TwrCenyDataTable() {
+                this.TableName = "TwrCeny";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal TwrCenyDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected TwrCenyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TwC_WartoscColumn {
+                get {
+                    return this.columnTwC_Wartosc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public TwrCenyRow this[int index] {
+                get {
+                    return ((TwrCenyRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event TwrCenyRowChangeEventHandler TwrCenyRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event TwrCenyRowChangeEventHandler TwrCenyRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event TwrCenyRowChangeEventHandler TwrCenyRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event TwrCenyRowChangeEventHandler TwrCenyRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddTwrCenyRow(TwrCenyRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public TwrCenyRow AddTwrCenyRow(decimal TwC_Wartosc) {
+                TwrCenyRow rowTwrCenyRow = ((TwrCenyRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TwC_Wartosc};
+                rowTwrCenyRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTwrCenyRow);
+                return rowTwrCenyRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TwrCenyDataTable cln = ((TwrCenyDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TwrCenyDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnTwC_Wartosc = base.Columns["TwC_Wartosc"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnTwC_Wartosc = new global::System.Data.DataColumn("TwC_Wartosc", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTwC_Wartosc);
+                this.columnTwC_Wartosc.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public TwrCenyRow NewTwrCenyRow() {
+                return ((TwrCenyRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TwrCenyRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TwrCenyRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TwrCenyRowChanged != null)) {
+                    this.TwrCenyRowChanged(this, new TwrCenyRowChangeEvent(((TwrCenyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TwrCenyRowChanging != null)) {
+                    this.TwrCenyRowChanging(this, new TwrCenyRowChangeEvent(((TwrCenyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TwrCenyRowDeleted != null)) {
+                    this.TwrCenyRowDeleted(this, new TwrCenyRowChangeEvent(((TwrCenyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TwrCenyRowDeleting != null)) {
+                    this.TwrCenyRowDeleting(this, new TwrCenyRowChangeEvent(((TwrCenyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveTwrCenyRow(TwrCenyRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                CDN_SEDDataSet4 ds = new CDN_SEDDataSet4();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TwrCenyDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -636,102 +870,95 @@ namespace OptimaAPI {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class KontrahenciRow : global::System.Data.DataRow {
+        public partial class TowaryRow : global::System.Data.DataRow {
             
-            private KontrahenciDataTable tableKontrahenci;
+            private TowaryDataTable tableTowary;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal KontrahenciRow(global::System.Data.DataRowBuilder rb) : 
+            internal TowaryRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableKontrahenci = ((KontrahenciDataTable)(this.Table));
+                this.tableTowary = ((TowaryDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Kod {
+            public string Twr_Kod {
                 get {
-                    return ((string)(this[this.tableKontrahenci.Knt_KodColumn]));
+                    return ((string)(this[this.tableTowary.Twr_KodColumn]));
                 }
                 set {
-                    this[this.tableKontrahenci.Knt_KodColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Nazwa1 {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_Nazwa1Column]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_Nazwa1Column] = value;
+                    this[this.tableTowary.Twr_KodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Ulica {
+            public string Twr_Nazwa {
                 get {
-                    return ((string)(this[this.tableKontrahenci.Knt_UlicaColumn]));
+                    return ((string)(this[this.tableTowary.Twr_NazwaColumn]));
                 }
                 set {
-                    this[this.tableKontrahenci.Knt_UlicaColumn] = value;
+                    this[this.tableTowary.Twr_NazwaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_NrDomu {
+            public string Twr_JM {
                 get {
-                    return ((string)(this[this.tableKontrahenci.Knt_NrDomuColumn]));
+                    return ((string)(this[this.tableTowary.Twr_JMColumn]));
                 }
                 set {
-                    this[this.tableKontrahenci.Knt_NrDomuColumn] = value;
+                    this[this.tableTowary.Twr_JMColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Miasto {
+            public string Twr_Waluta {
                 get {
-                    return ((string)(this[this.tableKontrahenci.Knt_MiastoColumn]));
+                    return ((string)(this[this.tableTowary.Twr_WalutaColumn]));
                 }
                 set {
-                    this[this.tableKontrahenci.Knt_MiastoColumn] = value;
+                    this[this.tableTowary.Twr_WalutaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_KodPocztowy {
+            public decimal Twr_Stawka {
                 get {
-                    return ((string)(this[this.tableKontrahenci.Knt_KodPocztowyColumn]));
+                    return ((decimal)(this[this.tableTowary.Twr_StawkaColumn]));
                 }
                 set {
-                    this[this.tableKontrahenci.Knt_KodPocztowyColumn] = value;
+                    this[this.tableTowary.Twr_StawkaColumn] = value;
                 }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TwrCenyRow : global::System.Data.DataRow {
+            
+            private TwrCenyDataTable tableTwrCeny;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal TwrCenyRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTwrCeny = ((TwrCenyDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Telefon1 {
+            public decimal TwC_Wartosc {
                 get {
-                    return ((string)(this[this.tableKontrahenci.Knt_Telefon1Column]));
+                    return ((decimal)(this[this.tableTwrCeny.TwC_WartoscColumn]));
                 }
                 set {
-                    this[this.tableKontrahenci.Knt_Telefon1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Email {
-                get {
-                    return ((string)(this[this.tableKontrahenci.Knt_EmailColumn]));
-                }
-                set {
-                    this[this.tableKontrahenci.Knt_EmailColumn] = value;
+                    this[this.tableTwrCeny.TwC_WartoscColumn] = value;
                 }
             }
         }
@@ -740,22 +967,56 @@ namespace OptimaAPI {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class KontrahenciRowChangeEvent : global::System.EventArgs {
+        public class TowaryRowChangeEvent : global::System.EventArgs {
             
-            private KontrahenciRow eventRow;
+            private TowaryRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciRowChangeEvent(KontrahenciRow row, global::System.Data.DataRowAction action) {
+            public TowaryRowChangeEvent(TowaryRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciRow Row {
+            public TowaryRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class TwrCenyRowChangeEvent : global::System.EventArgs {
+            
+            private TwrCenyRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public TwrCenyRowChangeEvent(TwrCenyRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public TwrCenyRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -771,7 +1032,7 @@ namespace OptimaAPI {
         }
     }
 }
-namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
+namespace OptimaAPI.CDN_SEDDataSet4TableAdapters {
     
     
     /// <summary>
@@ -783,7 +1044,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class KontrahenciTableAdapter : global::System.ComponentModel.Component {
+    public partial class TowaryTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -797,7 +1058,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public KontrahenciTableAdapter() {
+        public TowaryTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -894,15 +1155,12 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Kontrahenci";
-            tableMapping.ColumnMappings.Add("Knt_Kod", "Knt_Kod");
-            tableMapping.ColumnMappings.Add("Knt_Nazwa1", "Knt_Nazwa1");
-            tableMapping.ColumnMappings.Add("Knt_Ulica", "Knt_Ulica");
-            tableMapping.ColumnMappings.Add("Knt_NrDomu", "Knt_NrDomu");
-            tableMapping.ColumnMappings.Add("Knt_Miasto", "Knt_Miasto");
-            tableMapping.ColumnMappings.Add("Knt_KodPocztowy", "Knt_KodPocztowy");
-            tableMapping.ColumnMappings.Add("Knt_Telefon1", "Knt_Telefon1");
-            tableMapping.ColumnMappings.Add("Knt_Email", "Knt_Email");
+            tableMapping.DataSetTable = "Towary";
+            tableMapping.ColumnMappings.Add("Twr_Kod", "Twr_Kod");
+            tableMapping.ColumnMappings.Add("Twr_Nazwa", "Twr_Nazwa");
+            tableMapping.ColumnMappings.Add("Twr_JM", "Twr_JM");
+            tableMapping.ColumnMappings.Add("Twr_Waluta", "Twr_Waluta");
+            tableMapping.ColumnMappings.Add("Twr_Stawka", "Twr_Stawka");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -919,8 +1177,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Knt_Kod, Knt_Nazwa1, Knt_Ulica, Knt_NrDomu, Knt_Miasto, Knt_KodPocztowy, K" +
-                "nt_Telefon1, Knt_Email FROM CDN.Kontrahenci";
+            this._commandCollection[0].CommandText = "SELECT Twr_Kod, Twr_Nazwa, Twr_JM, Twr_Waluta, Twr_Stawka FROM CDN.Towary";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -928,7 +1185,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CDN_SEDDataSet1.KontrahenciDataTable dataTable) {
+        public virtual int Fill(CDN_SEDDataSet4.TowaryDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -941,9 +1198,176 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CDN_SEDDataSet1.KontrahenciDataTable GetData() {
+        public virtual CDN_SEDDataSet4.TowaryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CDN_SEDDataSet1.KontrahenciDataTable dataTable = new CDN_SEDDataSet1.KontrahenciDataTable();
+            CDN_SEDDataSet4.TowaryDataTable dataTable = new CDN_SEDDataSet4.TowaryDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class TwrCenyTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public TwrCenyTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "TwrCeny";
+            tableMapping.ColumnMappings.Add("TwC_Wartosc", "TwC_Wartosc");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::OptimaAPI.Properties.Settings.Default.CDN_SEDConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT TwC_Wartosc FROM CDN.TwrCeny";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(CDN_SEDDataSet4.TwrCenyDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual CDN_SEDDataSet4.TwrCenyDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            CDN_SEDDataSet4.TwrCenyDataTable dataTable = new CDN_SEDDataSet4.TwrCenyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1017,7 +1441,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(CDN_SEDDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CDN_SEDDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1027,7 +1451,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(CDN_SEDDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CDN_SEDDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1037,7 +1461,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(CDN_SEDDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CDN_SEDDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1071,7 +1495,7 @@ namespace OptimaAPI.CDN_SEDDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(CDN_SEDDataSet1 dataSet) {
+        public virtual int UpdateAll(CDN_SEDDataSet4 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

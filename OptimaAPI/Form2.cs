@@ -23,7 +23,6 @@ namespace OptimaAPI
 
         public IApplication Application { get; set; }
         public ILogin Login { get; set; }
-
         public Form2(IApplication application, ILogin login)
         {
             Application = application;
@@ -53,6 +52,15 @@ namespace OptimaAPI
             e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
                             this.DisplayRectangle);
         }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet.Kontrahenci' table. You can move, or remove it, as needed.
+            //this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet6.Towary' table. You can move, or remove it, as needed.
+            //this.towaryTableAdapter.Fill(this.cDN_SEDDataSet6.Towary);
+            filterKontrahenciComboBox.SelectedIndex = 0;
+            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+        }
         private void Form2_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -71,15 +79,6 @@ namespace OptimaAPI
         {
             dragging = false;
         }
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'cDN_SEDDataSet.Kontrahenci' table. You can move, or remove it, as needed.
-            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
-
-            dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.RowHeadersWidth = 25;
-        }
         private void ChangeNameOfKontrachenciColumns()
         {
             this.dataGridView1.Columns[0].HeaderText = "Kod";
@@ -94,20 +93,38 @@ namespace OptimaAPI
         #endregion
 
         #region menu
-        private void button3_Click(object sender, EventArgs e)
+        private void kontrahenciButton_Click(object sender, EventArgs e)
         {
-            //panel2.Visible = false;
-            panel_kontrachent.Visible = true;
+            kontrahenciPanel.Visible = true;
+            towaryPanel.Visible = false;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void towaryButton_Click(object sender, EventArgs e)
         {
-            panel_kontrachent.Visible = false;
-            //panel2.Visible = true;
+            kontrahenciPanel.Visible = false;
+            towaryPanel.Visible = true;
         }
         #endregion
 
-        #region Kontrahent
+        #region kontrahenciPanel
+        private void kontrahenciPanel_Paint(object sender, PaintEventArgs e)
+        {
+            dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.RowHeadersWidth = 25;
+            dataGridView1.Columns[0].ReadOnly = true;
+        }
+        #endregion
+
+        #region towaryPanel
+        private void towaryPanel_Paint(object sender, PaintEventArgs e)
+        {
+            //this.towaryTableAdapter1.Fill(this.cdN_SEDDataSet51.Towary);
+
+        }
+        #endregion
+
+        #region kontrahent
         private void add_kontrahent_Click(object sender, EventArgs e)
         {
             AdoSession session = Login.CreateSession();
@@ -125,8 +142,11 @@ namespace OptimaAPI
             adres.KodPocztowy = textBox6.Text;
             kontrahent.Telefon = textBox7.Text;
             kontrahent.Email = textBox8.Text;
-            
-            MessageBox.Show()
+            kontrahent.Rodzaj_Odbiorca = customerCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Dostawca = providerCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Konkurencja = competitionCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Partner = partnerCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Potencjalny = potentialCheckBox.Checked ? 1 : 0;
 
             try
             {
@@ -135,10 +155,9 @@ namespace OptimaAPI
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
-
         private void update_kontrahent_Click(object sender, EventArgs e)
         {
             AdoSession session = Login.CreateSession();
@@ -156,19 +175,22 @@ namespace OptimaAPI
             adres.KodPocztowy = textBox6.Text;
             kontrahent.Telefon = textBox7.Text;
             kontrahent.Email = textBox8.Text;
+            kontrahent.Rodzaj_Odbiorca = customerCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Dostawca = providerCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Konkurencja = competitionCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Partner = partnerCheckBox.Checked ? 1 : 0;
+            kontrahent.Rodzaj_Potencjalny = potentialCheckBox.Checked ? 1 : 0;
 
             try
             {
                 session.Save();
-
                 this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
-
         private void delete_kontrahent_Click(object sender, EventArgs e)
         {
             AdoSession session = Login.CreateSession();
@@ -189,10 +211,9 @@ namespace OptimaAPI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
-
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             var row = dataGridView1.Rows[e.RowIndex];
@@ -216,14 +237,65 @@ namespace OptimaAPI
             try
             {
                 session.Save();
-                
                 this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
+        private void filterKontrahenci_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            searchKontrahenci();
+        }
+        private void phraseKontrahenci_TextChanged(object sender, EventArgs e)
+        {
+            searchKontrahenci();
+        }
+        private void searchKontrahenci()
+        {
+            string phrase = $"(Knt_Kod like '%{phraseKontrahenci.Text}%' or" +
+                        $" Knt_Nazwa1 like '%{phraseKontrahenci.Text}%' or" +
+                        $" Knt_Ulica like '%{phraseKontrahenci.Text}%' or" +
+                        $" Knt_Miasto like '%{phraseKontrahenci.Text}%' or" +
+                        $" Knt_Telefon1 like '%{phraseKontrahenci.Text}%' or" +
+                        $" Knt_Email like '%{phraseKontrahenci.Text}%')";
+
+            switch (filterKontrahenciComboBox.Text)
+            {
+                
+                case "odbiorca":
+                    kontrahenciBindingSource.Filter = phrase + " and Knt_Rodzaj_Odbiorca='1'";
+                    break;
+
+                case "dostawca":
+                    kontrahenciBindingSource.Filter = phrase + " and Knt_Rodzaj_Dostawca='1'";
+                    break;
+
+                case "konkurencja":
+                    kontrahenciBindingSource.Filter = phrase + " and Knt_Rodzaj_Konkurencja='1'";
+                    break;
+
+                case "partner":
+                    kontrahenciBindingSource.Filter = phrase + " and Knt_Rodzaj_Partner='1'";
+                    break;
+
+                case "potencjalny":
+                    kontrahenciBindingSource.Filter = phrase + " and Knt_Rodzaj_Potencjalny='1'";
+                    break;
+
+                case "-każdy-":
+                    kontrahenciBindingSource.Filter = phrase;
+                    break;
+            }
+
+            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+        }
+        #endregion
+
+        #region towar
+
+
         #endregion
     }
 }

@@ -295,6 +295,16 @@ namespace OptimaAPI {
             
             private global::System.Data.DataColumn columnKnt_Email;
             
+            private global::System.Data.DataColumn columnKnt_Rodzaj_Dostawca;
+            
+            private global::System.Data.DataColumn columnKnt_Rodzaj_Odbiorca;
+            
+            private global::System.Data.DataColumn columnKnt_Rodzaj_Konkurencja;
+            
+            private global::System.Data.DataColumn columnKnt_Rodzaj_Partner;
+            
+            private global::System.Data.DataColumn columnKnt_Rodzaj_Potencjalny;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public KontrahenciDataTable() {
@@ -394,6 +404,46 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Knt_Rodzaj_DostawcaColumn {
+                get {
+                    return this.columnKnt_Rodzaj_Dostawca;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Knt_Rodzaj_OdbiorcaColumn {
+                get {
+                    return this.columnKnt_Rodzaj_Odbiorca;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Knt_Rodzaj_KonkurencjaColumn {
+                get {
+                    return this.columnKnt_Rodzaj_Konkurencja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Knt_Rodzaj_PartnerColumn {
+                get {
+                    return this.columnKnt_Rodzaj_Partner;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Knt_Rodzaj_PotencjalnyColumn {
+                get {
+                    return this.columnKnt_Rodzaj_Potencjalny;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +479,7 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KontrahenciRow AddKontrahenciRow(string Knt_Kod, string Knt_Nazwa1, string Knt_Ulica, string Knt_NrDomu, string Knt_Miasto, string Knt_KodPocztowy, string Knt_Telefon1, string Knt_Email) {
+            public KontrahenciRow AddKontrahenciRow(string Knt_Kod, string Knt_Nazwa1, string Knt_Ulica, string Knt_NrDomu, string Knt_Miasto, string Knt_KodPocztowy, string Knt_Telefon1, string Knt_Email, byte Knt_Rodzaj_Dostawca, byte Knt_Rodzaj_Odbiorca, byte Knt_Rodzaj_Konkurencja, byte Knt_Rodzaj_Partner, byte Knt_Rodzaj_Potencjalny) {
                 KontrahenciRow rowKontrahenciRow = ((KontrahenciRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Knt_Kod,
@@ -439,7 +489,12 @@ namespace OptimaAPI {
                         Knt_Miasto,
                         Knt_KodPocztowy,
                         Knt_Telefon1,
-                        Knt_Email};
+                        Knt_Email,
+                        Knt_Rodzaj_Dostawca,
+                        Knt_Rodzaj_Odbiorca,
+                        Knt_Rodzaj_Konkurencja,
+                        Knt_Rodzaj_Partner,
+                        Knt_Rodzaj_Potencjalny};
                 rowKontrahenciRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKontrahenciRow);
                 return rowKontrahenciRow;
@@ -470,6 +525,11 @@ namespace OptimaAPI {
                 this.columnKnt_KodPocztowy = base.Columns["Knt_KodPocztowy"];
                 this.columnKnt_Telefon1 = base.Columns["Knt_Telefon1"];
                 this.columnKnt_Email = base.Columns["Knt_Email"];
+                this.columnKnt_Rodzaj_Dostawca = base.Columns["Knt_Rodzaj_Dostawca"];
+                this.columnKnt_Rodzaj_Odbiorca = base.Columns["Knt_Rodzaj_Odbiorca"];
+                this.columnKnt_Rodzaj_Konkurencja = base.Columns["Knt_Rodzaj_Konkurencja"];
+                this.columnKnt_Rodzaj_Partner = base.Columns["Knt_Rodzaj_Partner"];
+                this.columnKnt_Rodzaj_Potencjalny = base.Columns["Knt_Rodzaj_Potencjalny"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +551,16 @@ namespace OptimaAPI {
                 base.Columns.Add(this.columnKnt_Telefon1);
                 this.columnKnt_Email = new global::System.Data.DataColumn("Knt_Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKnt_Email);
+                this.columnKnt_Rodzaj_Dostawca = new global::System.Data.DataColumn("Knt_Rodzaj_Dostawca", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKnt_Rodzaj_Dostawca);
+                this.columnKnt_Rodzaj_Odbiorca = new global::System.Data.DataColumn("Knt_Rodzaj_Odbiorca", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKnt_Rodzaj_Odbiorca);
+                this.columnKnt_Rodzaj_Konkurencja = new global::System.Data.DataColumn("Knt_Rodzaj_Konkurencja", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKnt_Rodzaj_Konkurencja);
+                this.columnKnt_Rodzaj_Partner = new global::System.Data.DataColumn("Knt_Rodzaj_Partner", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKnt_Rodzaj_Partner);
+                this.columnKnt_Rodzaj_Potencjalny = new global::System.Data.DataColumn("Knt_Rodzaj_Potencjalny", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKnt_Rodzaj_Potencjalny);
                 this.columnKnt_Kod.AllowDBNull = false;
                 this.columnKnt_Kod.MaxLength = 20;
                 this.columnKnt_Nazwa1.AllowDBNull = false;
@@ -507,6 +577,11 @@ namespace OptimaAPI {
                 this.columnKnt_Telefon1.MaxLength = 20;
                 this.columnKnt_Email.AllowDBNull = false;
                 this.columnKnt_Email.MaxLength = 127;
+                this.columnKnt_Rodzaj_Dostawca.AllowDBNull = false;
+                this.columnKnt_Rodzaj_Odbiorca.AllowDBNull = false;
+                this.columnKnt_Rodzaj_Konkurencja.AllowDBNull = false;
+                this.columnKnt_Rodzaj_Partner.AllowDBNull = false;
+                this.columnKnt_Rodzaj_Potencjalny.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -734,6 +809,61 @@ namespace OptimaAPI {
                     this[this.tableKontrahenci.Knt_EmailColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte Knt_Rodzaj_Dostawca {
+                get {
+                    return ((byte)(this[this.tableKontrahenci.Knt_Rodzaj_DostawcaColumn]));
+                }
+                set {
+                    this[this.tableKontrahenci.Knt_Rodzaj_DostawcaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte Knt_Rodzaj_Odbiorca {
+                get {
+                    return ((byte)(this[this.tableKontrahenci.Knt_Rodzaj_OdbiorcaColumn]));
+                }
+                set {
+                    this[this.tableKontrahenci.Knt_Rodzaj_OdbiorcaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte Knt_Rodzaj_Konkurencja {
+                get {
+                    return ((byte)(this[this.tableKontrahenci.Knt_Rodzaj_KonkurencjaColumn]));
+                }
+                set {
+                    this[this.tableKontrahenci.Knt_Rodzaj_KonkurencjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte Knt_Rodzaj_Partner {
+                get {
+                    return ((byte)(this[this.tableKontrahenci.Knt_Rodzaj_PartnerColumn]));
+                }
+                set {
+                    this[this.tableKontrahenci.Knt_Rodzaj_PartnerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte Knt_Rodzaj_Potencjalny {
+                get {
+                    return ((byte)(this[this.tableKontrahenci.Knt_Rodzaj_PotencjalnyColumn]));
+                }
+                set {
+                    this[this.tableKontrahenci.Knt_Rodzaj_PotencjalnyColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -903,6 +1033,11 @@ namespace OptimaAPI.CDN_SEDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Knt_KodPocztowy", "Knt_KodPocztowy");
             tableMapping.ColumnMappings.Add("Knt_Telefon1", "Knt_Telefon1");
             tableMapping.ColumnMappings.Add("Knt_Email", "Knt_Email");
+            tableMapping.ColumnMappings.Add("Knt_Rodzaj_Dostawca", "Knt_Rodzaj_Dostawca");
+            tableMapping.ColumnMappings.Add("Knt_Rodzaj_Odbiorca", "Knt_Rodzaj_Odbiorca");
+            tableMapping.ColumnMappings.Add("Knt_Rodzaj_Konkurencja", "Knt_Rodzaj_Konkurencja");
+            tableMapping.ColumnMappings.Add("Knt_Rodzaj_Partner", "Knt_Rodzaj_Partner");
+            tableMapping.ColumnMappings.Add("Knt_Rodzaj_Potencjalny", "Knt_Rodzaj_Potencjalny");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -919,8 +1054,9 @@ namespace OptimaAPI.CDN_SEDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Knt_Kod, Knt_Nazwa1, Knt_Ulica, Knt_NrDomu, Knt_Miasto, Knt_KodPocztowy, K" +
-                "nt_Telefon1, Knt_Email FROM CDN.Kontrahenci";
+            this._commandCollection[0].CommandText = @"SELECT        Knt_Kod, Knt_Nazwa1, Knt_Ulica, Knt_NrDomu, Knt_Miasto, Knt_KodPocztowy, Knt_Telefon1, Knt_Email, Knt_Rodzaj_Dostawca, Knt_Rodzaj_Odbiorca, Knt_Rodzaj_Konkurencja, Knt_Rodzaj_Partner, 
+                         Knt_Rodzaj_Potencjalny
+FROM            CDN.Kontrahenci";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
