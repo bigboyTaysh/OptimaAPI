@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -375,7 +376,7 @@ namespace OptimaAPI
 
             towar.Kod = textBox11.Text;
             towar.Nazwa = textBox10.Text;
-            towar.JM = textBox9.Text;
+            towar.JM = towaryComboBox.Text;
             towar.Stawka = decimal.Parse(textBox15.Text);
             cena.Wartosc = decimal.Parse(textBox14.Text);
             
@@ -397,7 +398,7 @@ namespace OptimaAPI
             Cena cena = (Cena)(towar.Ceny[$"Twc_TwcNumer='1'"]);
 
             towar.Nazwa = textBox10.Text;
-            towar.JM = textBox9.Text;
+            towar.JM = towaryComboBox.Text;
             towar.Stawka = decimal.Parse(textBox15.Text);
             cena.Wartosc = decimal.Parse(textBox14.Text);
 

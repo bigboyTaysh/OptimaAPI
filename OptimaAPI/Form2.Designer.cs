@@ -90,7 +90,6 @@
             this.deleteTowar = new System.Windows.Forms.Button();
             this.updateTowar = new System.Windows.Forms.Button();
             this.addTowar = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -103,6 +102,7 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.towaryComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
             this.kontrahenciPanel.SuspendLayout();
@@ -670,6 +670,7 @@
             // towaryPanel
             // 
             this.towaryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.towaryPanel.Controls.Add(this.towaryComboBox);
             this.towaryPanel.Controls.Add(this.label12);
             this.towaryPanel.Controls.Add(this.textBox12);
             this.towaryPanel.Controls.Add(this.label13);
@@ -680,7 +681,6 @@
             this.towaryPanel.Controls.Add(this.label9);
             this.towaryPanel.Controls.Add(this.label10);
             this.towaryPanel.Controls.Add(this.label11);
-            this.towaryPanel.Controls.Add(this.textBox9);
             this.towaryPanel.Controls.Add(this.textBox10);
             this.towaryPanel.Controls.Add(this.textBox11);
             this.towaryPanel.Controls.Add(this.deleteTowar);
@@ -814,18 +814,6 @@
             this.addTowar.Text = "Dodaj";
             this.addTowar.UseVisualStyleBackColor = false;
             this.addTowar.Click += new System.EventHandler(this.addTowar_Click);
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "Twr_JM", true));
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox9.Location = new System.Drawing.Point(133, 482);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(145, 22);
-            this.textBox9.TabIndex = 24;
             // 
             // textBox10
             // 
@@ -967,6 +955,28 @@
             this.textBox12.Size = new System.Drawing.Size(145, 22);
             this.textBox12.TabIndex = 34;
             // 
+            // towaryComboBox
+            // 
+            this.towaryComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.towaryComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "Twr_JM", true));
+            this.towaryComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.cDNSEDDataSet1BindingSource, "Twr_JM", true));
+            this.towaryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.towaryComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.towaryComboBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.towaryComboBox.FormattingEnabled = true;
+            this.towaryComboBox.Items.AddRange(new object[] {
+            "godz",
+            "kg",
+            "litr",
+            "m",
+            "mkw",
+            "opak",
+            "szt"});
+            this.towaryComboBox.Location = new System.Drawing.Point(133, 480);
+            this.towaryComboBox.Name = "towaryComboBox";
+            this.towaryComboBox.Size = new System.Drawing.Size(145, 24);
+            this.towaryComboBox.TabIndex = 36;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1069,7 +1079,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label13;
@@ -1078,5 +1087,6 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.ComboBox towaryComboBox;
     }
 }
