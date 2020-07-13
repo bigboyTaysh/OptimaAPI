@@ -54,10 +54,6 @@ namespace OptimaAPI
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cDN_SEDDataSet.Kontrahenci' table. You can move, or remove it, as needed.
-            //this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
-            // TODO: This line of code loads data into the 'cDN_SEDDataSet6.Towary' table. You can move, or remove it, as needed.
-            //this.towaryTableAdapter.Fill(this.cDN_SEDDataSet6.Towary);
             filterKontrahenciComboBox.SelectedIndex = 0;
             this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
         }
@@ -90,17 +86,56 @@ namespace OptimaAPI
             this.dataGridView1.Columns[6].HeaderText = "Telefon";
             this.dataGridView1.Columns[7].HeaderText = "Email";
         }
+        private void ChangeMenuButtonsColor(string name)
+        {
+            foreach (Control control in GetAllControl(name))
+            {
+                if (control.GetType() == typeof(Button))
+                {
+                    control.BackColor = Color.FromArgb(54, 57, 63);
+                    (control as Button).FlatAppearance.BorderColor = Color.FromArgb(54, 57, 63);
+                }
+            }
+        }
+        private List<Control> GetAllControl(string name)
+        {
+            List<Control> controls = new List<Control>();
+
+            foreach (var control in this.Controls)
+            {
+                if (control.GetType() == typeof(Panel))
+                {
+                    var panel = control as Panel;
+                    if (panel.Name.Contains(name))
+                    {
+                        foreach (var button in panel.Controls)
+                        {
+                            if (button.GetType() == typeof(Button))
+                            {
+                                controls.Add((Control)button);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return controls;
+        }
         #endregion
 
         #region menu
         private void kontrahenciButton_Click(object sender, EventArgs e)
         {
+            ChangeMenuButtonsColor("menuPanel");
+            kontrahenciButton.BackColor = Color.FromArgb(114, 137, 218);
             kontrahenciPanel.Visible = true;
             towaryPanel.Visible = false;
         }
 
         private void towaryButton_Click(object sender, EventArgs e)
         {
+            ChangeMenuButtonsColor("menuPanel");
+            towaryButton.BackColor = Color.FromArgb(114, 137, 218);
             kontrahenciPanel.Visible = false;
             towaryPanel.Visible = true;
         }
