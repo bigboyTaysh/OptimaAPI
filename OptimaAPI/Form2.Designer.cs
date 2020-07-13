@@ -78,6 +78,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.towaryPanel = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.twrKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.twrNazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.twrJMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.twrStawkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.twCWartoscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.twCWalutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cDNSEDDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cDN_SEDDataSet1 = new OptimaAPI.CDN_SEDDataSet1();
             this.menuPanel = new System.Windows.Forms.Panel();
@@ -211,6 +217,10 @@
             // 
             this.kontrahenciTableAdapter.ClearBeforeFill = true;
             // 
+            // towaryTableAdapter
+            // 
+            this.towaryTableAdapter.ClearBeforeFill = true;
+            // 
             // kontrahenciPanel
             // 
             this.kontrahenciPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
@@ -262,9 +272,9 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dataGridView1.DataSource = this.kontrahenciBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(852, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(833, 193);
             this.dataGridView1.TabIndex = 27;
             // 
             // dataGridViewTextBoxColumn1
@@ -314,27 +324,6 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Knt_Email";
             this.dataGridViewTextBoxColumn8.HeaderText = "Knt_Email";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.DataSource = this.cDNSEDDataSet1BindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(854, 153);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // cDNSEDDataSet1BindingSource
-            // 
-            this.cDNSEDDataSet1BindingSource.DataSource = this.cDN_SEDDataSet1;
-            this.cDNSEDDataSet1BindingSource.DataMember = "Towary";
-            // 
-            // cDN_SEDDataSet1
-            // 
-            this.cDN_SEDDataSet1.DataSetName = "CDN_SEDDataSet1";
-            this.cDN_SEDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // potentialCheckBox
             // 
@@ -671,6 +660,70 @@
             this.towaryPanel.Size = new System.Drawing.Size(861, 587);
             this.towaryPanel.TabIndex = 6;
             this.towaryPanel.Visible = false;
+            this.towaryPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.towaryPanel_Paint);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.twrKodDataGridViewTextBoxColumn,
+            this.twrNazwaDataGridViewTextBoxColumn,
+            this.twrJMDataGridViewTextBoxColumn,
+            this.twrStawkaDataGridViewTextBoxColumn,
+            this.twCWartoscDataGridViewTextBoxColumn,
+            this.twCWalutaDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.cDNSEDDataSet1BindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(106, 12);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(627, 157);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // twrKodDataGridViewTextBoxColumn
+            // 
+            this.twrKodDataGridViewTextBoxColumn.DataPropertyName = "Twr_Kod";
+            this.twrKodDataGridViewTextBoxColumn.HeaderText = "Twr_Kod";
+            this.twrKodDataGridViewTextBoxColumn.Name = "twrKodDataGridViewTextBoxColumn";
+            // 
+            // twrNazwaDataGridViewTextBoxColumn
+            // 
+            this.twrNazwaDataGridViewTextBoxColumn.DataPropertyName = "Twr_Nazwa";
+            this.twrNazwaDataGridViewTextBoxColumn.HeaderText = "Twr_Nazwa";
+            this.twrNazwaDataGridViewTextBoxColumn.Name = "twrNazwaDataGridViewTextBoxColumn";
+            // 
+            // twrJMDataGridViewTextBoxColumn
+            // 
+            this.twrJMDataGridViewTextBoxColumn.DataPropertyName = "Twr_JM";
+            this.twrJMDataGridViewTextBoxColumn.HeaderText = "Twr_JM";
+            this.twrJMDataGridViewTextBoxColumn.Name = "twrJMDataGridViewTextBoxColumn";
+            // 
+            // twrStawkaDataGridViewTextBoxColumn
+            // 
+            this.twrStawkaDataGridViewTextBoxColumn.DataPropertyName = "Twr_Stawka";
+            this.twrStawkaDataGridViewTextBoxColumn.HeaderText = "Twr_Stawka";
+            this.twrStawkaDataGridViewTextBoxColumn.Name = "twrStawkaDataGridViewTextBoxColumn";
+            // 
+            // twCWartoscDataGridViewTextBoxColumn
+            // 
+            this.twCWartoscDataGridViewTextBoxColumn.DataPropertyName = "TwC_Wartosc";
+            this.twCWartoscDataGridViewTextBoxColumn.HeaderText = "TwC_Wartosc";
+            this.twCWartoscDataGridViewTextBoxColumn.Name = "twCWartoscDataGridViewTextBoxColumn";
+            // 
+            // twCWalutaDataGridViewTextBoxColumn
+            // 
+            this.twCWalutaDataGridViewTextBoxColumn.DataPropertyName = "TwC_Waluta";
+            this.twCWalutaDataGridViewTextBoxColumn.HeaderText = "TwC_Waluta";
+            this.twCWalutaDataGridViewTextBoxColumn.Name = "twCWalutaDataGridViewTextBoxColumn";
+            // 
+            // cDNSEDDataSet1BindingSource
+            // 
+            this.cDNSEDDataSet1BindingSource.DataMember = "Towary";
+            this.cDNSEDDataSet1BindingSource.DataSource = this.cDN_SEDDataSet1;
+            // 
+            // cDN_SEDDataSet1
+            // 
+            this.cDN_SEDDataSet1.DataSetName = "CDN_SEDDataSet1";
+            this.cDN_SEDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuPanel
             // 
@@ -692,8 +745,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1052, 655);
             this.Controls.Add(this.towaryPanel);
-            this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.kontrahenciPanel);
+            this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.logoutButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -773,5 +826,11 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource cDNSEDDataSet1BindingSource;
         private CDN_SEDDataSet1 cDN_SEDDataSet1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn twrKodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn twrNazwaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn twrJMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn twrStawkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn twCWartoscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn twCWalutaDataGridViewTextBoxColumn;
     }
 }

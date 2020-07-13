@@ -30,6 +30,7 @@ namespace OptimaAPI
 
             InitializeComponent();
             ChangeNameOfKontrachenciColumns();
+            ChangeNameOfTowaryColumns();
         }
 
         #region okno
@@ -86,6 +87,15 @@ namespace OptimaAPI
             this.dataGridView1.Columns[5].HeaderText = "Kod pocztowy";
             this.dataGridView1.Columns[6].HeaderText = "Telefon";
             this.dataGridView1.Columns[7].HeaderText = "Email";
+        }
+        private void ChangeNameOfTowaryColumns()
+        {
+            this.dataGridView2.Columns[0].HeaderText = "Kod";
+            this.dataGridView2.Columns[1].HeaderText = "Nazwa";
+            this.dataGridView2.Columns[2].HeaderText = "Jednostka";
+            this.dataGridView2.Columns[3].HeaderText = "Stawka vat";
+            this.dataGridView2.Columns[4].HeaderText = "Wartość";
+            this.dataGridView2.Columns[5].HeaderText = "Waluta";
         }
         private void ChangeMenuButtonsColor(string name)
         {
@@ -155,8 +165,9 @@ namespace OptimaAPI
         #region towaryPanel
         private void towaryPanel_Paint(object sender, PaintEventArgs e)
         {
-            //this.towaryTableAdapter1.Fill(this.cdN_SEDDataSet51.Towary);
-
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.RowHeadersWidth = 25;
+            dataGridView2.Columns[0].ReadOnly = true;
         }
         #endregion
 
