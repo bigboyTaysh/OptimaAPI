@@ -165,6 +165,7 @@ namespace OptimaAPI
         #region towaryPanel
         private void towaryPanel_Paint(object sender, PaintEventArgs e)
         {
+            dataGridView2.CellValueChanged += dataGridView2_CellValueChanged;
             dataGridView2.AllowUserToAddRows = false;
             dataGridView2.RowHeadersWidth = 25;
             dataGridView2.Columns[0].ReadOnly = true;
@@ -341,8 +342,105 @@ namespace OptimaAPI
         #endregion
 
         #region towar
+        private void dataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = dataGridView2.Rows[e.RowIndex];
 
+            AdoSession session = Login.CreateSession();
+            Towary towary = (Towary)session.CreateObject("CDN.Towary", null);
+            Towar towar = (Towar)towary[$"Twr_Kod='{(string)row.Cells[0].Value}'"];
+            Cena cena = (Cena)(towar.Ceny[$"Twc_TwcNumer='1'"]);
 
+            towar.Nazwa = (string)row.Cells[1].Value;
+            towar.JM = (string)row.Cells[2].Value;
+            towar.Stawka = (decimal)row.Cells[3].Value;
+            cena.Wartosc = (decimal)row.Cells[4].Value;
+
+            try
+            {
+                session.Save();
+                this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void addTowar_Click(object sender, EventArgs e)
+        {
+            AdoSession session = Login.CreateSession();
+            Towary towary = (Towary)session.CreateObject("CDN.Towary", null);
+            Towar towar = (Towar)towary.AddNew(null);
+            Cena cena = (Cena)(towar.Ceny[$"Twc_TwcNumer='1'"]);
+
+            towar.Kod = textBox11.Text;
+            towar.Nazwa = textBox10.Text;
+            towar.JM = textBox9.Text;
+            towar.Stawka = decimal.Parse(textBox15.Text);
+            cena.Wartosc = decimal.Parse(textBox14.Text);
+            
+            try
+            {
+                session.Save();
+                this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void updateTowar_Click(object sender, EventArgs e)
+        {
+            AdoSession session = Login.CreateSession();
+            Towary towary = (Towary)session.CreateObject("CDN.Towary", null);
+            Towar towar = (Towar)towary[$"Twr_Kod='{textBox11.Text}'"];
+            Cena cena = (Cena)(towar.Ceny[$"Twc_TwcNumer='1'"]);
+
+            towar.Nazwa = textBox10.Text;
+            towar.JM = textBox9.Text;
+            towar.Stawka = decimal.Parse(textBox15.Text);
+            cena.Wartosc = decimal.Parse(textBox14.Text);
+
+            try
+            {
+                session.Save();
+                this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void deleteTowar_Click(object sender, EventArgs e)
+        {
+            AdoSession session = Login.CreateSession();
+            Towary towary = (Towary)session.CreateObject("CDN.Towary", null);
+            try
+            {
+                towary.Delete($"Twr_Kod='{textBox11.Text}'");
+                session.Save();
+                this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        private void phraseTowary_TextChanged(object sender, EventArgs e)
+        {
+            searchTowary();
+        }
+        private void searchTowary()
+        {
+            string phrase = $"Twr_Kod like '%{phraseTowary.Text}%' or" +
+                        $" Twr_Nazwa like '%{phraseTowary.Text}%'";
+
+            cDNSEDDataSet1BindingSource.Filter = phrase;
+
+            this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
+        }
         #endregion
     }
 }

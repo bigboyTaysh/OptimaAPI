@@ -87,6 +87,22 @@
             this.cDNSEDDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cDN_SEDDataSet1 = new OptimaAPI.CDN_SEDDataSet1();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.deleteTowar = new System.Windows.Forms.Button();
+            this.updateTowar = new System.Windows.Forms.Button();
+            this.addTowar = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.phraseTowary = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
             this.kontrahenciPanel.SuspendLayout();
@@ -654,6 +670,22 @@
             // towaryPanel
             // 
             this.towaryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.towaryPanel.Controls.Add(this.label12);
+            this.towaryPanel.Controls.Add(this.textBox12);
+            this.towaryPanel.Controls.Add(this.label13);
+            this.towaryPanel.Controls.Add(this.label14);
+            this.towaryPanel.Controls.Add(this.textBox14);
+            this.towaryPanel.Controls.Add(this.textBox15);
+            this.towaryPanel.Controls.Add(this.phraseTowary);
+            this.towaryPanel.Controls.Add(this.label9);
+            this.towaryPanel.Controls.Add(this.label10);
+            this.towaryPanel.Controls.Add(this.label11);
+            this.towaryPanel.Controls.Add(this.textBox9);
+            this.towaryPanel.Controls.Add(this.textBox10);
+            this.towaryPanel.Controls.Add(this.textBox11);
+            this.towaryPanel.Controls.Add(this.deleteTowar);
+            this.towaryPanel.Controls.Add(this.updateTowar);
+            this.towaryPanel.Controls.Add(this.addTowar);
             this.towaryPanel.Controls.Add(this.dataGridView2);
             this.towaryPanel.Location = new System.Drawing.Point(181, 56);
             this.towaryPanel.Name = "towaryPanel";
@@ -676,7 +708,7 @@
             this.dataGridView2.DataSource = this.cDNSEDDataSet1BindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(106, 12);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(627, 157);
+            this.dataGridView2.Size = new System.Drawing.Size(627, 198);
             this.dataGridView2.TabIndex = 0;
             // 
             // twrKodDataGridViewTextBoxColumn
@@ -738,6 +770,203 @@
             this.menuPanel.Size = new System.Drawing.Size(173, 578);
             this.menuPanel.TabIndex = 6;
             // 
+            // deleteTowar
+            // 
+            this.deleteTowar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.deleteTowar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.deleteTowar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteTowar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.deleteTowar.ForeColor = System.Drawing.SystemColors.Window;
+            this.deleteTowar.Location = new System.Drawing.Point(685, 502);
+            this.deleteTowar.Name = "deleteTowar";
+            this.deleteTowar.Size = new System.Drawing.Size(115, 37);
+            this.deleteTowar.TabIndex = 21;
+            this.deleteTowar.Text = "Usuń";
+            this.deleteTowar.UseVisualStyleBackColor = false;
+            this.deleteTowar.Click += new System.EventHandler(this.deleteTowar_Click);
+            // 
+            // updateTowar
+            // 
+            this.updateTowar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.updateTowar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.updateTowar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateTowar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.updateTowar.ForeColor = System.Drawing.SystemColors.Window;
+            this.updateTowar.Location = new System.Drawing.Point(685, 434);
+            this.updateTowar.Name = "updateTowar";
+            this.updateTowar.Size = new System.Drawing.Size(115, 37);
+            this.updateTowar.TabIndex = 20;
+            this.updateTowar.Text = "Edytuj";
+            this.updateTowar.UseVisualStyleBackColor = false;
+            this.updateTowar.Click += new System.EventHandler(this.updateTowar_Click);
+            // 
+            // addTowar
+            // 
+            this.addTowar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.addTowar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.addTowar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addTowar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addTowar.ForeColor = System.Drawing.SystemColors.Window;
+            this.addTowar.Location = new System.Drawing.Point(685, 371);
+            this.addTowar.Name = "addTowar";
+            this.addTowar.Size = new System.Drawing.Size(115, 37);
+            this.addTowar.TabIndex = 19;
+            this.addTowar.Text = "Dodaj";
+            this.addTowar.UseVisualStyleBackColor = false;
+            this.addTowar.Click += new System.EventHandler(this.addTowar_Click);
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "Twr_JM", true));
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox9.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox9.Location = new System.Drawing.Point(133, 482);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(145, 22);
+            this.textBox9.TabIndex = 24;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "Twr_Nazwa", true));
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox10.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox10.Location = new System.Drawing.Point(133, 411);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(145, 22);
+            this.textBox10.TabIndex = 23;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "Twr_Kod", true));
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox11.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox11.Location = new System.Drawing.Point(133, 349);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(145, 22);
+            this.textBox11.TabIndex = 22;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(46, 480);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 18);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Jednostka";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(46, 410);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 18);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Nazwa";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(46, 349);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 18);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Kod";
+            // 
+            // phraseTowary
+            // 
+            this.phraseTowary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.phraseTowary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phraseTowary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.phraseTowary.ForeColor = System.Drawing.SystemColors.Window;
+            this.phraseTowary.Location = new System.Drawing.Point(281, 246);
+            this.phraseTowary.Name = "phraseTowary";
+            this.phraseTowary.Size = new System.Drawing.Size(212, 22);
+            this.phraseTowary.TabIndex = 28;
+            this.phraseTowary.TextChanged += new System.EventHandler(this.phraseTowary_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(387, 410);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 18);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Wartość";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(387, 345);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 18);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Stawka";
+            // 
+            // textBox14
+            // 
+            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "TwC_Wartosc", true));
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox14.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox14.Location = new System.Drawing.Point(474, 411);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(145, 22);
+            this.textBox14.TabIndex = 30;
+            // 
+            // textBox15
+            // 
+            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "Twr_Stawka", true));
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox15.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox15.Location = new System.Drawing.Point(474, 345);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(145, 22);
+            this.textBox15.TabIndex = 29;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(387, 481);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 18);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Waluta";
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cDNSEDDataSet1BindingSource, "TwC_Waluta", true));
+            this.textBox12.Enabled = false;
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox12.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox12.Location = new System.Drawing.Point(474, 482);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(145, 22);
+            this.textBox12.TabIndex = 34;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,6 +993,7 @@
             this.kontrahenciPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.towaryPanel.ResumeLayout(false);
+            this.towaryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDNSEDDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet1)).EndInit();
@@ -832,5 +1062,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn twrStawkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn twCWartoscDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn twCWalutaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button deleteTowar;
+        private System.Windows.Forms.Button updateTowar;
+        private System.Windows.Forms.Button addTowar;
+        private System.Windows.Forms.TextBox phraseTowary;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox12;
     }
 }
