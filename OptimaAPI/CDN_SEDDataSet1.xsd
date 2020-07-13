@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CDN_SEDDataSet1" targetNamespace="http://tempuri.org/CDN_SEDDataSet1.xsd" xmlns:mstns="http://tempuri.org/CDN_SEDDataSet1.xsd" xmlns="http://tempuri.org/CDN_SEDDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CDN_SEDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CDN_SEDConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OptimaAPI.Properties.Settings.GlobalReference.Default.CDN_SEDConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TowaryTableAdapter" GeneratorDataComponentClassName="TowaryTableAdapter" Name="Towary" UserDataComponentName="TowaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CDN_SEDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        t.Twr_Kod, t.Twr_Nazwa, t.Twr_JM, t.Twr_Stawka, c.TwC_Wartosc, c.TwC_Waluta
+FROM            CDN.Towary AS t INNER JOIN
+                         CDN.TwrCeny AS c ON t.Twr_TwrId = c.TwC_TwrID
+WHERE        (c.TwC_TwCNumer = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Twr_Kod" DataSetColumn="Twr_Kod" />
+              <Mapping SourceColumn="Twr_Nazwa" DataSetColumn="Twr_Nazwa" />
+              <Mapping SourceColumn="Twr_JM" DataSetColumn="Twr_JM" />
+              <Mapping SourceColumn="Twr_Stawka" DataSetColumn="Twr_Stawka" />
+              <Mapping SourceColumn="TwC_Wartosc" DataSetColumn="TwC_Wartosc" />
+              <Mapping SourceColumn="TwC_Waluta" DataSetColumn="TwC_Waluta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CDN_SEDDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CDN_SEDDataSet1" msprop:Generator_UserDSName="CDN_SEDDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Towary" msprop:Generator_TableClassName="TowaryDataTable" msprop:Generator_TableVarName="tableTowary" msprop:Generator_TablePropName="Towary" msprop:Generator_RowDeletingName="TowaryRowDeleting" msprop:Generator_RowChangingName="TowaryRowChanging" msprop:Generator_RowEvHandlerName="TowaryRowChangeEventHandler" msprop:Generator_RowDeletedName="TowaryRowDeleted" msprop:Generator_UserTableName="Towary" msprop:Generator_RowChangedName="TowaryRowChanged" msprop:Generator_RowEvArgName="TowaryRowChangeEvent" msprop:Generator_RowClassName="TowaryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Twr_Kod" msprop:Generator_ColumnVarNameInTable="columnTwr_Kod" msprop:Generator_ColumnPropNameInRow="Twr_Kod" msprop:Generator_ColumnPropNameInTable="Twr_KodColumn" msprop:Generator_UserColumnName="Twr_Kod">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Twr_Nazwa" msprop:Generator_ColumnVarNameInTable="columnTwr_Nazwa" msprop:Generator_ColumnPropNameInRow="Twr_Nazwa" msprop:Generator_ColumnPropNameInTable="Twr_NazwaColumn" msprop:Generator_UserColumnName="Twr_Nazwa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Twr_JM" msprop:Generator_ColumnVarNameInTable="columnTwr_JM" msprop:Generator_ColumnPropNameInRow="Twr_JM" msprop:Generator_ColumnPropNameInTable="Twr_JMColumn" msprop:Generator_UserColumnName="Twr_JM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Twr_Stawka" msprop:Generator_ColumnVarNameInTable="columnTwr_Stawka" msprop:Generator_ColumnPropNameInRow="Twr_Stawka" msprop:Generator_ColumnPropNameInTable="Twr_StawkaColumn" msprop:Generator_UserColumnName="Twr_Stawka" type="xs:decimal" />
+              <xs:element name="TwC_Wartosc" msprop:Generator_ColumnVarNameInTable="columnTwC_Wartosc" msprop:Generator_ColumnPropNameInRow="TwC_Wartosc" msprop:Generator_ColumnPropNameInTable="TwC_WartoscColumn" msprop:Generator_UserColumnName="TwC_Wartosc" type="xs:decimal" />
+              <xs:element name="TwC_Waluta" msprop:Generator_ColumnVarNameInTable="columnTwC_Waluta" msprop:Generator_ColumnPropNameInRow="TwC_Waluta" msprop:Generator_ColumnPropNameInTable="TwC_WalutaColumn" msprop:Generator_UserColumnName="TwC_Waluta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

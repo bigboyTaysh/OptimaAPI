@@ -39,6 +39,7 @@
             this.kontrahenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cDN_SEDDataSet = new OptimaAPI.CDN_SEDDataSet();
             this.kontrahenciTableAdapter = new OptimaAPI.CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter();
+            this.towaryTableAdapter = new OptimaAPI.CDN_SEDDataSet1TableAdapters.TowaryTableAdapter();
             this.kontrahenciPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,11 +77,18 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.towaryPanel = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.cDNSEDDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDN_SEDDataSet1 = new OptimaAPI.CDN_SEDDataSet1();
             this.menuPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
             this.kontrahenciPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.towaryPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDNSEDDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet1)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -306,6 +314,27 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Knt_Email";
             this.dataGridViewTextBoxColumn8.HeaderText = "Knt_Email";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.DataSource = this.cDNSEDDataSet1BindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(854, 153);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // cDNSEDDataSet1BindingSource
+            // 
+            this.cDNSEDDataSet1BindingSource.DataSource = this.cDN_SEDDataSet1;
+            this.cDNSEDDataSet1BindingSource.DataMember = "Towary";
+            // 
+            // cDN_SEDDataSet1
+            // 
+            this.cDN_SEDDataSet1.DataSetName = "CDN_SEDDataSet1";
+            this.cDN_SEDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // potentialCheckBox
             // 
@@ -636,6 +665,7 @@
             // towaryPanel
             // 
             this.towaryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.towaryPanel.Controls.Add(this.dataGridView2);
             this.towaryPanel.Location = new System.Drawing.Point(181, 56);
             this.towaryPanel.Name = "towaryPanel";
             this.towaryPanel.Size = new System.Drawing.Size(861, 587);
@@ -680,6 +710,10 @@
             this.kontrahenciPanel.ResumeLayout(false);
             this.kontrahenciPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.towaryPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDNSEDDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet1)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -694,17 +728,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntKodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntNazwa1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntUlicaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntNrDomuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntMiastoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntKodPocztowyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntTelefon1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntEmailDataGridViewTextBoxColumn;
         private CDN_SEDDataSet cDN_SEDDataSet;
         private System.Windows.Forms.BindingSource kontrahenciBindingSource;
         private CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter kontrahenciTableAdapter;
+        private CDN_SEDDataSet1TableAdapters.TowaryTableAdapter towaryTableAdapter;
         private System.Windows.Forms.Panel kontrahenciPanel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -743,5 +770,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel towaryPanel;
         private System.Windows.Forms.Panel menuPanel;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource cDNSEDDataSet1BindingSource;
+        private CDN_SEDDataSet1 cDN_SEDDataSet1;
     }
 }

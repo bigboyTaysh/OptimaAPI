@@ -56,6 +56,7 @@ namespace OptimaAPI
         {
             filterKontrahenciComboBox.SelectedIndex = 0;
             this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
+            this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
         }
         private void Form2_MouseDown(object sender, MouseEventArgs e)
         {
