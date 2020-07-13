@@ -235,7 +235,7 @@
             this.kontrahenciPanel.Controls.Add(this.textBox1);
             this.kontrahenciPanel.Location = new System.Drawing.Point(181, 56);
             this.kontrahenciPanel.Name = "kontrahenciPanel";
-            this.kontrahenciPanel.Size = new System.Drawing.Size(866, 587);
+            this.kontrahenciPanel.Size = new System.Drawing.Size(861, 587);
             this.kontrahenciPanel.TabIndex = 5;
             this.kontrahenciPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.kontrahenciPanel_Paint);
             // 
@@ -636,16 +636,15 @@
             // towaryPanel
             // 
             this.towaryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.towaryPanel.Location = new System.Drawing.Point(8, 443);
+            this.towaryPanel.Location = new System.Drawing.Point(181, 56);
             this.towaryPanel.Name = "towaryPanel";
-            this.towaryPanel.Size = new System.Drawing.Size(866, 587);
+            this.towaryPanel.Size = new System.Drawing.Size(861, 587);
             this.towaryPanel.TabIndex = 6;
             this.towaryPanel.Visible = false;
             // 
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.menuPanel.Controls.Add(this.towaryPanel);
             this.menuPanel.Controls.Add(this.button7);
             this.menuPanel.Controls.Add(this.button6);
             this.menuPanel.Controls.Add(this.button5);
@@ -662,6 +661,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1052, 655);
+            this.Controls.Add(this.towaryPanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.kontrahenciPanel);
             this.Controls.Add(this.exitButton);
