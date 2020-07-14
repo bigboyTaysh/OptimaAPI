@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.zamowieniaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cDN_SEDDataSet3 = new OptimaAPI.CDN_SEDDataSet3();
-            this.zamowieniaTableAdapter = new OptimaAPI.CDN_SEDDataSet3TableAdapters.ZamowieniaTableAdapter();
             this.trETrNIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trETwrIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trETwrNazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trETwrKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trEIloscJMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trEWartoscNettoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trEWartoscBruttoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trEIloscJMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zamowieniaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDN_SEDDataSet3 = new OptimaAPI.CDN_SEDDataSet3();
+            this.zamowieniaTableAdapter = new OptimaAPI.CDN_SEDDataSet3TableAdapters.ZamowieniaTableAdapter();
+            this.exitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zamowieniaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet3)).BeginInit();
@@ -59,24 +60,10 @@
             this.trEWartoscNettoDataGridViewTextBoxColumn,
             this.trEWartoscBruttoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zamowieniaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(762, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // zamowieniaBindingSource
-            // 
-            this.zamowieniaBindingSource.DataMember = "Zamowienia";
-            this.zamowieniaBindingSource.DataSource = this.cDN_SEDDataSet3;
-            // 
-            // cDN_SEDDataSet3
-            // 
-            this.cDN_SEDDataSet3.DataSetName = "CDN_SEDDataSet3";
-            this.cDN_SEDDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // zamowieniaTableAdapter
-            // 
-            this.zamowieniaTableAdapter.ClearBeforeFill = true;
             // 
             // trETrNIdDataGridViewTextBoxColumn
             // 
@@ -102,6 +89,12 @@
             this.trETwrKodDataGridViewTextBoxColumn.HeaderText = "Kod towaru";
             this.trETwrKodDataGridViewTextBoxColumn.Name = "trETwrKodDataGridViewTextBoxColumn";
             // 
+            // trEIloscJMDataGridViewTextBoxColumn
+            // 
+            this.trEIloscJMDataGridViewTextBoxColumn.DataPropertyName = "TrE_IloscJM";
+            this.trEIloscJMDataGridViewTextBoxColumn.HeaderText = "Ilość";
+            this.trEIloscJMDataGridViewTextBoxColumn.Name = "trEIloscJMDataGridViewTextBoxColumn";
+            // 
             // trEWartoscNettoDataGridViewTextBoxColumn
             // 
             this.trEWartoscNettoDataGridViewTextBoxColumn.DataPropertyName = "TrE_WartoscNetto";
@@ -114,18 +107,43 @@
             this.trEWartoscBruttoDataGridViewTextBoxColumn.HeaderText = "Wartość brutto";
             this.trEWartoscBruttoDataGridViewTextBoxColumn.Name = "trEWartoscBruttoDataGridViewTextBoxColumn";
             // 
-            // trEWartoscBruttoDataGridViewTextBoxColumn
+            // zamowieniaBindingSource
             // 
-            this.trEIloscJMDataGridViewTextBoxColumn.DataPropertyName = "TrE_IloscJM";
-            this.trEIloscJMDataGridViewTextBoxColumn.HeaderText = "Ilość";
-            this.trEIloscJMDataGridViewTextBoxColumn.Name = "trEIloscJMDataGridViewTextBoxColumn";
+            this.zamowieniaBindingSource.DataMember = "Zamowienia";
+            this.zamowieniaBindingSource.DataSource = this.cDN_SEDDataSet3;
+            // 
+            // cDN_SEDDataSet3
+            // 
+            this.cDN_SEDDataSet3.DataSetName = "CDN_SEDDataSet3";
+            this.cDN_SEDDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // zamowieniaTableAdapter
+            // 
+            this.zamowieniaTableAdapter.ClearBeforeFill = true;
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Black;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(181)))), ((int)(((byte)(129)))));
+            this.exitButton.Location = new System.Drawing.Point(743, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(45, 36);
+            this.exitButton.TabIndex = 3;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -149,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trEWartoscNettoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trEWartoscBruttoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trEIloscJMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button exitButton;
     }
 }

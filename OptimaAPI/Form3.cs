@@ -29,5 +29,10 @@ namespace OptimaAPI
 
             this.zamowieniaTableAdapter.Fill(this.cDN_SEDDataSet3.Zamowienia);
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
