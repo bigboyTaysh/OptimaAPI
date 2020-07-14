@@ -109,9 +109,8 @@
             this.trNNumerPelnyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNDataDokDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNDataWysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trNDataOpeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trNPodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trNPodNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNRazemNettoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNRazemBruttoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
@@ -288,49 +287,49 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Knt_Kod";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Knt_Kod";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Kod";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Knt_Nazwa1";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Knt_Nazwa1";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nazwa";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Knt_Ulica";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Knt_Ulica";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ulica";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Knt_NrDomu";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Knt_NrDomu";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nr domu";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Knt_Miasto";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Knt_Miasto";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Miasto";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Knt_KodPocztowy";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Knt_KodPocztowy";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Kod pocztowy";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Knt_Telefon1";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Knt_Telefon1";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Telefon";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Knt_Email";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Knt_Email";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Email";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // potentialCheckBox
@@ -923,37 +922,37 @@
             // twrKodDataGridViewTextBoxColumn
             // 
             this.twrKodDataGridViewTextBoxColumn.DataPropertyName = "Twr_Kod";
-            this.twrKodDataGridViewTextBoxColumn.HeaderText = "Twr_Kod";
+            this.twrKodDataGridViewTextBoxColumn.HeaderText = "Kod";
             this.twrKodDataGridViewTextBoxColumn.Name = "twrKodDataGridViewTextBoxColumn";
             // 
             // twrNazwaDataGridViewTextBoxColumn
             // 
             this.twrNazwaDataGridViewTextBoxColumn.DataPropertyName = "Twr_Nazwa";
-            this.twrNazwaDataGridViewTextBoxColumn.HeaderText = "Twr_Nazwa";
+            this.twrNazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
             this.twrNazwaDataGridViewTextBoxColumn.Name = "twrNazwaDataGridViewTextBoxColumn";
             // 
             // twrJMDataGridViewTextBoxColumn
             // 
             this.twrJMDataGridViewTextBoxColumn.DataPropertyName = "Twr_JM";
-            this.twrJMDataGridViewTextBoxColumn.HeaderText = "Twr_JM";
+            this.twrJMDataGridViewTextBoxColumn.HeaderText = "Jednostka";
             this.twrJMDataGridViewTextBoxColumn.Name = "twrJMDataGridViewTextBoxColumn";
             // 
             // twrStawkaDataGridViewTextBoxColumn
             // 
             this.twrStawkaDataGridViewTextBoxColumn.DataPropertyName = "Twr_Stawka";
-            this.twrStawkaDataGridViewTextBoxColumn.HeaderText = "Twr_Stawka";
+            this.twrStawkaDataGridViewTextBoxColumn.HeaderText = "Stawka vat";
             this.twrStawkaDataGridViewTextBoxColumn.Name = "twrStawkaDataGridViewTextBoxColumn";
             // 
             // twCWartoscDataGridViewTextBoxColumn
             // 
             this.twCWartoscDataGridViewTextBoxColumn.DataPropertyName = "TwC_Wartosc";
-            this.twCWartoscDataGridViewTextBoxColumn.HeaderText = "TwC_Wartosc";
+            this.twCWartoscDataGridViewTextBoxColumn.HeaderText = "Wartość";
             this.twCWartoscDataGridViewTextBoxColumn.Name = "twCWartoscDataGridViewTextBoxColumn";
             // 
             // twCWalutaDataGridViewTextBoxColumn
             // 
             this.twCWalutaDataGridViewTextBoxColumn.DataPropertyName = "TwC_Waluta";
-            this.twCWalutaDataGridViewTextBoxColumn.HeaderText = "TwC_Waluta";
+            this.twCWalutaDataGridViewTextBoxColumn.HeaderText = "Waluta";
             this.twCWalutaDataGridViewTextBoxColumn.Name = "twCWalutaDataGridViewTextBoxColumn";
             // 
             // menuPanel
@@ -986,9 +985,8 @@
             this.trNNumerPelnyDataGridViewTextBoxColumn,
             this.trNDataDokDataGridViewTextBoxColumn,
             this.trNDataWysDataGridViewTextBoxColumn,
-            this.trNDataOpeDataGridViewTextBoxColumn,
-            this.trNPodIDDataGridViewTextBoxColumn,
-            this.trNPodNazwa1DataGridViewTextBoxColumn,
+            this.kntKodDataGridViewTextBoxColumn,
+            this.kntNazwa1DataGridViewTextBoxColumn,
             this.trNRazemNettoDataGridViewTextBoxColumn,
             this.trNRazemBruttoDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.traNagBindingSource;
@@ -1011,50 +1009,44 @@
             // trNNumerPelnyDataGridViewTextBoxColumn
             // 
             this.trNNumerPelnyDataGridViewTextBoxColumn.DataPropertyName = "TrN_NumerPelny";
-            this.trNNumerPelnyDataGridViewTextBoxColumn.HeaderText = "TrN_NumerPelny";
+            this.trNNumerPelnyDataGridViewTextBoxColumn.HeaderText = "Numer pełny";
             this.trNNumerPelnyDataGridViewTextBoxColumn.Name = "trNNumerPelnyDataGridViewTextBoxColumn";
             this.trNNumerPelnyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // trNDataDokDataGridViewTextBoxColumn
             // 
             this.trNDataDokDataGridViewTextBoxColumn.DataPropertyName = "TrN_DataDok";
-            this.trNDataDokDataGridViewTextBoxColumn.HeaderText = "TrN_DataDok";
+            this.trNDataDokDataGridViewTextBoxColumn.HeaderText = "Data dokumentu";
             this.trNDataDokDataGridViewTextBoxColumn.Name = "trNDataDokDataGridViewTextBoxColumn";
             // 
             // trNDataWysDataGridViewTextBoxColumn
             // 
             this.trNDataWysDataGridViewTextBoxColumn.DataPropertyName = "TrN_DataWys";
-            this.trNDataWysDataGridViewTextBoxColumn.HeaderText = "TrN_DataWys";
+            this.trNDataWysDataGridViewTextBoxColumn.HeaderText = "Data wystawienia";
             this.trNDataWysDataGridViewTextBoxColumn.Name = "trNDataWysDataGridViewTextBoxColumn";
-            // 
-            // trNDataOpeDataGridViewTextBoxColumn
-            // 
-            this.trNDataOpeDataGridViewTextBoxColumn.DataPropertyName = "TrN_DataOpe";
-            this.trNDataOpeDataGridViewTextBoxColumn.HeaderText = "TrN_DataOpe";
-            this.trNDataOpeDataGridViewTextBoxColumn.Name = "trNDataOpeDataGridViewTextBoxColumn";
             // 
             // trNPodIDDataGridViewTextBoxColumn
             // 
-            this.trNPodIDDataGridViewTextBoxColumn.DataPropertyName = "TrN_PodID";
-            this.trNPodIDDataGridViewTextBoxColumn.HeaderText = "TrN_PodID";
-            this.trNPodIDDataGridViewTextBoxColumn.Name = "trNPodIDDataGridViewTextBoxColumn";
+            this.kntKodDataGridViewTextBoxColumn.DataPropertyName = "Knt_Kod";
+            this.kntKodDataGridViewTextBoxColumn.HeaderText = "Kod kontrahenta";
+            this.kntKodDataGridViewTextBoxColumn.Name = "trNPodIDDataGridViewTextBoxColumn";
             // 
             // trNPodNazwa1DataGridViewTextBoxColumn
             // 
-            this.trNPodNazwa1DataGridViewTextBoxColumn.DataPropertyName = "TrN_PodNazwa1";
-            this.trNPodNazwa1DataGridViewTextBoxColumn.HeaderText = "TrN_PodNazwa1";
-            this.trNPodNazwa1DataGridViewTextBoxColumn.Name = "trNPodNazwa1DataGridViewTextBoxColumn";
+            this.kntNazwa1DataGridViewTextBoxColumn.DataPropertyName = "Knt_Nazwa1";
+            this.kntNazwa1DataGridViewTextBoxColumn.HeaderText = "Nazwa kontrahenta";
+            this.kntNazwa1DataGridViewTextBoxColumn.Name = "trNPodNazwa1DataGridViewTextBoxColumn";
             // 
             // trNRazemNettoDataGridViewTextBoxColumn
             // 
             this.trNRazemNettoDataGridViewTextBoxColumn.DataPropertyName = "TrN_RazemNetto";
-            this.trNRazemNettoDataGridViewTextBoxColumn.HeaderText = "TrN_RazemNetto";
+            this.trNRazemNettoDataGridViewTextBoxColumn.HeaderText = "Suma netto";
             this.trNRazemNettoDataGridViewTextBoxColumn.Name = "trNRazemNettoDataGridViewTextBoxColumn";
             // 
             // trNRazemBruttoDataGridViewTextBoxColumn
             // 
             this.trNRazemBruttoDataGridViewTextBoxColumn.DataPropertyName = "TrN_RazemBrutto";
-            this.trNRazemBruttoDataGridViewTextBoxColumn.HeaderText = "TrN_RazemBrutto";
+            this.trNRazemBruttoDataGridViewTextBoxColumn.HeaderText = "Suma brutto";
             this.trNRazemBruttoDataGridViewTextBoxColumn.Name = "trNRazemBruttoDataGridViewTextBoxColumn";
             // 
             // Form2
@@ -1179,9 +1171,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trNNumerPelnyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNDataDokDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNDataWysDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trNDataOpeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trNPodIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trNPodNazwa1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kntKodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kntNazwa1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNRazemNettoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNRazemBruttoDataGridViewTextBoxColumn;
     }

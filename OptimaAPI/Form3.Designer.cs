@@ -33,10 +33,7 @@
             this.zamowieniaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cDN_SEDDataSet3 = new OptimaAPI.CDN_SEDDataSet3();
             this.zamowieniaTableAdapter = new OptimaAPI.CDN_SEDDataSet3TableAdapters.ZamowieniaTableAdapter();
-            this.trETrEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trETrNIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trETwrIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trETwrNazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trETwrKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,10 +51,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.trETrEIDDataGridViewTextBoxColumn,
             this.trETrNIdDataGridViewTextBoxColumn,
-            this.kntKodDataGridViewTextBoxColumn,
-            this.kntNazwa1DataGridViewTextBoxColumn,
             this.trETwrIdDataGridViewTextBoxColumn,
             this.trETwrNazwaDataGridViewTextBoxColumn,
             this.trETwrKodDataGridViewTextBoxColumn,
@@ -84,65 +78,46 @@
             // 
             this.zamowieniaTableAdapter.ClearBeforeFill = true;
             // 
-            // trETrEIDDataGridViewTextBoxColumn
-            // 
-            this.trETrEIDDataGridViewTextBoxColumn.DataPropertyName = "TrE_TrEID";
-            this.trETrEIDDataGridViewTextBoxColumn.HeaderText = "TrE_TrEID";
-            this.trETrEIDDataGridViewTextBoxColumn.Name = "trETrEIDDataGridViewTextBoxColumn";
-            this.trETrEIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // trETrNIdDataGridViewTextBoxColumn
             // 
             this.trETrNIdDataGridViewTextBoxColumn.DataPropertyName = "TrE_TrNId";
-            this.trETrNIdDataGridViewTextBoxColumn.HeaderText = "TrE_TrNId";
+            this.trETrNIdDataGridViewTextBoxColumn.HeaderText = "ID zamówienia";
             this.trETrNIdDataGridViewTextBoxColumn.Name = "trETrNIdDataGridViewTextBoxColumn";
-            // 
-            // kntKodDataGridViewTextBoxColumn
-            // 
-            this.kntKodDataGridViewTextBoxColumn.DataPropertyName = "Knt_Kod";
-            this.kntKodDataGridViewTextBoxColumn.HeaderText = "Knt_Kod";
-            this.kntKodDataGridViewTextBoxColumn.Name = "kntKodDataGridViewTextBoxColumn";
-            // 
-            // kntNazwa1DataGridViewTextBoxColumn
-            // 
-            this.kntNazwa1DataGridViewTextBoxColumn.DataPropertyName = "Knt_Nazwa1";
-            this.kntNazwa1DataGridViewTextBoxColumn.HeaderText = "Knt_Nazwa1";
-            this.kntNazwa1DataGridViewTextBoxColumn.Name = "kntNazwa1DataGridViewTextBoxColumn";
             // 
             // trETwrIdDataGridViewTextBoxColumn
             // 
             this.trETwrIdDataGridViewTextBoxColumn.DataPropertyName = "TrE_TwrId";
-            this.trETwrIdDataGridViewTextBoxColumn.HeaderText = "TrE_TwrId";
+            this.trETwrIdDataGridViewTextBoxColumn.HeaderText = "ID towaru";
             this.trETwrIdDataGridViewTextBoxColumn.Name = "trETwrIdDataGridViewTextBoxColumn";
             // 
             // trETwrNazwaDataGridViewTextBoxColumn
             // 
             this.trETwrNazwaDataGridViewTextBoxColumn.DataPropertyName = "TrE_TwrNazwa";
-            this.trETwrNazwaDataGridViewTextBoxColumn.HeaderText = "TrE_TwrNazwa";
+            this.trETwrNazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa towaru";
             this.trETwrNazwaDataGridViewTextBoxColumn.Name = "trETwrNazwaDataGridViewTextBoxColumn";
             // 
             // trETwrKodDataGridViewTextBoxColumn
             // 
             this.trETwrKodDataGridViewTextBoxColumn.DataPropertyName = "TrE_TwrKod";
-            this.trETwrKodDataGridViewTextBoxColumn.HeaderText = "TrE_TwrKod";
+            this.trETwrKodDataGridViewTextBoxColumn.HeaderText = "Kod towaru";
             this.trETwrKodDataGridViewTextBoxColumn.Name = "trETwrKodDataGridViewTextBoxColumn";
             // 
             // trEWartoscNettoDataGridViewTextBoxColumn
             // 
             this.trEWartoscNettoDataGridViewTextBoxColumn.DataPropertyName = "TrE_WartoscNetto";
-            this.trEWartoscNettoDataGridViewTextBoxColumn.HeaderText = "TrE_WartoscNetto";
+            this.trEWartoscNettoDataGridViewTextBoxColumn.HeaderText = "Wartość netto";
             this.trEWartoscNettoDataGridViewTextBoxColumn.Name = "trEWartoscNettoDataGridViewTextBoxColumn";
             // 
             // trEWartoscBruttoDataGridViewTextBoxColumn
             // 
             this.trEWartoscBruttoDataGridViewTextBoxColumn.DataPropertyName = "TrE_WartoscBrutto";
-            this.trEWartoscBruttoDataGridViewTextBoxColumn.HeaderText = "TrE_WartoscBrutto";
+            this.trEWartoscBruttoDataGridViewTextBoxColumn.HeaderText = "Wartość brutto";
             this.trEWartoscBruttoDataGridViewTextBoxColumn.Name = "trEWartoscBruttoDataGridViewTextBoxColumn";
             // 
             // trEWartoscBruttoDataGridViewTextBoxColumn
             // 
             this.trEIloscJMDataGridViewTextBoxColumn.DataPropertyName = "TrE_IloscJM";
-            this.trEIloscJMDataGridViewTextBoxColumn.HeaderText = "TrE_IloscJM";
+            this.trEIloscJMDataGridViewTextBoxColumn.HeaderText = "Ilość";
             this.trEIloscJMDataGridViewTextBoxColumn.Name = "trEIloscJMDataGridViewTextBoxColumn";
             // 
             // Form3
@@ -167,10 +142,7 @@
         private System.Windows.Forms.BindingSource zamowieniaBindingSource;
         private CDN_SEDDataSet3 cDN_SEDDataSet3;
         private CDN_SEDDataSet3TableAdapters.ZamowieniaTableAdapter zamowieniaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trETrEIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trETrNIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntKodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntNazwa1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trETwrIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trETwrNazwaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trETwrKodDataGridViewTextBoxColumn;

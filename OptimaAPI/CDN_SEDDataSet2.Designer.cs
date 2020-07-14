@@ -285,8 +285,6 @@ namespace OptimaAPI {
             
             private global::System.Data.DataColumn columnTrN_DataWys;
             
-            private global::System.Data.DataColumn columnTrN_DataOpe;
-            
             private global::System.Data.DataColumn columnTrN_PodID;
             
             private global::System.Data.DataColumn columnTrN_PodNazwa1;
@@ -294,6 +292,10 @@ namespace OptimaAPI {
             private global::System.Data.DataColumn columnTrN_RazemNetto;
             
             private global::System.Data.DataColumn columnTrN_RazemBrutto;
+            
+            private global::System.Data.DataColumn columnKnt_Kod;
+            
+            private global::System.Data.DataColumn columnKnt_Nazwa1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -354,14 +356,6 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TrN_DataOpeColumn {
-                get {
-                    return this.columnTrN_DataOpe;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn TrN_PodIDColumn {
                 get {
                     return this.columnTrN_PodID;
@@ -389,6 +383,22 @@ namespace OptimaAPI {
             public global::System.Data.DataColumn TrN_RazemBruttoColumn {
                 get {
                     return this.columnTrN_RazemBrutto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Knt_KodColumn {
+                get {
+                    return this.columnKnt_Kod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Knt_Nazwa1Column {
+                get {
+                    return this.columnKnt_Nazwa1;
                 }
             }
             
@@ -429,17 +439,18 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TraNagRow AddTraNagRow(string TrN_NumerPelny, System.DateTime TrN_DataDok, System.DateTime TrN_DataWys, System.DateTime TrN_DataOpe, int TrN_PodID, string TrN_PodNazwa1, decimal TrN_RazemNetto, decimal TrN_RazemBrutto) {
+            public TraNagRow AddTraNagRow(string TrN_NumerPelny, System.DateTime TrN_DataDok, System.DateTime TrN_DataWys, int TrN_PodID, string TrN_PodNazwa1, decimal TrN_RazemNetto, decimal TrN_RazemBrutto, string Knt_Kod, string Knt_Nazwa1) {
                 TraNagRow rowTraNagRow = ((TraNagRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TrN_NumerPelny,
                         TrN_DataDok,
                         TrN_DataWys,
-                        TrN_DataOpe,
                         TrN_PodID,
                         TrN_PodNazwa1,
                         TrN_RazemNetto,
-                        TrN_RazemBrutto};
+                        TrN_RazemBrutto,
+                        Knt_Kod,
+                        Knt_Nazwa1};
                 rowTraNagRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTraNagRow);
                 return rowTraNagRow;
@@ -465,11 +476,12 @@ namespace OptimaAPI {
                 this.columnTrN_NumerPelny = base.Columns["TrN_NumerPelny"];
                 this.columnTrN_DataDok = base.Columns["TrN_DataDok"];
                 this.columnTrN_DataWys = base.Columns["TrN_DataWys"];
-                this.columnTrN_DataOpe = base.Columns["TrN_DataOpe"];
                 this.columnTrN_PodID = base.Columns["TrN_PodID"];
                 this.columnTrN_PodNazwa1 = base.Columns["TrN_PodNazwa1"];
                 this.columnTrN_RazemNetto = base.Columns["TrN_RazemNetto"];
                 this.columnTrN_RazemBrutto = base.Columns["TrN_RazemBrutto"];
+                this.columnKnt_Kod = base.Columns["Knt_Kod"];
+                this.columnKnt_Nazwa1 = base.Columns["Knt_Nazwa1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -481,8 +493,6 @@ namespace OptimaAPI {
                 base.Columns.Add(this.columnTrN_DataDok);
                 this.columnTrN_DataWys = new global::System.Data.DataColumn("TrN_DataWys", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTrN_DataWys);
-                this.columnTrN_DataOpe = new global::System.Data.DataColumn("TrN_DataOpe", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTrN_DataOpe);
                 this.columnTrN_PodID = new global::System.Data.DataColumn("TrN_PodID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTrN_PodID);
                 this.columnTrN_PodNazwa1 = new global::System.Data.DataColumn("TrN_PodNazwa1", typeof(string), null, global::System.Data.MappingType.Element);
@@ -491,15 +501,22 @@ namespace OptimaAPI {
                 base.Columns.Add(this.columnTrN_RazemNetto);
                 this.columnTrN_RazemBrutto = new global::System.Data.DataColumn("TrN_RazemBrutto", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTrN_RazemBrutto);
+                this.columnKnt_Kod = new global::System.Data.DataColumn("Knt_Kod", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKnt_Kod);
+                this.columnKnt_Nazwa1 = new global::System.Data.DataColumn("Knt_Nazwa1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKnt_Nazwa1);
                 this.columnTrN_NumerPelny.ReadOnly = true;
                 this.columnTrN_NumerPelny.MaxLength = 30;
                 this.columnTrN_DataDok.AllowDBNull = false;
                 this.columnTrN_DataWys.AllowDBNull = false;
-                this.columnTrN_DataOpe.AllowDBNull = false;
                 this.columnTrN_PodNazwa1.AllowDBNull = false;
                 this.columnTrN_PodNazwa1.MaxLength = 50;
                 this.columnTrN_RazemNetto.AllowDBNull = false;
                 this.columnTrN_RazemBrutto.AllowDBNull = false;
+                this.columnKnt_Kod.AllowDBNull = false;
+                this.columnKnt_Kod.MaxLength = 20;
+                this.columnKnt_Nazwa1.AllowDBNull = false;
+                this.columnKnt_Nazwa1.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -680,17 +697,6 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime TrN_DataOpe {
-                get {
-                    return ((global::System.DateTime)(this[this.tableTraNag.TrN_DataOpeColumn]));
-                }
-                set {
-                    this[this.tableTraNag.TrN_DataOpeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int TrN_PodID {
                 get {
                     try {
@@ -735,6 +741,28 @@ namespace OptimaAPI {
                 }
                 set {
                     this[this.tableTraNag.TrN_RazemBruttoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Knt_Kod {
+                get {
+                    return ((string)(this[this.tableTraNag.Knt_KodColumn]));
+                }
+                set {
+                    this[this.tableTraNag.Knt_KodColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Knt_Nazwa1 {
+                get {
+                    return ((string)(this[this.tableTraNag.Knt_Nazwa1Column]));
+                }
+                set {
+                    this[this.tableTraNag.Knt_Nazwa1Column] = value;
                 }
             }
             
@@ -925,11 +953,12 @@ namespace OptimaAPI.CDN_SEDDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("TrN_NumerPelny", "TrN_NumerPelny");
             tableMapping.ColumnMappings.Add("TrN_DataDok", "TrN_DataDok");
             tableMapping.ColumnMappings.Add("TrN_DataWys", "TrN_DataWys");
-            tableMapping.ColumnMappings.Add("TrN_DataOpe", "TrN_DataOpe");
             tableMapping.ColumnMappings.Add("TrN_PodID", "TrN_PodID");
             tableMapping.ColumnMappings.Add("TrN_PodNazwa1", "TrN_PodNazwa1");
             tableMapping.ColumnMappings.Add("TrN_RazemNetto", "TrN_RazemNetto");
             tableMapping.ColumnMappings.Add("TrN_RazemBrutto", "TrN_RazemBrutto");
+            tableMapping.ColumnMappings.Add("Knt_Kod", "Knt_Kod");
+            tableMapping.ColumnMappings.Add("Knt_Nazwa1", "Knt_Nazwa1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -946,8 +975,9 @@ namespace OptimaAPI.CDN_SEDDataSet2TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TrN_NumerPelny, TrN_DataDok, TrN_DataWys, TrN_DataOpe, TrN_PodID, TrN_PodN" +
-                "azwa1, TrN_RazemNetto, TrN_RazemBrutto FROM CDN.TraNag";
+            this._commandCollection[0].CommandText = @"SELECT        t.TrN_NumerPelny, t.TrN_DataDok, t.TrN_DataWys, t.TrN_PodID, t.TrN_PodNazwa1, t.TrN_RazemNetto, t.TrN_RazemBrutto, k.Knt_Kod, k.Knt_Nazwa1
+FROM            CDN.TraNag AS t INNER JOIN
+                         CDN.Kontrahenci AS k ON t.TrN_PodID = k.Knt_KntId";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

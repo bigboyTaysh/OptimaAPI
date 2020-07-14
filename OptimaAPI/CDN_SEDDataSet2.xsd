@@ -9,10 +9,12 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TraNagTableAdapter" GeneratorDataComponentClassName="TraNagTableAdapter" Name="TraNag" UserDataComponentName="TraNagTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CDN_SEDConnectionString (Settings)" DbObjectName="CDN_SED.CDN.TraNag" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CDN_SEDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT TrN_NumerPelny, TrN_DataDok, TrN_DataWys, TrN_DataOpe, TrN_PodID, TrN_PodNazwa1, TrN_RazemNetto, TrN_RazemBrutto FROM CDN.TraNag</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        t.TrN_NumerPelny, t.TrN_DataDok, t.TrN_DataWys, t.TrN_PodID, t.TrN_PodNazwa1, t.TrN_RazemNetto, t.TrN_RazemBrutto, k.Knt_Kod, k.Knt_Nazwa1
+FROM            CDN.TraNag AS t INNER JOIN
+                         CDN.Kontrahenci AS k ON t.TrN_PodID = k.Knt_KntId</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,11 +24,12 @@
               <Mapping SourceColumn="TrN_NumerPelny" DataSetColumn="TrN_NumerPelny" />
               <Mapping SourceColumn="TrN_DataDok" DataSetColumn="TrN_DataDok" />
               <Mapping SourceColumn="TrN_DataWys" DataSetColumn="TrN_DataWys" />
-              <Mapping SourceColumn="TrN_DataOpe" DataSetColumn="TrN_DataOpe" />
               <Mapping SourceColumn="TrN_PodID" DataSetColumn="TrN_PodID" />
               <Mapping SourceColumn="TrN_PodNazwa1" DataSetColumn="TrN_PodNazwa1" />
               <Mapping SourceColumn="TrN_RazemNetto" DataSetColumn="TrN_RazemNetto" />
               <Mapping SourceColumn="TrN_RazemBrutto" DataSetColumn="TrN_RazemBrutto" />
+              <Mapping SourceColumn="Knt_Kod" DataSetColumn="Knt_Kod" />
+              <Mapping SourceColumn="Knt_Nazwa1" DataSetColumn="Knt_Nazwa1" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -38,7 +41,7 @@
   <xs:element name="CDN_SEDDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CDN_SEDDataSet2" msprop:Generator_UserDSName="CDN_SEDDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TraNag" msprop:Generator_TableClassName="TraNagDataTable" msprop:Generator_TableVarName="tableTraNag" msprop:Generator_TablePropName="TraNag" msprop:Generator_RowDeletingName="TraNagRowDeleting" msprop:Generator_RowChangingName="TraNagRowChanging" msprop:Generator_RowEvHandlerName="TraNagRowChangeEventHandler" msprop:Generator_RowDeletedName="TraNagRowDeleted" msprop:Generator_UserTableName="TraNag" msprop:Generator_RowChangedName="TraNagRowChanged" msprop:Generator_RowEvArgName="TraNagRowChangeEvent" msprop:Generator_RowClassName="TraNagRow">
+        <xs:element name="TraNag" msprop:Generator_TableClassName="TraNagDataTable" msprop:Generator_TableVarName="tableTraNag" msprop:Generator_RowChangedName="TraNagRowChanged" msprop:Generator_TablePropName="TraNag" msprop:Generator_RowDeletingName="TraNagRowDeleting" msprop:Generator_RowChangingName="TraNagRowChanging" msprop:Generator_RowEvHandlerName="TraNagRowChangeEventHandler" msprop:Generator_RowDeletedName="TraNagRowDeleted" msprop:Generator_RowClassName="TraNagRow" msprop:Generator_UserTableName="TraNag" msprop:Generator_RowEvArgName="TraNagRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TrN_NumerPelny" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTrN_NumerPelny" msprop:Generator_ColumnPropNameInRow="TrN_NumerPelny" msprop:Generator_ColumnPropNameInTable="TrN_NumerPelnyColumn" msprop:Generator_UserColumnName="TrN_NumerPelny" minOccurs="0">
@@ -50,7 +53,6 @@
               </xs:element>
               <xs:element name="TrN_DataDok" msprop:Generator_ColumnVarNameInTable="columnTrN_DataDok" msprop:Generator_ColumnPropNameInRow="TrN_DataDok" msprop:Generator_ColumnPropNameInTable="TrN_DataDokColumn" msprop:Generator_UserColumnName="TrN_DataDok" type="xs:dateTime" />
               <xs:element name="TrN_DataWys" msprop:Generator_ColumnVarNameInTable="columnTrN_DataWys" msprop:Generator_ColumnPropNameInRow="TrN_DataWys" msprop:Generator_ColumnPropNameInTable="TrN_DataWysColumn" msprop:Generator_UserColumnName="TrN_DataWys" type="xs:dateTime" />
-              <xs:element name="TrN_DataOpe" msprop:Generator_ColumnVarNameInTable="columnTrN_DataOpe" msprop:Generator_ColumnPropNameInRow="TrN_DataOpe" msprop:Generator_ColumnPropNameInTable="TrN_DataOpeColumn" msprop:Generator_UserColumnName="TrN_DataOpe" type="xs:dateTime" />
               <xs:element name="TrN_PodID" msprop:Generator_ColumnVarNameInTable="columnTrN_PodID" msprop:Generator_ColumnPropNameInRow="TrN_PodID" msprop:Generator_ColumnPropNameInTable="TrN_PodIDColumn" msprop:Generator_UserColumnName="TrN_PodID" type="xs:int" minOccurs="0" />
               <xs:element name="TrN_PodNazwa1" msprop:Generator_ColumnVarNameInTable="columnTrN_PodNazwa1" msprop:Generator_ColumnPropNameInRow="TrN_PodNazwa1" msprop:Generator_ColumnPropNameInTable="TrN_PodNazwa1Column" msprop:Generator_UserColumnName="TrN_PodNazwa1">
                 <xs:simpleType>
@@ -61,6 +63,20 @@
               </xs:element>
               <xs:element name="TrN_RazemNetto" msprop:Generator_ColumnVarNameInTable="columnTrN_RazemNetto" msprop:Generator_ColumnPropNameInRow="TrN_RazemNetto" msprop:Generator_ColumnPropNameInTable="TrN_RazemNettoColumn" msprop:Generator_UserColumnName="TrN_RazemNetto" type="xs:decimal" />
               <xs:element name="TrN_RazemBrutto" msprop:Generator_ColumnVarNameInTable="columnTrN_RazemBrutto" msprop:Generator_ColumnPropNameInRow="TrN_RazemBrutto" msprop:Generator_ColumnPropNameInTable="TrN_RazemBruttoColumn" msprop:Generator_UserColumnName="TrN_RazemBrutto" type="xs:decimal" />
+              <xs:element name="Knt_Kod" msprop:Generator_ColumnVarNameInTable="columnKnt_Kod" msprop:Generator_ColumnPropNameInRow="Knt_Kod" msprop:Generator_ColumnPropNameInTable="Knt_KodColumn" msprop:Generator_UserColumnName="Knt_Kod">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Knt_Nazwa1" msprop:Generator_ColumnVarNameInTable="columnKnt_Nazwa1" msprop:Generator_ColumnPropNameInRow="Knt_Nazwa1" msprop:Generator_ColumnPropNameInTable="Knt_Nazwa1Column" msprop:Generator_UserColumnName="Knt_Nazwa1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

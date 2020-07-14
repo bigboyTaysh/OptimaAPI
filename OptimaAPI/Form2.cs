@@ -31,8 +31,6 @@ namespace OptimaAPI
             Login = login;
 
             InitializeComponent();
-            ChangeNameOfKontrachenciColumns();
-            ChangeNameOfTowaryColumns();
         }
 
         #region okno
@@ -80,26 +78,6 @@ namespace OptimaAPI
         private void Form2_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
-        }
-        private void ChangeNameOfKontrachenciColumns()
-        {
-            this.dataGridView1.Columns[0].HeaderText = "Kod";
-            this.dataGridView1.Columns[1].HeaderText = "Nazwa";
-            this.dataGridView1.Columns[2].HeaderText = "Ulica";
-            this.dataGridView1.Columns[3].HeaderText = "Nr domu";
-            this.dataGridView1.Columns[4].HeaderText = "Miasto";
-            this.dataGridView1.Columns[5].HeaderText = "Kod pocztowy";
-            this.dataGridView1.Columns[6].HeaderText = "Telefon";
-            this.dataGridView1.Columns[7].HeaderText = "Email";
-        }
-        private void ChangeNameOfTowaryColumns()
-        {
-            this.dataGridView2.Columns[0].HeaderText = "Kod";
-            this.dataGridView2.Columns[1].HeaderText = "Nazwa";
-            this.dataGridView2.Columns[2].HeaderText = "Jednostka";
-            this.dataGridView2.Columns[3].HeaderText = "Stawka vat";
-            this.dataGridView2.Columns[4].HeaderText = "Wartość";
-            this.dataGridView2.Columns[5].HeaderText = "Waluta";
         }
         private void ChangeMenuButtonsColor(string name)
         {

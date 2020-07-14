@@ -283,10 +283,6 @@ namespace OptimaAPI {
             
             private global::System.Data.DataColumn columnTrE_TrNId;
             
-            private global::System.Data.DataColumn columnKnt_Kod;
-            
-            private global::System.Data.DataColumn columnKnt_Nazwa1;
-            
             private global::System.Data.DataColumn columnTrE_TwrId;
             
             private global::System.Data.DataColumn columnTrE_TwrNazwa;
@@ -345,22 +341,6 @@ namespace OptimaAPI {
             public global::System.Data.DataColumn TrE_TrNIdColumn {
                 get {
                     return this.columnTrE_TrNId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_KodColumn {
-                get {
-                    return this.columnKnt_Kod;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Knt_Nazwa1Column {
-                get {
-                    return this.columnKnt_Nazwa1;
                 }
             }
             
@@ -449,13 +429,11 @@ namespace OptimaAPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ZamowieniaRow AddZamowieniaRow(int TrE_TrNId, string Knt_Kod, string Knt_Nazwa1, int TrE_TwrId, string TrE_TwrNazwa, string TrE_TwrKod, decimal TrE_WartoscNetto, decimal TrE_WartoscBrutto, decimal TrE_IloscJM) {
+            public ZamowieniaRow AddZamowieniaRow(int TrE_TrNId, int TrE_TwrId, string TrE_TwrNazwa, string TrE_TwrKod, decimal TrE_WartoscNetto, decimal TrE_WartoscBrutto, decimal TrE_IloscJM) {
                 ZamowieniaRow rowZamowieniaRow = ((ZamowieniaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TrE_TrNId,
-                        Knt_Kod,
-                        Knt_Nazwa1,
                         TrE_TwrId,
                         TrE_TwrNazwa,
                         TrE_TwrKod,
@@ -493,8 +471,6 @@ namespace OptimaAPI {
             internal void InitVars() {
                 this.columnTrE_TrEID = base.Columns["TrE_TrEID"];
                 this.columnTrE_TrNId = base.Columns["TrE_TrNId"];
-                this.columnKnt_Kod = base.Columns["Knt_Kod"];
-                this.columnKnt_Nazwa1 = base.Columns["Knt_Nazwa1"];
                 this.columnTrE_TwrId = base.Columns["TrE_TwrId"];
                 this.columnTrE_TwrNazwa = base.Columns["TrE_TwrNazwa"];
                 this.columnTrE_TwrKod = base.Columns["TrE_TwrKod"];
@@ -510,10 +486,6 @@ namespace OptimaAPI {
                 base.Columns.Add(this.columnTrE_TrEID);
                 this.columnTrE_TrNId = new global::System.Data.DataColumn("TrE_TrNId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTrE_TrNId);
-                this.columnKnt_Kod = new global::System.Data.DataColumn("Knt_Kod", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Kod);
-                this.columnKnt_Nazwa1 = new global::System.Data.DataColumn("Knt_Nazwa1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Nazwa1);
                 this.columnTrE_TwrId = new global::System.Data.DataColumn("TrE_TwrId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTrE_TwrId);
                 this.columnTrE_TwrNazwa = new global::System.Data.DataColumn("TrE_TwrNazwa", typeof(string), null, global::System.Data.MappingType.Element);
@@ -535,10 +507,6 @@ namespace OptimaAPI {
                 this.columnTrE_TrEID.ReadOnly = true;
                 this.columnTrE_TrEID.Unique = true;
                 this.columnTrE_TrNId.AllowDBNull = false;
-                this.columnKnt_Kod.AllowDBNull = false;
-                this.columnKnt_Kod.MaxLength = 20;
-                this.columnKnt_Nazwa1.AllowDBNull = false;
-                this.columnKnt_Nazwa1.MaxLength = 50;
                 this.columnTrE_TwrNazwa.AllowDBNull = false;
                 this.columnTrE_TwrNazwa.MaxLength = 255;
                 this.columnTrE_TwrKod.AllowDBNull = false;
@@ -705,28 +673,6 @@ namespace OptimaAPI {
                 }
                 set {
                     this[this.tableZamowienia.TrE_TrNIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Kod {
-                get {
-                    return ((string)(this[this.tableZamowienia.Knt_KodColumn]));
-                }
-                set {
-                    this[this.tableZamowienia.Knt_KodColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Knt_Nazwa1 {
-                get {
-                    return ((string)(this[this.tableZamowienia.Knt_Nazwa1Column]));
-                }
-                set {
-                    this[this.tableZamowienia.Knt_Nazwa1Column] = value;
                 }
             }
             
@@ -975,8 +921,6 @@ namespace OptimaAPI.CDN_SEDDataSet3TableAdapters {
             tableMapping.DataSetTable = "Zamowienia";
             tableMapping.ColumnMappings.Add("TrE_TrEID", "TrE_TrEID");
             tableMapping.ColumnMappings.Add("TrE_TrNId", "TrE_TrNId");
-            tableMapping.ColumnMappings.Add("Knt_Kod", "Knt_Kod");
-            tableMapping.ColumnMappings.Add("Knt_Nazwa1", "Knt_Nazwa1");
             tableMapping.ColumnMappings.Add("TrE_TwrId", "TrE_TwrId");
             tableMapping.ColumnMappings.Add("TrE_TwrNazwa", "TrE_TwrNazwa");
             tableMapping.ColumnMappings.Add("TrE_TwrKod", "TrE_TwrKod");
@@ -999,7 +943,7 @@ namespace OptimaAPI.CDN_SEDDataSet3TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        t.TrE_TrEID, t.TrE_TrNId, k.Knt_Kod, k.Knt_Nazwa1, t.TrE_TwrId, t.TrE_TwrNazwa, t.TrE_TwrKod, t.TrE_IloscJM, t.TrE_WartoscNetto, t.TrE_WartoscBrutto
+            this._commandCollection[0].CommandText = @"SELECT        t.TrE_TrEID, t.TrE_TrNId, t.TrE_TwrId, t.TrE_TwrNazwa, t.TrE_TwrKod, t.TrE_IloscJM, t.TrE_WartoscNetto, t.TrE_WartoscBrutto
 FROM            CDN.TraElem AS t INNER JOIN
                          CDN.Kontrahenci AS k ON t.TrE_PodID = k.Knt_KntId";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;

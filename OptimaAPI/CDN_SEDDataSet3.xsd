@@ -9,10 +9,10 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ZamowieniaTableAdapter" GeneratorDataComponentClassName="ZamowieniaTableAdapter" Name="Zamowienia" UserDataComponentName="ZamowieniaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CDN_SEDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CDN_SEDConnectionString (Settings)" DbObjectName="CDN_SED.CDN.TraElem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        t.TrE_TrEID, t.TrE_TrNId, k.Knt_Kod, k.Knt_Nazwa1, t.TrE_TwrId, t.TrE_TwrNazwa, t.TrE_TwrKod, t.TrE_IloscJM, t.TrE_WartoscNetto, t.TrE_WartoscBrutto
+                    <CommandText>SELECT        t.TrE_TrEID, t.TrE_TrNId, t.TrE_TwrId, t.TrE_TwrNazwa, t.TrE_TwrKod, t.TrE_IloscJM, t.TrE_WartoscNetto, t.TrE_WartoscBrutto
 FROM            CDN.TraElem AS t INNER JOIN
                          CDN.Kontrahenci AS k ON t.TrE_PodID = k.Knt_KntId</CommandText>
                     <Parameters />
@@ -23,8 +23,6 @@ FROM            CDN.TraElem AS t INNER JOIN
             <Mappings>
               <Mapping SourceColumn="TrE_TrEID" DataSetColumn="TrE_TrEID" />
               <Mapping SourceColumn="TrE_TrNId" DataSetColumn="TrE_TrNId" />
-              <Mapping SourceColumn="Knt_Kod" DataSetColumn="Knt_Kod" />
-              <Mapping SourceColumn="Knt_Nazwa1" DataSetColumn="Knt_Nazwa1" />
               <Mapping SourceColumn="TrE_TwrId" DataSetColumn="TrE_TwrId" />
               <Mapping SourceColumn="TrE_TwrNazwa" DataSetColumn="TrE_TwrNazwa" />
               <Mapping SourceColumn="TrE_TwrKod" DataSetColumn="TrE_TwrKod" />
@@ -47,20 +45,6 @@ FROM            CDN.TraElem AS t INNER JOIN
             <xs:sequence>
               <xs:element name="TrE_TrEID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTrE_TrEID" msprop:Generator_ColumnPropNameInRow="TrE_TrEID" msprop:Generator_ColumnPropNameInTable="TrE_TrEIDColumn" msprop:Generator_UserColumnName="TrE_TrEID" type="xs:int" />
               <xs:element name="TrE_TrNId" msprop:Generator_ColumnVarNameInTable="columnTrE_TrNId" msprop:Generator_ColumnPropNameInRow="TrE_TrNId" msprop:Generator_ColumnPropNameInTable="TrE_TrNIdColumn" msprop:Generator_UserColumnName="TrE_TrNId" type="xs:int" />
-              <xs:element name="Knt_Kod" msprop:Generator_ColumnVarNameInTable="columnKnt_Kod" msprop:Generator_ColumnPropNameInRow="Knt_Kod" msprop:Generator_ColumnPropNameInTable="Knt_KodColumn" msprop:Generator_UserColumnName="Knt_Kod">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Knt_Nazwa1" msprop:Generator_ColumnVarNameInTable="columnKnt_Nazwa1" msprop:Generator_ColumnPropNameInRow="Knt_Nazwa1" msprop:Generator_ColumnPropNameInTable="Knt_Nazwa1Column" msprop:Generator_UserColumnName="Knt_Nazwa1">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="TrE_TwrId" msprop:Generator_ColumnVarNameInTable="columnTrE_TwrId" msprop:Generator_ColumnPropNameInRow="TrE_TwrId" msprop:Generator_ColumnPropNameInTable="TrE_TwrIdColumn" msprop:Generator_UserColumnName="TrE_TwrId" type="xs:int" minOccurs="0" />
               <xs:element name="TrE_TwrNazwa" msprop:Generator_ColumnVarNameInTable="columnTrE_TwrNazwa" msprop:Generator_ColumnPropNameInRow="TrE_TwrNazwa" msprop:Generator_ColumnPropNameInTable="TrE_TwrNazwaColumn" msprop:Generator_UserColumnName="TrE_TwrNazwa">
                 <xs:simpleType>
