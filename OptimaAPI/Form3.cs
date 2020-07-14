@@ -29,10 +29,15 @@ namespace OptimaAPI
 
             this.zamowieniaTableAdapter.Fill(this.cDN_SEDDataSet3.Zamowienia);
         }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form3_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                this.DisplayRectangle);
         }
     }
 }

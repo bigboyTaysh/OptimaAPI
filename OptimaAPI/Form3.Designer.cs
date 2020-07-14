@@ -60,9 +60,9 @@
             this.trEWartoscNettoDataGridViewTextBoxColumn,
             this.trEWartoscBruttoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zamowieniaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 93);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(762, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // trETrNIdDataGridViewTextBoxColumn
@@ -128,7 +128,7 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(181)))), ((int)(((byte)(129)))));
-            this.exitButton.Location = new System.Drawing.Point(743, 12);
+            this.exitButton.Location = new System.Drawing.Point(714, 12);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(45, 36);
             this.exitButton.TabIndex = 3;
@@ -140,13 +140,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.ClientSize = new System.Drawing.Size(771, 450);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form3_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zamowieniaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet3)).EndInit();

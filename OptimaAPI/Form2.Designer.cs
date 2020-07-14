@@ -104,15 +104,15 @@
             this.menuPanel = new System.Windows.Forms.Panel();
             this.zamowieniaPanel = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.cDN_SEDDataSet2 = new OptimaAPI.CDN_SEDDataSet2();
-            this.traNagBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trNNumerPelnyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNDataDokDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNDataWysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntKodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trNPodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trNPodNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNRazemNettoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNRazemBruttoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.traNagBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDN_SEDDataSet2 = new OptimaAPI.CDN_SEDDataSet2();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
             this.kontrahenciPanel.SuspendLayout();
@@ -124,8 +124,8 @@
             this.menuPanel.SuspendLayout();
             this.zamowieniaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traNagBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // logoutButton
@@ -985,26 +985,16 @@
             this.trNNumerPelnyDataGridViewTextBoxColumn,
             this.trNDataDokDataGridViewTextBoxColumn,
             this.trNDataWysDataGridViewTextBoxColumn,
-            this.kntKodDataGridViewTextBoxColumn,
-            this.kntNazwa1DataGridViewTextBoxColumn,
+            this.trNPodIDDataGridViewTextBoxColumn,
+            this.trNPodNazwa1DataGridViewTextBoxColumn,
             this.trNRazemNettoDataGridViewTextBoxColumn,
             this.trNRazemBruttoDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.traNagBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(8, 12);
+            this.dataGridView3.Location = new System.Drawing.Point(52, 12);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(841, 150);
+            this.dataGridView3.Size = new System.Drawing.Size(743, 150);
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_CellMouseDoubleClick);
-            // 
-            // cDN_SEDDataSet2
-            // 
-            this.cDN_SEDDataSet2.DataSetName = "CDN_SEDDataSet2";
-            this.cDN_SEDDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // traNagBindingSource
-            // 
-            this.traNagBindingSource.DataMember = "TraNag";
-            this.traNagBindingSource.DataSource = this.cDN_SEDDataSet2;
             // 
             // trNNumerPelnyDataGridViewTextBoxColumn
             // 
@@ -1027,15 +1017,15 @@
             // 
             // trNPodIDDataGridViewTextBoxColumn
             // 
-            this.kntKodDataGridViewTextBoxColumn.DataPropertyName = "Knt_Kod";
-            this.kntKodDataGridViewTextBoxColumn.HeaderText = "Kod kontrahenta";
-            this.kntKodDataGridViewTextBoxColumn.Name = "trNPodIDDataGridViewTextBoxColumn";
+            this.trNPodIDDataGridViewTextBoxColumn.DataPropertyName = "Knt_Kod";
+            this.trNPodIDDataGridViewTextBoxColumn.HeaderText = "Kod kontrahenta";
+            this.trNPodIDDataGridViewTextBoxColumn.Name = "trNPodIDDataGridViewTextBoxColumn";
             // 
             // trNPodNazwa1DataGridViewTextBoxColumn
             // 
-            this.kntNazwa1DataGridViewTextBoxColumn.DataPropertyName = "Knt_Nazwa1";
-            this.kntNazwa1DataGridViewTextBoxColumn.HeaderText = "Nazwa kontrahenta";
-            this.kntNazwa1DataGridViewTextBoxColumn.Name = "trNPodNazwa1DataGridViewTextBoxColumn";
+            this.trNPodNazwa1DataGridViewTextBoxColumn.DataPropertyName = "Knt_Nazwa1";
+            this.trNPodNazwa1DataGridViewTextBoxColumn.HeaderText = "Nazwa kontrahenta";
+            this.trNPodNazwa1DataGridViewTextBoxColumn.Name = "trNPodNazwa1DataGridViewTextBoxColumn";
             // 
             // trNRazemNettoDataGridViewTextBoxColumn
             // 
@@ -1048,6 +1038,16 @@
             this.trNRazemBruttoDataGridViewTextBoxColumn.DataPropertyName = "TrN_RazemBrutto";
             this.trNRazemBruttoDataGridViewTextBoxColumn.HeaderText = "Suma brutto";
             this.trNRazemBruttoDataGridViewTextBoxColumn.Name = "trNRazemBruttoDataGridViewTextBoxColumn";
+            // 
+            // traNagBindingSource
+            // 
+            this.traNagBindingSource.DataMember = "TraNag";
+            this.traNagBindingSource.DataSource = this.cDN_SEDDataSet2;
+            // 
+            // cDN_SEDDataSet2
+            // 
+            this.cDN_SEDDataSet2.DataSetName = "CDN_SEDDataSet2";
+            this.cDN_SEDDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Form2
             // 
@@ -1083,8 +1083,8 @@
             this.menuPanel.ResumeLayout(false);
             this.zamowieniaPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traNagBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1175,5 +1175,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kntNazwa1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNRazemNettoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNRazemBruttoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trNPodIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trNPodNazwa1DataGridViewTextBoxColumn;
     }
 }
