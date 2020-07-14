@@ -12,6 +12,7 @@ using CDNBase;
 using CDNHeal;
 using CDNRVAT;
 using CDNTwrb1;
+using CDNHlmn;
 using OP_KASBOLib;
 
 namespace OptimaAPI
@@ -56,6 +57,8 @@ namespace OptimaAPI
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet2.TraNag' table. You can move, or remove it, as needed.
+            this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
             filterKontrahenciComboBox.SelectedIndex = 0;
             this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
             this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
@@ -450,6 +453,20 @@ namespace OptimaAPI
             cDNSEDDataSet1BindingSource.Filter = phrase;
 
             this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
+        }
+        #endregion
+
+        #region zamówienia
+        private void dataGridView3_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var row = dataGridView3.Rows[e.RowIndex];
+
+            AdoSession session = Login.CreateSession();
+            DokumentyHaMag dokumenty = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag", null);
+            DokumentHaMag dokument = (DokumentHaMag)dokumenty[$"TrN_NumerPelny='{(string)row.Cells[0].Value}'"];
+
+            MessageBox.Show(dokument.PodID.ToString());
+
         }
         #endregion
     }
