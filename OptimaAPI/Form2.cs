@@ -142,14 +142,23 @@ namespace OptimaAPI
             kontrahenciButton.BackColor = Color.FromArgb(114, 137, 218);
             kontrahenciPanel.Visible = true;
             towaryPanel.Visible = false;
+            zamowieniaPanel.Visible = false;
         }
-
         private void towaryButton_Click(object sender, EventArgs e)
         {
             ChangeMenuButtonsColor("menuPanel");
             towaryButton.BackColor = Color.FromArgb(114, 137, 218);
             kontrahenciPanel.Visible = false;
             towaryPanel.Visible = true;
+            zamowieniaPanel.Visible = false;
+        }
+        private void zamowieniaButton_Click(object sender, EventArgs e)
+        {
+            ChangeMenuButtonsColor("menuPanel");
+            zamowieniaButton.BackColor = Color.FromArgb(114, 137, 218);
+            kontrahenciPanel.Visible = false;
+            towaryPanel.Visible = false;
+            zamowieniaPanel.Visible = true;
         }
         #endregion
 
