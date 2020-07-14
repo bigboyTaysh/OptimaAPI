@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CDN_SEDDataSet3" targetNamespace="http://tempuri.org/CDN_SEDDataSet3.xsd" xmlns:mstns="http://tempuri.org/CDN_SEDDataSet3.xsd" xmlns="http://tempuri.org/CDN_SEDDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CDN_SEDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CDN_SEDConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OptimaAPI.Properties.Settings.GlobalReference.Default.CDN_SEDConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ZamowieniaTableAdapter" GeneratorDataComponentClassName="ZamowieniaTableAdapter" Name="Zamowienia" UserDataComponentName="ZamowieniaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CDN_SEDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        t.TrE_TrEID, t.TrE_TrNId, k.Knt_Kod, k.Knt_Nazwa1, t.TrE_TwrId, t.TrE_TwrNazwa, t.TrE_TwrKod, t.TrE_IloscJM, t.TrE_WartoscNetto, t.TrE_WartoscBrutto
+FROM            CDN.TraElem AS t INNER JOIN
+                         CDN.Kontrahenci AS k ON t.TrE_PodID = k.Knt_KntId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TrE_TrEID" DataSetColumn="TrE_TrEID" />
+              <Mapping SourceColumn="TrE_TrNId" DataSetColumn="TrE_TrNId" />
+              <Mapping SourceColumn="Knt_Kod" DataSetColumn="Knt_Kod" />
+              <Mapping SourceColumn="Knt_Nazwa1" DataSetColumn="Knt_Nazwa1" />
+              <Mapping SourceColumn="TrE_TwrId" DataSetColumn="TrE_TwrId" />
+              <Mapping SourceColumn="TrE_TwrNazwa" DataSetColumn="TrE_TwrNazwa" />
+              <Mapping SourceColumn="TrE_TwrKod" DataSetColumn="TrE_TwrKod" />
+              <Mapping SourceColumn="TrE_WartoscNetto" DataSetColumn="TrE_WartoscNetto" />
+              <Mapping SourceColumn="TrE_WartoscBrutto" DataSetColumn="TrE_WartoscBrutto" />
+              <Mapping SourceColumn="TrE_IloscJM" DataSetColumn="TrE_IloscJM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CDN_SEDDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CDN_SEDDataSet3" msprop:Generator_UserDSName="CDN_SEDDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Zamowienia" msprop:Generator_TableClassName="ZamowieniaDataTable" msprop:Generator_TableVarName="tableZamowienia" msprop:Generator_TablePropName="Zamowienia" msprop:Generator_RowDeletingName="ZamowieniaRowDeleting" msprop:Generator_RowChangingName="ZamowieniaRowChanging" msprop:Generator_RowEvHandlerName="ZamowieniaRowChangeEventHandler" msprop:Generator_RowDeletedName="ZamowieniaRowDeleted" msprop:Generator_UserTableName="Zamowienia" msprop:Generator_RowChangedName="ZamowieniaRowChanged" msprop:Generator_RowEvArgName="ZamowieniaRowChangeEvent" msprop:Generator_RowClassName="ZamowieniaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TrE_TrEID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTrE_TrEID" msprop:Generator_ColumnPropNameInRow="TrE_TrEID" msprop:Generator_ColumnPropNameInTable="TrE_TrEIDColumn" msprop:Generator_UserColumnName="TrE_TrEID" type="xs:int" />
+              <xs:element name="TrE_TrNId" msprop:Generator_ColumnVarNameInTable="columnTrE_TrNId" msprop:Generator_ColumnPropNameInRow="TrE_TrNId" msprop:Generator_ColumnPropNameInTable="TrE_TrNIdColumn" msprop:Generator_UserColumnName="TrE_TrNId" type="xs:int" />
+              <xs:element name="Knt_Kod" msprop:Generator_ColumnVarNameInTable="columnKnt_Kod" msprop:Generator_ColumnPropNameInRow="Knt_Kod" msprop:Generator_ColumnPropNameInTable="Knt_KodColumn" msprop:Generator_UserColumnName="Knt_Kod">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Knt_Nazwa1" msprop:Generator_ColumnVarNameInTable="columnKnt_Nazwa1" msprop:Generator_ColumnPropNameInRow="Knt_Nazwa1" msprop:Generator_ColumnPropNameInTable="Knt_Nazwa1Column" msprop:Generator_UserColumnName="Knt_Nazwa1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrE_TwrId" msprop:Generator_ColumnVarNameInTable="columnTrE_TwrId" msprop:Generator_ColumnPropNameInRow="TrE_TwrId" msprop:Generator_ColumnPropNameInTable="TrE_TwrIdColumn" msprop:Generator_UserColumnName="TrE_TwrId" type="xs:int" minOccurs="0" />
+              <xs:element name="TrE_TwrNazwa" msprop:Generator_ColumnVarNameInTable="columnTrE_TwrNazwa" msprop:Generator_ColumnPropNameInRow="TrE_TwrNazwa" msprop:Generator_ColumnPropNameInTable="TrE_TwrNazwaColumn" msprop:Generator_UserColumnName="TrE_TwrNazwa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrE_TwrKod" msprop:Generator_ColumnVarNameInTable="columnTrE_TwrKod" msprop:Generator_ColumnPropNameInRow="TrE_TwrKod" msprop:Generator_ColumnPropNameInTable="TrE_TwrKodColumn" msprop:Generator_UserColumnName="TrE_TwrKod">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrE_WartoscNetto" msprop:Generator_ColumnVarNameInTable="columnTrE_WartoscNetto" msprop:Generator_ColumnPropNameInRow="TrE_WartoscNetto" msprop:Generator_ColumnPropNameInTable="TrE_WartoscNettoColumn" msprop:Generator_UserColumnName="TrE_WartoscNetto" type="xs:decimal" />
+              <xs:element name="TrE_WartoscBrutto" msprop:Generator_ColumnVarNameInTable="columnTrE_WartoscBrutto" msprop:Generator_ColumnPropNameInRow="TrE_WartoscBrutto" msprop:Generator_ColumnPropNameInTable="TrE_WartoscBruttoColumn" msprop:Generator_UserColumnName="TrE_WartoscBrutto" type="xs:decimal" />
+              <xs:element name="TrE_IloscJM" msprop:Generator_ColumnVarNameInTable="columnTrE_IloscJM" msprop:Generator_ColumnPropNameInRow="TrE_IloscJM" msprop:Generator_ColumnPropNameInTable="TrE_IloscJMColumn" msprop:Generator_UserColumnName="TrE_IloscJM" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Zamowienia" />
+      <xs:field xpath="mstns:TrE_TrEID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

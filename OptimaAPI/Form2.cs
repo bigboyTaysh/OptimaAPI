@@ -465,8 +465,9 @@ namespace OptimaAPI
             DokumentyHaMag dokumenty = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag", null);
             DokumentHaMag dokument = (DokumentHaMag)dokumenty[$"TrN_NumerPelny='{(string)row.Cells[0].Value}'"];
 
-            MessageBox.Show(dokument.PodID.ToString());
-
+            Form3 form = new Form3(dokument);
+            form.Show();
+            form.Activate();
         }
         #endregion
     }

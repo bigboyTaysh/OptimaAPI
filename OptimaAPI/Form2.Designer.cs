@@ -38,6 +38,7 @@
             this.cDN_SEDDataSet = new OptimaAPI.CDN_SEDDataSet();
             this.kontrahenciTableAdapter = new OptimaAPI.CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter();
             this.towaryTableAdapter = new OptimaAPI.CDN_SEDDataSet1TableAdapters.TowaryTableAdapter();
+            this.traNagTableAdapter = new OptimaAPI.CDN_SEDDataSet2TableAdapters.TraNagTableAdapter();
             this.kontrahenciPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,7 +106,6 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.cDN_SEDDataSet2 = new OptimaAPI.CDN_SEDDataSet2();
             this.traNagBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.traNagTableAdapter = new OptimaAPI.CDN_SEDDataSet2TableAdapters.TraNagTableAdapter();
             this.trNNumerPelnyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNDataDokDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trNDataWysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -224,6 +224,10 @@
             // towaryTableAdapter
             // 
             this.towaryTableAdapter.ClearBeforeFill = true;
+            // 
+            // traNagTableAdapter
+            // 
+            this.traNagTableAdapter.ClearBeforeFill = true;
             // 
             // kontrahenciPanel
             // 
@@ -1004,10 +1008,6 @@
             this.traNagBindingSource.DataMember = "TraNag";
             this.traNagBindingSource.DataSource = this.cDN_SEDDataSet2;
             // 
-            // traNagTableAdapter
-            // 
-            this.traNagTableAdapter.ClearBeforeFill = true;
-            // 
             // trNNumerPelnyDataGridViewTextBoxColumn
             // 
             this.trNNumerPelnyDataGridViewTextBoxColumn.DataPropertyName = "TrN_NumerPelny";
@@ -1108,6 +1108,7 @@
         private System.Windows.Forms.BindingSource kontrahenciBindingSource;
         private CDN_SEDDataSetTableAdapters.KontrahenciTableAdapter kontrahenciTableAdapter;
         private CDN_SEDDataSet1TableAdapters.TowaryTableAdapter towaryTableAdapter;
+        private CDN_SEDDataSet2TableAdapters.TraNagTableAdapter traNagTableAdapter;
         private System.Windows.Forms.Panel kontrahenciPanel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -1175,7 +1176,6 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private CDN_SEDDataSet2 cDN_SEDDataSet2;
         private System.Windows.Forms.BindingSource traNagBindingSource;
-        private CDN_SEDDataSet2TableAdapters.TraNagTableAdapter traNagTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNNumerPelnyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNDataDokDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNDataWysDataGridViewTextBoxColumn;
