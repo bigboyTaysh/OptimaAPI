@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="CDN_SEDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        t.TrN_NumerPelny, t.TrN_DataDok, t.TrN_DataWys, t.TrN_PodID, t.TrN_PodNazwa1, t.TrN_RazemNetto, t.TrN_RazemBrutto, k.Knt_Kod, k.Knt_Nazwa1
+                    <CommandText>SELECT        t.TrN_NumerPelny, t.TrN_DataDok, t.TrN_DataWys, t.TrN_PodID, t.TrN_PodNazwa1, t.TrN_RazemNetto, t.TrN_RazemBrutto, k.Knt_Kod, k.Knt_Nazwa1, t.TrN_TypDokumentu
 FROM            CDN.TraNag AS t INNER JOIN
                          CDN.Kontrahenci AS k ON t.TrN_PodID = k.Knt_KntId</CommandText>
                     <Parameters />
@@ -30,6 +30,7 @@ FROM            CDN.TraNag AS t INNER JOIN
               <Mapping SourceColumn="TrN_RazemBrutto" DataSetColumn="TrN_RazemBrutto" />
               <Mapping SourceColumn="Knt_Kod" DataSetColumn="Knt_Kod" />
               <Mapping SourceColumn="Knt_Nazwa1" DataSetColumn="Knt_Nazwa1" />
+              <Mapping SourceColumn="TrN_TypDokumentu" DataSetColumn="TrN_TypDokumentu" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -41,7 +42,7 @@ FROM            CDN.TraNag AS t INNER JOIN
   <xs:element name="CDN_SEDDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CDN_SEDDataSet2" msprop:Generator_UserDSName="CDN_SEDDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TraNag" msprop:Generator_TableClassName="TraNagDataTable" msprop:Generator_TableVarName="tableTraNag" msprop:Generator_RowChangedName="TraNagRowChanged" msprop:Generator_TablePropName="TraNag" msprop:Generator_RowDeletingName="TraNagRowDeleting" msprop:Generator_RowChangingName="TraNagRowChanging" msprop:Generator_RowEvHandlerName="TraNagRowChangeEventHandler" msprop:Generator_RowDeletedName="TraNagRowDeleted" msprop:Generator_RowClassName="TraNagRow" msprop:Generator_UserTableName="TraNag" msprop:Generator_RowEvArgName="TraNagRowChangeEvent">
+        <xs:element name="TraNag" msprop:Generator_TableClassName="TraNagDataTable" msprop:Generator_TableVarName="tableTraNag" msprop:Generator_TablePropName="TraNag" msprop:Generator_RowDeletingName="TraNagRowDeleting" msprop:Generator_RowChangingName="TraNagRowChanging" msprop:Generator_RowEvHandlerName="TraNagRowChangeEventHandler" msprop:Generator_RowDeletedName="TraNagRowDeleted" msprop:Generator_UserTableName="TraNag" msprop:Generator_RowChangedName="TraNagRowChanged" msprop:Generator_RowEvArgName="TraNagRowChangeEvent" msprop:Generator_RowClassName="TraNagRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TrN_NumerPelny" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTrN_NumerPelny" msprop:Generator_ColumnPropNameInRow="TrN_NumerPelny" msprop:Generator_ColumnPropNameInTable="TrN_NumerPelnyColumn" msprop:Generator_UserColumnName="TrN_NumerPelny" minOccurs="0">
@@ -77,6 +78,7 @@ FROM            CDN.TraNag AS t INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="TrN_TypDokumentu" msprop:Generator_ColumnVarNameInTable="columnTrN_TypDokumentu" msprop:Generator_ColumnPropNameInRow="TrN_TypDokumentu" msprop:Generator_ColumnPropNameInTable="TrN_TypDokumentuColumn" msprop:Generator_UserColumnName="TrN_TypDokumentu" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

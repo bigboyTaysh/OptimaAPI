@@ -56,10 +56,12 @@ namespace OptimaAPI
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'cDN_SEDDataSet2.TraNag' table. You can move, or remove it, as needed.
-            this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
             filterKontrahenciComboBox.SelectedIndex = 0;
             this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet.Kontrahenci);
             this.towaryTableAdapter.Fill(this.cDN_SEDDataSet1.Towary);
+
+            traNagBindingSource.Filter = "TrN_TypDokumentu='309'";
+            this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
         }
         private void Form2_MouseDown(object sender, MouseEventArgs e)
         {
