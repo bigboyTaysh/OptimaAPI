@@ -16,11 +16,12 @@ namespace OptimaAPI
     {
         private ILogin Login;
         private IApplication Application;
-        private List<ITowar> Towary = new List<ITowar>();
-        public Form5(IApplication application, ILogin login)
+        private List<ITowar> Towary;
+        public Form5(IApplication application, ILogin login, List<ITowar> towary)
         {
             Application = application;
             Login = login;
+            Towary = towary;
             InitializeComponent();
             LoadTowary();
         }
