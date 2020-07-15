@@ -36,6 +36,7 @@
             this.stawkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cenyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Checked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,11 +52,11 @@
             this.nazwaDataGridViewTextBoxColumn,
             this.stawkaDataGridViewTextBoxColumn,
             this.jMDataGridViewTextBoxColumn,
-            this.cenyDataGridViewTextBoxColumn});
+            this.cenyDataGridViewTextBoxColumn,
+            this.Checked});
             this.dataGridView1.DataSource = this.iTowarBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(775, 219);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -68,7 +69,7 @@
             this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
             this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
             this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
-            this.kodDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kodDataGridViewTextBoxColumn.Width = 51;
             // 
             // nazwaDataGridViewTextBoxColumn
             // 
@@ -87,16 +88,23 @@
             // jMDataGridViewTextBoxColumn
             // 
             this.jMDataGridViewTextBoxColumn.DataPropertyName = "JM";
-            this.jMDataGridViewTextBoxColumn.HeaderText = "JM";
+            this.jMDataGridViewTextBoxColumn.HeaderText = "Jednostka";
             this.jMDataGridViewTextBoxColumn.Name = "jMDataGridViewTextBoxColumn";
             this.jMDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cenyDataGridViewTextBoxColumn
             // 
             this.cenyDataGridViewTextBoxColumn.DataPropertyName = "Ceny";
-            this.cenyDataGridViewTextBoxColumn.HeaderText = "Ceny";
+            this.cenyDataGridViewTextBoxColumn.HeaderText = "Cena";
             this.cenyDataGridViewTextBoxColumn.Name = "cenyDataGridViewTextBoxColumn";
             this.cenyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Checked
+            // 
+            this.Checked.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Checked.HeaderText = "";
+            this.Checked.Name = "Checked";
+            this.Checked.Width = 51;
             // 
             // Form4
             // 
@@ -115,11 +123,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource iTowarBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn kodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stawkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cenyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iTowarBindingSource;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Checked;
     }
 }
