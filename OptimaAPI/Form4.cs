@@ -83,5 +83,10 @@ namespace OptimaAPI
             e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
                             this.DisplayRectangle);
         }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dataGridView1.Rows[e.RowIndex].Cells[3].Value = "1.0000";
+        }
     }
 }

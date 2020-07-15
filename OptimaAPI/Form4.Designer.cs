@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stawkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ilosc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cenyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTowarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -40,12 +46,6 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stawkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ilosc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cenyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
@@ -70,6 +70,43 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(637, 219);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            // 
+            // kodDataGridViewTextBoxColumn
+            // 
+            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
+            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
+            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
+            // 
+            // nazwaDataGridViewTextBoxColumn
+            // 
+            this.nazwaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.Name = "nazwaDataGridViewTextBoxColumn";
+            // 
+            // stawkaDataGridViewTextBoxColumn
+            // 
+            this.stawkaDataGridViewTextBoxColumn.DataPropertyName = "Stawka";
+            this.stawkaDataGridViewTextBoxColumn.HeaderText = "Stawka";
+            this.stawkaDataGridViewTextBoxColumn.Name = "stawkaDataGridViewTextBoxColumn";
+            // 
+            // Ilosc
+            // 
+            this.Ilosc.HeaderText = "Ilosc";
+            this.Ilosc.Name = "Ilosc";
+            // 
+            // cenyDataGridViewTextBoxColumn
+            // 
+            this.cenyDataGridViewTextBoxColumn.DataPropertyName = "Ceny";
+            this.cenyDataGridViewTextBoxColumn.HeaderText = "Wartość";
+            this.cenyDataGridViewTextBoxColumn.Name = "cenyDataGridViewTextBoxColumn";
+            this.cenyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jMDataGridViewTextBoxColumn
+            // 
+            this.jMDataGridViewTextBoxColumn.DataPropertyName = "JM";
+            this.jMDataGridViewTextBoxColumn.HeaderText = "Jednostka";
+            this.jMDataGridViewTextBoxColumn.Name = "jMDataGridViewTextBoxColumn";
             // 
             // iTowarBindingSource
             // 
@@ -169,42 +206,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 40;
-            // 
-            // kodDataGridViewTextBoxColumn
-            // 
-            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
-            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
-            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
-            // 
-            // nazwaDataGridViewTextBoxColumn
-            // 
-            this.nazwaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa";
-            this.nazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
-            this.nazwaDataGridViewTextBoxColumn.Name = "nazwaDataGridViewTextBoxColumn";
-            // 
-            // stawkaDataGridViewTextBoxColumn
-            // 
-            this.stawkaDataGridViewTextBoxColumn.DataPropertyName = "Stawka";
-            this.stawkaDataGridViewTextBoxColumn.HeaderText = "Stawka";
-            this.stawkaDataGridViewTextBoxColumn.Name = "stawkaDataGridViewTextBoxColumn";
-            // 
-            // Ilosc
-            // 
-            this.Ilosc.HeaderText = "Ilosc";
-            this.Ilosc.Name = "Ilosc";
-            // 
-            // cenyDataGridViewTextBoxColumn
-            // 
-            this.cenyDataGridViewTextBoxColumn.DataPropertyName = "Ceny";
-            this.cenyDataGridViewTextBoxColumn.HeaderText = "Wartość";
-            this.cenyDataGridViewTextBoxColumn.Name = "cenyDataGridViewTextBoxColumn";
-            this.cenyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jMDataGridViewTextBoxColumn
-            // 
-            this.jMDataGridViewTextBoxColumn.DataPropertyName = "JM";
-            this.jMDataGridViewTextBoxColumn.HeaderText = "Jednostka";
-            this.jMDataGridViewTextBoxColumn.Name = "jMDataGridViewTextBoxColumn";
             // 
             // Form4
             // 
