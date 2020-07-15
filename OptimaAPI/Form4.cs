@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CDNBase;
+using CDNTwrb1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,26 @@ namespace OptimaAPI
 {
     public partial class Form4 : Form
     {
-        public Form4()
+        private ILogin Login;
+        private IApplication Application;
+        private List<ITowar> Towary = new List<ITowar>();
+        public Form4(IApplication application, ILogin login)
         {
+            Application = application;
+            Login = login;
             InitializeComponent();
+            LoadTowary();
+        }
+
+        private void LoadTowary()
+        {
+            AdoSession session = Login.CreateSession();
+            Towary towary = (Towary)session.CreateObject("CDN.Towary", null);
+            
+            foreach (ITowar item in towary)
+            {
+                Towary.Add(item);
+            }
         }
     }
 }

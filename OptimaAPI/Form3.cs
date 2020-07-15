@@ -18,7 +18,6 @@ namespace OptimaAPI
         {
             InitializeComponent();
             dokument = dokumentHaMag;
-
         }
 
         private void Form3_Load(object sender, EventArgs e)
