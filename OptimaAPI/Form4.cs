@@ -31,10 +31,40 @@ namespace OptimaAPI
                     Ceny = ((Cena)t.Ceny[0]).Wartosc
                 }).ToList();
         }
+        private void exitButton_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5(Login, this);
+            form.Show();
+            form.Activate();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet4.Kontrahenci' table. You can move, or remove it, as needed.
+            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet4.Kontrahenci);
+
+            kontrahenciComboBox.SelectedIndex = 1;
+
+        }
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         public void RefreshList()
         {
-            dataGridView1.DataSource = Towary.Select(t =>
+            var towary = Towary.Select(t =>
                 new {
                     t.Kod,
                     t.Nazwa,
@@ -42,35 +72,16 @@ namespace OptimaAPI
                     t.JM,
                     Ceny = ((Cena)t.Ceny[0]).Wartosc
                 }).ToList();
+
+            dataGridView1.DataSource = towary;
+
+            label2.Text = towary.Sum(t => t.Ceny).ToString();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Form4_Paint(object sender, PaintEventArgs e)
         {
-            Form5 form = new Form5(Login, this);
-            form.Show();
-            form.Activate();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'cDN_SEDDataSet4.Kontrahenci' table. You can move, or remove it, as needed.
-            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet4.Kontrahenci);
-
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                            this.DisplayRectangle);
         }
     }
 }
