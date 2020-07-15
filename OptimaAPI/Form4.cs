@@ -60,5 +60,17 @@ namespace OptimaAPI
         {
 
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet4.Kontrahenci' table. You can move, or remove it, as needed.
+            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet4.Kontrahenci);
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
