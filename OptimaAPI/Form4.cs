@@ -15,13 +15,50 @@ namespace OptimaAPI
     public partial class Form4 : Form
     {
         private ILogin Login;
-        private IApplication Application;
-        private List<ITowar> Towary = new List<ITowar>();
+        public List<ITowar> Towary { get; set; }
         public Form4(IApplication application, ILogin login)
         {
-            Application = application;
             Login = login;
+            Towary = new List<ITowar>();
             InitializeComponent();
+
+            dataGridView1.DataSource = Towary.Select(t =>
+                new {
+                    t.Kod,
+                    t.Nazwa,
+                    t.Stawka,
+                    t.JM,
+                    Ceny = ((Cena)t.Ceny[0]).Wartosc
+                }).ToList();
+        }
+
+        public void RefreshList()
+        {
+            dataGridView1.DataSource = Towary.Select(t =>
+                new {
+                    t.Kod,
+                    t.Nazwa,
+                    t.Stawka,
+                    t.JM,
+                    Ceny = ((Cena)t.Ceny[0]).Wartosc
+                }).ToList();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5(Login, this);
+            form.Show();
+            form.Activate();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

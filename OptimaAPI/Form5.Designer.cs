@@ -30,13 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iTowarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Checked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stawkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cenyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Checked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.iTowarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -57,12 +58,30 @@
             this.dataGridView1.DataSource = this.iTowarBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(775, 219);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 219);
             this.dataGridView1.TabIndex = 0;
             // 
-            // iTowarBindingSource
+            // Checked
             // 
-            this.iTowarBindingSource.DataSource = typeof(CDNTwrb1.ITowar);
+            this.Checked.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Checked.HeaderText = "";
+            this.Checked.Name = "Checked";
+            this.Checked.Width = 51;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
+            this.button3.Location = new System.Drawing.Point(231, 260);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 37);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Dodaj";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // kodDataGridViewTextBoxColumn
             // 
@@ -99,20 +118,18 @@
             this.cenyDataGridViewTextBoxColumn.Name = "cenyDataGridViewTextBoxColumn";
             this.cenyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Checked
+            // iTowarBindingSource
             // 
-            this.Checked.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Checked.HeaderText = "";
-            this.Checked.Name = "Checked";
-            this.Checked.Width = 51;
+            this.iTowarBindingSource.DataSource = typeof(CDNTwrb1.ITowar);
             // 
-            // Form4
+            // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(577, 327);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form4";
+            this.Name = "Form5";
             this.Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).EndInit();
@@ -130,5 +147,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cenyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Checked;
+        private System.Windows.Forms.Button button3;
     }
 }
