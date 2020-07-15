@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,9 @@ namespace OptimaAPI
     public partial class Form4 : Form
     {
         private ILogin Login;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+        private bool dragging = false;
         public List<ITowar> Towary { get; set; }
         public Form4(IApplication application, ILogin login)
         {
@@ -30,7 +34,47 @@ namespace OptimaAPI
                     t.JM,
                     Ceny = ((Cena)t.Ceny[0]).Wartosc
                 }).ToList();
+
+            dataGridView1.RowHeadersWidth = 25;
+            dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
         }
+
+        private void Form4_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+        private void Form4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+        private void Form4_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+        private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 3)
+            {
+                decimal sum = 0m;
+
+                foreach (DataGridViewRow item in dataGridView1.Rows)
+                {
+                    sum += decimal.Parse(item.Cells[3].Value.ToString()) * decimal.Parse(item.Cells[4].Value.ToString());
+                }
+
+                NumberFormatInfo setPrecision = new NumberFormatInfo();
+                setPrecision.NumberDecimalDigits = 4;
+
+                label2.Text = sum.ToString("N", setPrecision);
+            }
+        }
+
         private void exitButton_Paint(object sender, PaintEventArgs e)
         {
             
@@ -86,7 +130,7 @@ namespace OptimaAPI
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            dataGridView1.Rows[e.RowIndex].Cells[3].Value = "1.0000";
+            dataGridView1.Rows[e.RowIndex].Cells[3].Value = "1,0000";
         }
     }
 }

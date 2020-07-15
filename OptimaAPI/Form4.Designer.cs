@@ -66,9 +66,9 @@
             this.cenyDataGridViewTextBoxColumn,
             this.jMDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.iTowarBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 54);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(637, 219);
+            this.dataGridView1.Size = new System.Drawing.Size(630, 219);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             // 
@@ -119,7 +119,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(234, 390);
+            this.button2.Location = new System.Drawing.Point(274, 390);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 37);
             this.button2.TabIndex = 26;
@@ -134,7 +134,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(598, 279);
+            this.button3.Location = new System.Drawing.Point(593, 279);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(53, 52);
             this.button3.TabIndex = 25;
@@ -152,7 +152,7 @@
             this.kontrahenciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kontrahenciComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.kontrahenciComboBox.FormattingEnabled = true;
-            this.kontrahenciComboBox.Location = new System.Drawing.Point(201, 334);
+            this.kontrahenciComboBox.Location = new System.Drawing.Point(242, 334);
             this.kontrahenciComboBox.Name = "kontrahenciComboBox";
             this.kontrahenciComboBox.Size = new System.Drawing.Size(178, 24);
             this.kontrahenciComboBox.TabIndex = 37;
@@ -192,7 +192,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(230, 288);
+            this.label1.Location = new System.Drawing.Point(270, 288);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 39;
@@ -202,7 +202,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(306, 293);
+            this.label2.Location = new System.Drawing.Point(346, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 40;
@@ -222,9 +222,13 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form4_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form4_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form4_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form4_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).EndInit();
