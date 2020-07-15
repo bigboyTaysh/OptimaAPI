@@ -147,6 +147,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CDNTwrb1.ITowar.datasource" />
     <None Include="CDN_SEDDataSet.xsc">
       <DependentUpon>CDN_SEDDataSet.xsd</DependentUpon>
     </None>

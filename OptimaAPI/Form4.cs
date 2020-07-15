@@ -24,7 +24,6 @@ namespace OptimaAPI
             InitializeComponent();
             LoadTowary();
         }
-
         private void LoadTowary()
         {
             AdoSession session = Login.CreateSession();
@@ -34,6 +33,15 @@ namespace OptimaAPI
             {
                 Towary.Add(item);
             }
+
+            dataGridView1.DataSource = Towary.Select(t => 
+                new {
+                    t.Kod,
+                    t.Nazwa,
+                    t.Stawka,
+                    t.JM,
+                    Ceny = ((Cena)t.Ceny[0]).Wartosc
+                }).ToList();
         }
     }
 }
