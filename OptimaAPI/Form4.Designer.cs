@@ -46,10 +46,16 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.platnosciComboBox = new System.Windows.Forms.ComboBox();
+            this.formyPlatnosciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDN_SEDDataSet5 = new OptimaAPI.CDN_SEDDataSet5();
+            this.formyPlatnosciTableAdapter = new OptimaAPI.CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formyPlatnosciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -152,7 +158,7 @@
             this.kontrahenciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kontrahenciComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.kontrahenciComboBox.FormattingEnabled = true;
-            this.kontrahenciComboBox.Location = new System.Drawing.Point(242, 334);
+            this.kontrahenciComboBox.Location = new System.Drawing.Point(137, 330);
             this.kontrahenciComboBox.Name = "kontrahenciComboBox";
             this.kontrahenciComboBox.Size = new System.Drawing.Size(178, 24);
             this.kontrahenciComboBox.TabIndex = 37;
@@ -185,7 +191,6 @@
             this.exitButton.Text = "X";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            this.exitButton.Paint += new System.Windows.Forms.PaintEventHandler(this.exitButton_Paint);
             // 
             // label1
             // 
@@ -201,11 +206,40 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(346, 293);
+            this.label2.Location = new System.Drawing.Point(345, 288);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 40;
+            // 
+            // platnosciComboBox
+            // 
+            this.platnosciComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.platnosciComboBox.DataSource = this.formyPlatnosciBindingSource;
+            this.platnosciComboBox.DisplayMember = "FPl_Nazwa";
+            this.platnosciComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.platnosciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.platnosciComboBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.platnosciComboBox.FormattingEnabled = true;
+            this.platnosciComboBox.Location = new System.Drawing.Point(349, 330);
+            this.platnosciComboBox.Name = "platnosciComboBox";
+            this.platnosciComboBox.Size = new System.Drawing.Size(178, 24);
+            this.platnosciComboBox.TabIndex = 41;
+            // 
+            // formyPlatnosciBindingSource
+            // 
+            this.formyPlatnosciBindingSource.DataMember = "FormyPlatnosci";
+            this.formyPlatnosciBindingSource.DataSource = this.cDN_SEDDataSet5;
+            // 
+            // cDN_SEDDataSet5
+            // 
+            this.cDN_SEDDataSet5.DataSetName = "CDN_SEDDataSet5";
+            this.cDN_SEDDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // formyPlatnosciTableAdapter
+            // 
+            this.formyPlatnosciTableAdapter.ClearBeforeFill = true;
             // 
             // Form4
             // 
@@ -213,6 +247,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(663, 450);
+            this.Controls.Add(this.platnosciComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
@@ -233,6 +268,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formyPlatnosciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +294,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ilosc;
         private System.Windows.Forms.DataGridViewTextBoxColumn cenyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox platnosciComboBox;
+        private CDN_SEDDataSet5 cDN_SEDDataSet5;
+        private System.Windows.Forms.BindingSource formyPlatnosciBindingSource;
+        private CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter formyPlatnosciTableAdapter;
     }
 }

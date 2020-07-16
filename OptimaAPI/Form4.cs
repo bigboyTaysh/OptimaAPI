@@ -39,6 +39,17 @@ namespace OptimaAPI
             dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
         }
 
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet5.FormyPlatnosci' table. You can move, or remove it, as needed.
+            this.formyPlatnosciTableAdapter.Fill(this.cDN_SEDDataSet5.FormyPlatnosci);
+            // TODO: This line of code loads data into the 'cDN_SEDDataSet4.Kontrahenci' table. You can move, or remove it, as needed.
+            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet4.Kontrahenci);
+
+            kontrahenciComboBox.SelectedIndex = 1;
+            platnosciComboBox.SelectedIndex = 1;
+
+        }
         private void Form4_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -78,10 +89,6 @@ namespace OptimaAPI
             }
         }
 
-        private void exitButton_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
         private void button3_Click(object sender, EventArgs e)
         {
             Form5 form = new Form5(Login, this);
@@ -96,14 +103,7 @@ namespace OptimaAPI
         {
 
         }
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'cDN_SEDDataSet4.Kontrahenci' table. You can move, or remove it, as needed.
-            this.kontrahenciTableAdapter.Fill(this.cDN_SEDDataSet4.Kontrahenci);
 
-            kontrahenciComboBox.SelectedIndex = 1;
-
-        }
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
