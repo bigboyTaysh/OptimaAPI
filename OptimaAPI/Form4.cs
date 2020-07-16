@@ -19,13 +19,15 @@ namespace OptimaAPI
     public partial class Form4 : Form
     {
         private ILogin Login;
+        private Form2 Form;
         private Point dragCursorPoint;
         private Point dragFormPoint;
         private bool dragging = false;
         public List<ITowar> Towary { get; set; }
-        public Form4(IApplication application, ILogin login)
+        public Form4(IApplication application, ILogin login, Form2 form)
         {
             Login = login;
+            Form = form;
             Towary = new List<ITowar>();
             InitializeComponent();
 
@@ -137,6 +139,8 @@ namespace OptimaAPI
                 }
 
                 session.Save();
+                Form.RefreshZamowienia();
+                this.Close();
             }
             catch (Exception ex)
             {

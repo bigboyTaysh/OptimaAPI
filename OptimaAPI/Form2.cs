@@ -452,9 +452,14 @@ namespace OptimaAPI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form4 form = new Form4(Application, Login);
+            Form4 form = new Form4(Application, Login, this);
             form.Show();
             form.Activate();
+        }
+        public void RefreshZamowienia()
+        {
+            traNagBindingSource.Filter = "TrN_TypDokumentu='309'";
+            this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
         }
         #endregion
     }
