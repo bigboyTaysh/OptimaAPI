@@ -43,7 +43,6 @@ namespace OptimaAPI
                     Ceny = ((Cena)t.Ceny[0]).Wartosc
                 }).ToList();
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             List<string> docs = new List<string>();
@@ -59,6 +58,15 @@ namespace OptimaAPI
 
             Form4.Towary = Towary.Where(t => docs.Any(d => d.Equals(t.Kod))).ToList();
             Form4.RefreshList();
+            this.Close();
+        }
+        private void Form5_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                            this.DisplayRectangle);
+        }
+        private void exitButton_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

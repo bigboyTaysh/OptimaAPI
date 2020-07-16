@@ -38,6 +38,7 @@
             this.jMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cenyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTowarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.exitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             this.cenyDataGridViewTextBoxColumn,
             this.Checked});
             this.dataGridView1.DataSource = this.iTowarBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(547, 219);
             this.dataGridView1.TabIndex = 0;
@@ -75,7 +76,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(231, 260);
+            this.button3.Location = new System.Drawing.Point(230, 301);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 37);
             this.button3.TabIndex = 25;
@@ -122,16 +123,34 @@
             // 
             this.iTowarBindingSource.DataSource = typeof(CDNTwrb1.ITowar);
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Black;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(181)))), ((int)(((byte)(129)))));
+            this.exitButton.Location = new System.Drawing.Point(517, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(45, 36);
+            this.exitButton.TabIndex = 39;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(577, 327);
+            this.ClientSize = new System.Drawing.Size(574, 365);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
             this.Text = "Form4";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form5_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -149,5 +168,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cenyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Checked;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button exitButton;
     }
 }

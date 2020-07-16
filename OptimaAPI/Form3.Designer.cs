@@ -60,9 +60,9 @@
             this.trEWartoscNettoDataGridViewTextBoxColumn,
             this.trEWartoscBruttoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zamowieniaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 72);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 329);
             this.dataGridView1.TabIndex = 0;
             // 
             // trETrNIdDataGridViewTextBoxColumn

@@ -55,6 +55,11 @@ namespace OptimaAPI
             platnosciComboBox.SelectedIndex = 1;
 
         }
+        private void Form4_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                            this.DisplayRectangle);
+        }
         private void Form4_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -150,11 +155,6 @@ namespace OptimaAPI
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        private void Form4_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
-                            this.DisplayRectangle);
         }
         private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
