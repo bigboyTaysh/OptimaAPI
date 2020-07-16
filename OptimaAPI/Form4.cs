@@ -105,7 +105,7 @@ namespace OptimaAPI
         {
             AdoSession session = Login.CreateSession();
 
-            DokumentyHaMag dokumenty = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag",null);
+            DokumentyHaMag dokumenty = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag", null);
             DokumentHaMag dokument = (DokumentHaMag)dokumenty.AddNew(null);
 
             ICollection kontrahenci = (ICollection)(session.CreateObject("CDN.Kontrahenci", null));
@@ -114,22 +114,33 @@ namespace OptimaAPI
             ICollection platnosci = (ICollection)(session.CreateObject("CDN.FormyPlatnosci", null));
             FormaPlatnosci platnosc = (FormaPlatnosci)platnosci[$"FPl_Nazwa='{platnosciComboBox.Text}'"];
 
-            dokument.Rodzaj = 302000;
-            dokument.TypDokumentu = 302;
-            dokument.Bufor = 0;
-            dokument.DataDok = dataDokumentu.Value;
-            dokument.DataWys = dataDostawy.Value;
-            dokument.FormaPlatnosci = platnosc;
-            dokument.Podmiot = kontrahent;
-            dokument.MagazynZrodlowyID = 1;
-
-            ICollection elementy = dokument.Elementy;
-            IElementHaMag element;
-
-            foreach (DataGridViewRow item in dataGridView1.Rows)
+            try
             {
-                element = (IElementHaMag)elementy.AddNew(null);
+                dokument.Rodzaj = 309000;
+                dokument.TypDokumentu = 309;
+                dokument.Bufor = 0;
+                dokument.DataDok = dataDokumentu.Value;
+                dokument.DataWys = dataDostawy.Value;
+                dokument.FormaPlatnosci = platnosc;
+                dokument.Podmiot = kontrahent;
+                dokument.MagazynZrodlowyID = 1;
 
+                ICollection elementy = dokument.Elementy;
+                IElementHaMag element;
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    element = (IElementHaMag)elementy.AddNew(null);
+                    element.TowarKod = row.Cells[0].Value.ToString();
+                    element.Ilosc = double.Parse(row.Cells[3].Value.ToString());
+                    element.WartoscNetto = decimal.Parse(row.Cells[3].Value.ToString()) * decimal.Parse(row.Cells[4].Value.ToString());
+                }
+
+                session.Save();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void exitButton_Click(object sender, EventArgs e)
