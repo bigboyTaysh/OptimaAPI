@@ -65,7 +65,10 @@ namespace OptimaAPI
 
                 foreach (DataGridViewRow item in dataGridView1.Rows)
                 {
-                    sum += decimal.Parse(item.Cells[3].Value.ToString()) * decimal.Parse(item.Cells[4].Value.ToString());
+                    if (item.Cells[3].Value != null)
+                    {
+                        sum += decimal.Parse(item.Cells[3].Value.ToString()) * decimal.Parse(item.Cells[4].Value.ToString());
+                    }
                 }
 
                 NumberFormatInfo setPrecision = new NumberFormatInfo();
@@ -128,9 +131,12 @@ namespace OptimaAPI
                             this.DisplayRectangle);
         }
 
-        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
-            dataGridView1.Rows[e.RowIndex].Cells[3].Value = "1,0000";
+            if(e.StateChanged.ToString() == "Displayed")
+            {
+                e.Row.Cells[3].Value = "1,0000";
+            }
         }
     }
 }
