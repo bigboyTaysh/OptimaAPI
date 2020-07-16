@@ -461,8 +461,6 @@ namespace OptimaAPI
             traNagBindingSource.Filter = "TrN_TypDokumentu='309'";
             this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
         }
-        #endregion
-
         private void deleteZamowieniaButton_Click(object sender, EventArgs e)
         {
             AdoSession session = Login.CreateSession();
@@ -485,5 +483,6 @@ namespace OptimaAPI
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
     }
 }

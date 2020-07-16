@@ -32,7 +32,6 @@ namespace OptimaAPI
         {
             this.Close();
         }
-
         private void Form3_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
