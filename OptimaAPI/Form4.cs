@@ -1,4 +1,6 @@
 ﻿using CDNBase;
+using CDNHeal;
+using CDNHlmn;
 using CDNTwrb1;
 using System;
 using System.Collections.Generic;
@@ -88,27 +90,44 @@ namespace OptimaAPI
                 label2.Text = sum.ToString("N", setPrecision);
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Form5 form = new Form5(Login, this);
             form.Show();
             form.Activate();
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            AdoSession session = Login.CreateSession();
 
+            DokumentyHaMag documents = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag",null);
+            DokumentHaMag document = (DokumentHaMag)documents.AddNew(null);
+
+            ICollection kontrahenci = (ICollection)(session.CreateObject("CDN.Kontrahenci", null));
+            IKontrahent kontrahent = (IKontrahent)kontrahenci[$"Knt_Nazwa1='{kontrahenciComboBox.Text}'"];
+
+            MessageBox.Show(kontrahent.Nazwa1);
+        }
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        private void Form4_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
+                            this.DisplayRectangle);
+        }
+        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if(e.StateChanged.ToString() == "Displayed")
+            {
+                e.Row.Cells[3].Value = "1,0000";
+            }
+        }
         public void RefreshList()
         {
             var towary = Towary.Select(t =>
@@ -123,20 +142,6 @@ namespace OptimaAPI
             dataGridView1.DataSource = towary;
 
             label2.Text = towary.Sum(t => t.Ceny).ToString();
-        }
-
-        private void Form4_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
-                            this.DisplayRectangle);
-        }
-
-        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-        {
-            if(e.StateChanged.ToString() == "Displayed")
-            {
-                e.Row.Cells[3].Value = "1,0000";
-            }
         }
     }
 }

@@ -37,7 +37,7 @@
             this.cenyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTowarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.kontrahenciComboBox = new System.Windows.Forms.ComboBox();
             this.kontrahenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -50,6 +50,8 @@
             this.formyPlatnosciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cDN_SEDDataSet5 = new OptimaAPI.CDN_SEDDataSet5();
             this.formyPlatnosciTableAdapter = new OptimaAPI.CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
@@ -118,20 +120,20 @@
             // 
             this.iTowarBindingSource.DataSource = typeof(CDNTwrb1.ITowar);
             // 
-            // button2
+            // addButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(274, 390);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 37);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Dodaj";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.addButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.addButton.Location = new System.Drawing.Point(274, 442);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(115, 37);
+            this.addButton.TabIndex = 26;
+            this.addButton.Text = "Dodaj";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // button3
             // 
@@ -158,7 +160,7 @@
             this.kontrahenciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kontrahenciComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.kontrahenciComboBox.FormattingEnabled = true;
-            this.kontrahenciComboBox.Location = new System.Drawing.Point(137, 330);
+            this.kontrahenciComboBox.Location = new System.Drawing.Point(242, 355);
             this.kontrahenciComboBox.Name = "kontrahenciComboBox";
             this.kontrahenciComboBox.Size = new System.Drawing.Size(178, 24);
             this.kontrahenciComboBox.TabIndex = 37;
@@ -197,7 +199,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(270, 288);
+            this.label1.Location = new System.Drawing.Point(270, 289);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 39;
@@ -208,7 +210,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(345, 288);
+            this.label2.Location = new System.Drawing.Point(325, 289);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 40;
@@ -222,7 +224,7 @@
             this.platnosciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.platnosciComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.platnosciComboBox.FormattingEnabled = true;
-            this.platnosciComboBox.Location = new System.Drawing.Point(349, 330);
+            this.platnosciComboBox.Location = new System.Drawing.Point(242, 401);
             this.platnosciComboBox.Name = "platnosciComboBox";
             this.platnosciComboBox.Size = new System.Drawing.Size(178, 24);
             this.platnosciComboBox.TabIndex = 41;
@@ -241,18 +243,42 @@
             // 
             this.formyPlatnosciTableAdapter.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(325, 323);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(284, 323);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Kod:";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(663, 450);
+            this.ClientSize = new System.Drawing.Size(663, 504);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.platnosciComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.kontrahenciComboBox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -279,7 +305,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource iTowarBindingSource;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox kontrahenciComboBox;
         private CDN_SEDDataSet4 cDN_SEDDataSet4;
@@ -298,5 +324,7 @@
         private CDN_SEDDataSet5 cDN_SEDDataSet5;
         private System.Windows.Forms.BindingSource formyPlatnosciBindingSource;
         private CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter formyPlatnosciTableAdapter;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
