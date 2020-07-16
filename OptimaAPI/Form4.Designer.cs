@@ -52,6 +52,10 @@
             this.formyPlatnosciTableAdapter = new OptimaAPI.CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter();
             this.kontrahentLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataDokumentu = new System.Windows.Forms.DateTimePicker();
+            this.dataDostawy = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
@@ -127,7 +131,7 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.addButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.addButton.Location = new System.Drawing.Point(274, 442);
+            this.addButton.Location = new System.Drawing.Point(274, 576);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(115, 37);
             this.addButton.TabIndex = 26;
@@ -160,7 +164,7 @@
             this.kontrahenciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kontrahenciComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.kontrahenciComboBox.FormattingEnabled = true;
-            this.kontrahenciComboBox.Location = new System.Drawing.Point(242, 355);
+            this.kontrahenciComboBox.Location = new System.Drawing.Point(242, 486);
             this.kontrahenciComboBox.Name = "kontrahenciComboBox";
             this.kontrahenciComboBox.Size = new System.Drawing.Size(178, 24);
             this.kontrahenciComboBox.TabIndex = 37;
@@ -199,7 +203,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(270, 289);
+            this.label1.Location = new System.Drawing.Point(270, 413);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 39;
@@ -210,7 +214,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(325, 289);
+            this.label2.Location = new System.Drawing.Point(325, 413);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 40;
@@ -224,7 +228,7 @@
             this.platnosciComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.platnosciComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.platnosciComboBox.FormattingEnabled = true;
-            this.platnosciComboBox.Location = new System.Drawing.Point(242, 401);
+            this.platnosciComboBox.Location = new System.Drawing.Point(242, 530);
             this.platnosciComboBox.Name = "platnosciComboBox";
             this.platnosciComboBox.Size = new System.Drawing.Size(178, 24);
             this.platnosciComboBox.TabIndex = 41;
@@ -249,7 +253,7 @@
             this.kontrahentLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
             this.kontrahentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kontrahentLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.kontrahentLabel.Location = new System.Drawing.Point(325, 323);
+            this.kontrahentLabel.Location = new System.Drawing.Point(325, 448);
             this.kontrahentLabel.Name = "kontrahentLabel";
             this.kontrahentLabel.Size = new System.Drawing.Size(0, 20);
             this.kontrahentLabel.TabIndex = 42;
@@ -259,18 +263,62 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(284, 323);
+            this.label4.Location = new System.Drawing.Point(284, 448);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 20);
             this.label4.TabIndex = 43;
             this.label4.Text = "Kod:";
+            // 
+            // dataDokumentu
+            // 
+            this.dataDokumentu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dataDokumentu.Location = new System.Drawing.Point(231, 309);
+            this.dataDokumentu.Name = "dataDokumentu";
+            this.dataDokumentu.Size = new System.Drawing.Size(200, 22);
+            this.dataDokumentu.TabIndex = 44;
+            // 
+            // dataDostawy
+            // 
+            this.dataDostawy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dataDostawy.Location = new System.Drawing.Point(231, 376);
+            this.dataDostawy.Name = "dataDostawy";
+            this.dataDostawy.Size = new System.Drawing.Size(200, 22);
+            this.dataDostawy.TabIndex = 45;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(268, 279);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 20);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Data dokumenu:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(279, 344);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 20);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Data dostawy:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(663, 504);
+            this.ClientSize = new System.Drawing.Size(663, 625);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dataDostawy);
+            this.Controls.Add(this.dataDokumentu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.kontrahentLabel);
             this.Controls.Add(this.platnosciComboBox);
@@ -326,5 +374,9 @@
         private CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter formyPlatnosciTableAdapter;
         private System.Windows.Forms.Label kontrahentLabel;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dataDokumentu;
+        private System.Windows.Forms.DateTimePicker dataDostawy;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -1018,7 +1018,7 @@
             // trNDataWysDataGridViewTextBoxColumn
             // 
             this.trNDataWysDataGridViewTextBoxColumn.DataPropertyName = "TrN_DataWys";
-            this.trNDataWysDataGridViewTextBoxColumn.HeaderText = "Data wystawienia";
+            this.trNDataWysDataGridViewTextBoxColumn.HeaderText = "Data dostawy";
             this.trNDataWysDataGridViewTextBoxColumn.Name = "trNDataWysDataGridViewTextBoxColumn";
             // 
             // trNPodIDDataGridViewTextBoxColumn
