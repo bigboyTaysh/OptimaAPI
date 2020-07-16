@@ -111,14 +111,26 @@ namespace OptimaAPI
             ICollection kontrahenci = (ICollection)(session.CreateObject("CDN.Kontrahenci", null));
             IKontrahent kontrahent = (IKontrahent)kontrahenci[$"Knt_Kod='{kontrahentLabel.Text}'"];
 
-            ICollection FormyPlatnosci = (ICollection)(session.CreateObject("CDN.FormyPlatnosci", null));
-            FormaPlatnosci platnosci = (FormaPlatnosci)FormyPlatnosci[$"FPl_Nazwa='{platnosciComboBox.Text}'"];
+            ICollection platnosci = (ICollection)(session.CreateObject("CDN.FormyPlatnosci", null));
+            FormaPlatnosci platnosc = (FormaPlatnosci)platnosci[$"FPl_Nazwa='{platnosciComboBox.Text}'"];
 
             dokument.Rodzaj = 302000;
             dokument.TypDokumentu = 302;
             dokument.Bufor = 0;
-            dokument.DataDok = new DateTime(2020, 07, 16);
+            dokument.DataDok = dataDokumentu.Value;
+            dokument.DataWys = dataDostawy.Value;
+            dokument.FormaPlatnosci = platnosc;
+            dokument.Podmiot = kontrahent;
+            dokument.MagazynZrodlowyID = 1;
 
+            ICollection elementy = dokument.Elementy;
+            IElementHaMag element;
+
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                element = (IElementHaMag)elementy.AddNew(null);
+
+            }
         }
         private void exitButton_Click(object sender, EventArgs e)
         {
