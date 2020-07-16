@@ -2,6 +2,7 @@
 using CDNHeal;
 using CDNHlmn;
 using CDNTwrb1;
+using OP_KASBOLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -104,13 +105,20 @@ namespace OptimaAPI
         {
             AdoSession session = Login.CreateSession();
 
-            DokumentyHaMag documents = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag",null);
-            DokumentHaMag document = (DokumentHaMag)documents.AddNew(null);
+            DokumentyHaMag dokumenty = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag",null);
+            DokumentHaMag dokument = (DokumentHaMag)dokumenty.AddNew(null);
 
             ICollection kontrahenci = (ICollection)(session.CreateObject("CDN.Kontrahenci", null));
-            IKontrahent kontrahent = (IKontrahent)kontrahenci[$"Knt_Nazwa1='{kontrahenciComboBox.Text}'"];
+            IKontrahent kontrahent = (IKontrahent)kontrahenci[$"Knt_Kod='{kontrahentLabel.Text}'"];
 
-            MessageBox.Show(kontrahent.Nazwa1);
+            ICollection FormyPlatnosci = (ICollection)(session.CreateObject("CDN.FormyPlatnosci", null));
+            FormaPlatnosci platnosci = (FormaPlatnosci)FormyPlatnosci[$"FPl_Nazwa='{platnosciComboBox.Text}'"];
+
+            dokument.Rodzaj = 302000;
+            dokument.TypDokumentu = 302;
+            dokument.Bufor = 0;
+            dokument.DataDok = new DateTime(2020, 07, 16);
+
         }
         private void exitButton_Click(object sender, EventArgs e)
         {

@@ -50,7 +50,7 @@
             this.formyPlatnosciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cDN_SEDDataSet5 = new OptimaAPI.CDN_SEDDataSet5();
             this.formyPlatnosciTableAdapter = new OptimaAPI.CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter();
-            this.label3 = new System.Windows.Forms.Label();
+            this.kontrahentLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTowarBindingSource)).BeginInit();
@@ -243,16 +243,16 @@
             // 
             this.formyPlatnosciTableAdapter.ClearBeforeFill = true;
             // 
-            // label3
+            // kontrahentLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(325, 323);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
-            this.label3.TabIndex = 42;
+            this.kontrahentLabel.AutoSize = true;
+            this.kontrahentLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kontrahenciBindingSource, "Knt_Kod", true));
+            this.kontrahentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kontrahentLabel.ForeColor = System.Drawing.SystemColors.Window;
+            this.kontrahentLabel.Location = new System.Drawing.Point(325, 323);
+            this.kontrahentLabel.Name = "kontrahentLabel";
+            this.kontrahentLabel.Size = new System.Drawing.Size(0, 20);
+            this.kontrahentLabel.TabIndex = 42;
             // 
             // label4
             // 
@@ -272,7 +272,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(663, 504);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.kontrahentLabel);
             this.Controls.Add(this.platnosciComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -324,7 +324,7 @@
         private CDN_SEDDataSet5 cDN_SEDDataSet5;
         private System.Windows.Forms.BindingSource formyPlatnosciBindingSource;
         private CDN_SEDDataSet5TableAdapters.FormyPlatnosciTableAdapter formyPlatnosciTableAdapter;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label kontrahentLabel;
         private System.Windows.Forms.Label label4;
     }
 }
