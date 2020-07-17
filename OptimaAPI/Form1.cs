@@ -73,7 +73,7 @@ namespace OptimaAPI
                 appForm.Show();
                 appForm.Activate();
 
-            } catch (Exception ex) 
+            } catch (Exception) 
             {
                 if(application != null)
                 {
