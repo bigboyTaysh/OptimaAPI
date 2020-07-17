@@ -37,5 +37,10 @@ namespace OptimaAPI
             e.Graphics.DrawRectangle(new Pen(Color.Gray, 3),
                 this.DisplayRectangle);
         }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
