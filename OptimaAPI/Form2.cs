@@ -452,7 +452,7 @@ namespace OptimaAPI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form4 form = new Form4(Application, Login, this);
+            Form4 form = new Form4(Application, Login, this, 309000, 309);
             form.Show();
             form.Activate();
         }
@@ -460,28 +460,6 @@ namespace OptimaAPI
         {
             traNagBindingSource.Filter = "TrN_TypDokumentu='309'";
             this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
-        }
-        private void deleteZamowieniaButton_Click(object sender, EventArgs e)
-        {
-            AdoSession session = Login.CreateSession();
-            ICollection dokumenty = (ICollection)session.CreateObject("CDN.DokumentyHaMag", null);
-
-            try
-            {
-                foreach (DataGridViewRow row in dataGridView3.SelectedRows)
-                {
-                    dokumenty.Delete($"TrN_NumerPelny='{row.Cells[0].Value.ToString()}'");
-                }
-
-                session.Save();
-                traNagBindingSource.Filter = "TrN_TypDokumentu='309'";
-                this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
         }
         #endregion
     }

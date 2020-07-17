@@ -20,15 +20,20 @@ namespace OptimaAPI
     {
         private ILogin Login;
         private Form2 Form;
+        private int Rodzaj, TypDokumentu;
         private Point dragCursorPoint;
         private Point dragFormPoint;
         private bool dragging = false;
+
         public List<ITowar> Towary { get; set; }
-        public Form4(IApplication application, ILogin login, Form2 form)
+        public Form4(IApplication application, ILogin login, Form2 form, int rodzaj, int typDokumentu)
         {
             Login = login;
             Form = form;
+            Rodzaj = rodzaj;
+            TypDokumentu = typDokumentu;
             Towary = new List<ITowar>();
+
             InitializeComponent();
 
             dataGridView1.DataSource = Towary.Select(t =>
@@ -123,8 +128,8 @@ namespace OptimaAPI
 
             try
             {
-                dokument.Rodzaj = 309000;
-                dokument.TypDokumentu = 309;
+                dokument.Rodzaj = Rodzaj;
+                dokument.TypDokumentu = TypDokumentu;
                 dokument.Bufor = 0;
                 dokument.DataDok = dataDokumentu.Value;
                 dokument.DataWys = dataDostawy.Value;
