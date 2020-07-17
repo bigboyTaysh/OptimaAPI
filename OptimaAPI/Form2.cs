@@ -387,6 +387,7 @@ namespace OptimaAPI
             towar.Kod = textBox11.Text;
             towar.Nazwa = textBox10.Text;
             towar.JM = towaryComboBox.Text;
+            towar.Flaga = 2;
             towar.Stawka = decimal.Parse(textBox15.Text);
             cena.Wartosc = decimal.Parse(textBox14.Text);
             
