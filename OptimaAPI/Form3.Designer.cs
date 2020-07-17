@@ -41,6 +41,7 @@
             this.cDN_SEDDataSet3 = new OptimaAPI.CDN_SEDDataSet3();
             this.zamowieniaTableAdapter = new OptimaAPI.CDN_SEDDataSet3TableAdapters.ZamowieniaTableAdapter();
             this.exitButton = new System.Windows.Forms.Button();
+            this.okButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zamowieniaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet3)).BeginInit();
@@ -136,12 +137,28 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // okButton
+            // 
+            this.okButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.okButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.okButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.okButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.okButton.Location = new System.Drawing.Point(328, 416);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(115, 37);
+            this.okButton.TabIndex = 27;
+            this.okButton.Text = "OK";
+            this.okButton.UseVisualStyleBackColor = false;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(771, 450);
+            this.ClientSize = new System.Drawing.Size(771, 474);
+            this.Controls.Add(this.okButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -171,5 +188,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trEWartoscBruttoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trEIloscJMDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button okButton;
     }
 }
