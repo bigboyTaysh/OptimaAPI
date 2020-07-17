@@ -149,7 +149,17 @@ namespace OptimaAPI
                 }
 
                 session.Save();
-                Form.RefreshZamowienia();
+
+                switch (Rodzaj)
+                {
+                    case 309000:
+                        Form.RefreshZamowienia();
+                        break;
+                    case 302000:
+                        Form.RefreshFaktury();
+                        break;
+                }
+
                 this.Close();
             }
             catch (Exception ex)

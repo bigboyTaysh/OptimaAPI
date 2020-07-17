@@ -114,6 +114,17 @@
             this.trNRazemBruttoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.traNagBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cDN_SEDDataSet2 = new OptimaAPI.CDN_SEDDataSet2();
+            this.fakturyButton = new System.Windows.Forms.Button();
+            this.fakturyPanel = new System.Windows.Forms.Panel();
+            this.addFakturyButton = new System.Windows.Forms.Button();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kontrahenciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet)).BeginInit();
             this.kontrahenciPanel.SuspendLayout();
@@ -127,6 +138,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traNagBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet2)).BeginInit();
+            this.fakturyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // logoutButton
@@ -959,6 +972,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.menuPanel.Controls.Add(this.fakturyButton);
             this.menuPanel.Controls.Add(this.zamowieniaButton);
             this.menuPanel.Controls.Add(this.towaryButton);
             this.menuPanel.Controls.Add(this.kontrahenciButton);
@@ -1066,12 +1080,117 @@
             this.cDN_SEDDataSet2.DataSetName = "CDN_SEDDataSet2";
             this.cDN_SEDDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // fakturyButton
+            // 
+            this.fakturyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.fakturyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.fakturyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fakturyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.fakturyButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.fakturyButton.Location = new System.Drawing.Point(8, 216);
+            this.fakturyButton.Name = "fakturyButton";
+            this.fakturyButton.Size = new System.Drawing.Size(158, 65);
+            this.fakturyButton.TabIndex = 3;
+            this.fakturyButton.Text = "faktury";
+            this.fakturyButton.UseVisualStyleBackColor = false;
+            this.fakturyButton.Click += new System.EventHandler(this.fakturyButton_Click);
+            // 
+            // fakturyPanel
+            // 
+            this.fakturyPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.fakturyPanel.Controls.Add(this.addFakturyButton);
+            this.fakturyPanel.Controls.Add(this.dataGridView4);
+            this.fakturyPanel.Location = new System.Drawing.Point(181, 56);
+            this.fakturyPanel.Name = "fakturyPanel";
+            this.fakturyPanel.Size = new System.Drawing.Size(861, 587);
+            this.fakturyPanel.TabIndex = 23;
+            this.fakturyPanel.Visible = false;
+            // 
+            // addFakturyButton
+            // 
+            this.addFakturyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.addFakturyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.addFakturyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addFakturyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addFakturyButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.addFakturyButton.Location = new System.Drawing.Point(373, 524);
+            this.addFakturyButton.Name = "addFakturyButton";
+            this.addFakturyButton.Size = new System.Drawing.Size(115, 37);
+            this.addFakturyButton.TabIndex = 22;
+            this.addFakturyButton.Text = "Dodaj";
+            this.addFakturyButton.UseVisualStyleBackColor = false;
+            this.addFakturyButton.Click += new System.EventHandler(this.addFakturyButton_Click);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.dataGridView4.DataSource = this.traNagBindingSource;
+            this.dataGridView4.Location = new System.Drawing.Point(52, 12);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(743, 484);
+            this.dataGridView4.TabIndex = 0;
+            this.dataGridView4.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView4_CellMouseDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "TrN_NumerPelny";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Numer pełny";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "TrN_DataDok";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Data dokumentu";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "TrN_DataWys";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Data dostawy";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Knt_Kod";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Kod kontrahenta";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Knt_Nazwa1";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Nazwa kontrahenta";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "TrN_RazemNetto";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Suma netto";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "TrN_RazemBrutto";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Suma brutto";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1052, 655);
+            this.Controls.Add(this.fakturyPanel);
             this.Controls.Add(this.zamowieniaPanel);
             this.Controls.Add(this.towaryPanel);
             this.Controls.Add(this.kontrahenciPanel);
@@ -1102,6 +1221,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traNagBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDN_SEDDataSet2)).EndInit();
+            this.fakturyPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1195,5 +1316,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trNPodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trNPodNazwa1DataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button fakturyButton;
+        private System.Windows.Forms.Panel fakturyPanel;
+        private System.Windows.Forms.Button addFakturyButton;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
     }
 }

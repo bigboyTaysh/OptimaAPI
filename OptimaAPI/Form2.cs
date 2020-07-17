@@ -126,6 +126,7 @@ namespace OptimaAPI
             kontrahenciPanel.Visible = true;
             towaryPanel.Visible = false;
             zamowieniaPanel.Visible = false;
+            fakturyPanel.Visible = false;
         }
         private void towaryButton_Click(object sender, EventArgs e)
         {
@@ -134,6 +135,7 @@ namespace OptimaAPI
             kontrahenciPanel.Visible = false;
             towaryPanel.Visible = true;
             zamowieniaPanel.Visible = false;
+            fakturyPanel.Visible = false;
         }
         private void zamowieniaButton_Click(object sender, EventArgs e)
         {
@@ -142,6 +144,22 @@ namespace OptimaAPI
             kontrahenciPanel.Visible = false;
             towaryPanel.Visible = false;
             zamowieniaPanel.Visible = true;
+            fakturyPanel.Visible = false;
+
+            traNagBindingSource.Filter = "TrN_TypDokumentu='309'";
+            this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
+        }
+        private void fakturyButton_Click(object sender, EventArgs e)
+        {
+            ChangeMenuButtonsColor("menuPanel");
+            fakturyButton.BackColor = Color.FromArgb(114, 137, 218);
+            kontrahenciPanel.Visible = false;
+            towaryPanel.Visible = false;
+            zamowieniaPanel.Visible = false;
+            fakturyPanel.Visible = true;
+
+            traNagBindingSource.Filter = "TrN_TypDokumentu='302'";
+            this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
         }
         #endregion
 
@@ -459,6 +477,33 @@ namespace OptimaAPI
         public void RefreshZamowienia()
         {
             traNagBindingSource.Filter = "TrN_TypDokumentu='309'";
+            this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
+        }
+        #endregion
+
+        #region faktury
+        private void dataGridView4_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var row = dataGridView4.Rows[e.RowIndex];
+
+            AdoSession session = Login.CreateSession();
+            DokumentyHaMag dokumenty = (DokumentyHaMag)session.CreateObject("CDN.DokumentyHaMag", null);
+            DokumentHaMag dokument = (DokumentHaMag)dokumenty[$"TrN_NumerPelny='{(string)row.Cells[0].Value}'"];
+
+            Form3 form = new Form3(dokument);
+            form.Show();
+            form.Activate();
+        }
+
+        private void addFakturyButton_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4(Application, Login, this, 302000, 302);
+            form.Show();
+            form.Activate();
+        }
+        public void RefreshFaktury()
+        {
+            traNagBindingSource.Filter = "TrN_TypDokumentu='302'";
             this.traNagTableAdapter.Fill(this.cDN_SEDDataSet2.TraNag);
         }
         #endregion
